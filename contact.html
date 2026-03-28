@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — ICY Immobilier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pine:#2B5141;--pine-dark:#1e3a2e;--pine-mid:#3a6b56;
+  --pine-10:rgba(43,81,65,0.08);--pine-20:rgba(43,81,65,0.16);
+  --caramel:#C46210;--caramel-light:#d4751e;
+  --beige:#EEE8D3;--beige-mid:#e5ddc6;--beige-dark:#d9d0b4;
+  --charcoal:#3E403A;--charcoal-60:#6b6d66;--charcoal-30:#a8a9a4;
+  --charcoal-08:rgba(62,64,58,0.08);
+  --white:#fff;--pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0;text-decoration:none}
+.nav-center{display:flex;gap:32px}
+.nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
+.nav-center a:hover{color:var(--beige)}
+.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
+.nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
+.nav-mobile a{font-size:15px;color:rgba(238,232,211,0.65);padding:14px 0;border-bottom:1px solid rgba(238,232,211,0.06);text-decoration:none;font-weight:400}
+.nav-mobile a:last-child{border-bottom:none;color:var(--caramel);margin-top:8px;font-weight:500}
+.nav-mobile.open{display:flex}
+
+/* HERO */
+.hero{background:var(--pine);padding:72px 52px;border-bottom:2px solid var(--caramel)}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(238,232,211,0.4);font-weight:600;margin-bottom:20px}
+.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+h1{font-family:'Clash Display',sans-serif;font-size:44px;font-weight:600;line-height:1.1;color:var(--beige);margin-bottom:16px;letter-spacing:-0.025em}
+.hero-sub{font-size:16px;color:rgba(238,232,211,0.58);max-width:520px;font-weight:300;line-height:1.8}
+
+/* MAIN */
+.main{padding:80px 52px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;background:var(--beige)}
+
+/* CANAUX DE CONTACT */
+.canaux{display:flex;flex-direction:column;gap:12px}
+.canal{background:var(--white);padding:28px 28px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;align-items:center;gap:20px;transition:all 0.15s;text-decoration:none;cursor:pointer}
+.canal:hover{border-color:var(--caramel);box-shadow:0 4px 20px rgba(196,98,16,0.08);transform:translateY(-1px)}
+.canal-icon{width:48px;height:48px;border-radius:var(--r-md);background:var(--pine-10);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.canal-icon svg{width:22px;height:22px}
+.canal-title{font-size:15px;font-weight:600;color:var(--pine);margin-bottom:4px}
+.canal-desc{font-size:13px;color:var(--charcoal-60);font-weight:300}
+.canal-arr{font-size:16px;color:var(--caramel);margin-left:auto;flex-shrink:0}
+
+.section-label{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);margin-bottom:8px;letter-spacing:-0.01em}
+.section-intro{font-size:14px;color:var(--charcoal-60);font-weight:300;margin-bottom:32px;line-height:1.7}
+.section-divider{height:1px;background:var(--charcoal-08);margin:32px 0}
+
+/* FORMULAIRE */
+.form-card{background:var(--white);padding:44px 40px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);box-shadow:0 4px 32px rgba(43,81,65,0.06)}
+.f-label{font-size:11px;font-weight:700;color:var(--charcoal-30);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:7px;display:block}
+.f-input{width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);padding:13px 16px;color:var(--charcoal);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.15s;border-radius:var(--r-sm);display:block;margin-bottom:12px}
+.f-input::placeholder{color:var(--charcoal-30)}
+.f-input:focus{border-color:var(--pine);background:var(--white)}
+.f-select{width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);padding:13px 16px;color:var(--charcoal);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;border-radius:var(--r-sm);display:block;margin-bottom:12px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a9a4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.f-textarea{width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);padding:13px 16px;color:var(--charcoal);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.15s;border-radius:var(--r-sm);display:block;margin-bottom:12px;resize:vertical;min-height:120px;line-height:1.65}
+.f-textarea::placeholder{color:var(--charcoal-30)}
+.f-textarea:focus{border-color:var(--pine);background:var(--white)}
+.btn-submit{width:100%;background:var(--caramel);color:var(--white);padding:16px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;border:none;cursor:pointer;border-radius:var(--pill);margin-top:4px;transition:all 0.18s}
+.btn-submit:hover{background:var(--caramel-light);transform:translateY(-1px)}
+.f-rgpd{font-size:11px;color:var(--charcoal-30);margin-top:12px;line-height:1.7;text-align:center}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:44px 52px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:24px}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-nav a{font-size:12px;color:rgba(238,232,211,0.28);letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400;text-decoration:none}
+.footer-nav a:hover{color:rgba(238,232,211,0.68)}
+.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400;white-space:nowrap}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);gap:16px}
+.footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
+.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
+
+/* RESPONSIVE */
+@media(max-width:1024px){nav{padding:0 32px}.hero,.main{padding:56px 32px}.main{gap:52px}h1{font-size:38px}footer{padding:36px 32px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero{padding:44px 20px}h1{font-size:30px}.main{grid-template-columns:1fr;padding:48px 20px;gap:40px}.form-card{padding:28px 24px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+@media(max-width:480px){h1{font-size:26px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
+      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
+      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+  </a>
+  <div class="nav-center">
+    <a href="vendre.html">Vendre</a>
+    <a href="acheter.html">Acheter</a>
+    <a href="methode.html">Notre m&#233;thode</a>
+    <a href="resultats.html">R&#233;sultats</a>
+  </div>
+  <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
+  <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="vendre.html">Vendre</a>
+  <a href="acheter.html">Acheter</a>
+  <a href="methode.html">Notre m&#233;thode</a>
+  <a href="resultats.html">R&#233;sultats</a>
+  <a href="estimation.html">Estimer mon bien</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow"><span class="eyebrow-dot"></span>Nous contacter</div>
+  <h1>Une question ?<br>On vous r&#233;pond.</h1>
+  <p class="hero-sub">Pour tout projet de vente ou d'achat, une question sur nos offres, ou simplement pour prendre contact avec ICY — choisissez le canal qui vous convient.</p>
+</section>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- COLONNE GAUCHE — canaux -->
+  <div>
+    <div class="section-label">Par o&#249; commencer</div>
+    <p class="section-intro">Selon votre projet, certains canaux sont plus adapt&#233;s que d'autres.</p>
+
+    <div class="canaux">
+      <a class="canal" href="estimation.html">
+        <div class="canal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B5141" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/>
+          </svg>
+        </div>
+        <div>
+          <div class="canal-title">Estimer mon bien</div>
+          <div class="canal-desc">Vous souhaitez vendre — commencez par une estimation gratuite sous 24h</div>
+        </div>
+        <span class="canal-arr">&#8594;</span>
+      </a>
+
+      <a class="canal" href="mailto:contact@icy-immobilier.fr">
+        <div class="canal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B5141" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="canal-title">contact@icy-immobilier.fr</div>
+          <div class="canal-desc">Pour toute question — r&#233;ponse sous 24h ouvr&#233;es</div>
+        </div>
+        <span class="canal-arr">&#8594;</span>
+      </a>
+
+      <a class="canal" href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener">
+        <div class="canal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B5141" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="canal-title">@ICY_IMMOBILIER</div>
+          <div class="canal-desc">Suivez l'actualit&#233; du march&#233; et les biens en cours sur Instagram</div>
+        </div>
+        <span class="canal-arr">&#8594;</span>
+      </a>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-label">Zone d'intervention</div>
+    <p class="section-intro" style="margin-bottom:0">ICY Immobilier intervient principalement sur <strong>Paris et l'Île-de-France</strong>, avec des partenaires en province pour certaines grandes villes. Les offres ICY Direct et ICY Radar sont disponibles <strong>partout en France</strong>.</p>
+  </div>
+
+  <!-- COLONNE DROITE — formulaire -->
+  <div>
+    <div class="section-label">Envoyer un message</div>
+    <p class="section-intro">Pr&#233;cisez votre projet et ICY vous recontacte sous 24h.</p>
+    <div class="form-card">
+      <label class="f-label">Pr&#233;nom &amp; Nom</label>
+      <input class="f-input" type="text" placeholder="Yannick Iradukunda">
+
+      <label class="f-label">Email</label>
+      <input class="f-input" type="email" placeholder="vous@email.fr">
+
+      <label class="f-label">T&#233;l&#233;phone <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:10px">(optionnel)</span></label>
+      <input class="f-input" type="tel" placeholder="06 XX XX XX XX">
+
+      <label class="f-label">Votre projet</label>
+      <select class="f-select">
+        <option value="" disabled selected>Choisir...</option>
+        <option>Je veux vendre mon bien</option>
+        <option>Je cherche un bien &#224; acheter</option>
+        <option>Je veux une estimation</option>
+        <option>Question sur une offre ICY</option>
+        <option>Partenariat agence</option>
+        <option>Autre</option>
+      </select>
+
+      <label class="f-label">Message</label>
+      <textarea class="f-textarea" placeholder="D&#233;crivez votre projet en quelques lignes..."></textarea>
+
+      <button class="btn-submit" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')">Prendre un rendez-vous &#8594;</button>
+      <p class="f-rgpd">Vos donn&#233;es sont utilis&#233;es uniquement pour traiter votre demande. Aucun d&#233;marchage commercial. Conform&#233;ment au RGPD, vous pouvez demander leur suppression &#224; tout moment.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
+      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
+      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+    <div class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="vendre.html">Vendre</a>
+      <a href="acheter.html">Acheter</a>
+      <a href="methode.html">Notre m&#233;thode</a>
+      <a href="resultats.html">R&#233;sultats</a>
+      <a href="honoraires.html">Honoraires</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions l&#233;gales</a>
+    </div>
+    <div class="footer-email">contact@icy-immobilier.fr</div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
+    <div class="footer-carte">Carte T &mdash; Meilleurs Biens Immobilier</div>
+  </div>
+</footer>
+
+</body>
+</html>
