@@ -168,15 +168,15 @@ footer{background:var(--charcoal);padding:44px 52px}
     <h1>Le bon bien, le bon acheteur.<span class="h1-sub">Au bon moment.</span></h1>
     <p class="hero-sub"><strong>Le réseau qu'il faut</strong> pour être vu des bons acheteurs. Un expert dans votre poche, disponible à toute heure. Autonome ou accompagné — c'est vous qui choisissez.</p>
     <div class="ctas">
-      <button class="btn-fill" onclick="window.location='vendre.html'">Je vends mon bien →</button>
-      <button class="btn-ghost" onclick="window.location='acheter.html'">Je cherche un bien</button>
+      <button class="btn-fill" onclick="window.location='/vendre'">Je vends mon bien →</button>
+      <button class="btn-ghost" onclick="window.location='/acheter'">Je cherche un bien</button>
     </div>
   </div>
   <div class="hero-right">
-    <div class="video-wrap">
+    <div class="video-wrap" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">
       <div class="play-ring"><div class="play-tri"></div></div>
-      <div class="video-tag">Présentation — 2 min</div>
-      <div class="video-desc">Yannick vous présente ICY</div>
+      <div class="video-tag" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">Présentation — 2 min</div>
+      <div class="video-desc" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">Yannick vous présente ICY</div>
     </div>
   </div>
 </section>
@@ -243,7 +243,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <div class="est-point"><span class="est-dot"></span>Sans engagement — partout en France</div>
       </div>
     </div>
-    <div class="form-card">
+    <div class="form-card" id="form-estimation">
       <div class="form-row">
         <div><div class="f-label">Prénom</div><input class="f-input" type="text" placeholder="Yannick"></div>
         <div><div class="f-label">Email</div><input class="f-input" type="email" placeholder="vous@email.fr"></div>
@@ -254,7 +254,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <div><div class="f-label">Pièces</div><input class="f-input" type="text" placeholder="3"></div>
       </div>
       <div style="margin-bottom:12px"><div class="f-label">Votre situation</div>
-        <select class="f-select"><option value="" disabled selected>Choisir...</option><option>Je veux vendre rapidement</option><option>Je réfléchis à vendre</option><option>Simple curiosité</option></select>
+        <select class="f-select"><option value="" disabled selected>Choisir...</option><option>Je souhaite vendre rapidement</option><option>Je réfléchis à vendre</option><option>Simple curiosité</option></select>
       </div>
       <div class="f-label">Disponibilité pour les visites</div>
       <div class="f-radios">
@@ -266,7 +266,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <label class="f-radio"><input type="radio" name="prix"> J'ai une idée du prix</label>
         <label class="f-radio"><input type="radio" name="prix"> Je pars de zéro</label>
       </div>
-      <button class="btn-submit">Recevoir mon estimation →</button>
+      <button class="btn-submit" onclick="envoyerFormulaire('form-estimation')">Recevoir mon estimation →</button>
       <p class="f-rgpd">Données utilisées uniquement pour votre estimation. Aucun démarchage.</p>
     </div>
   </div>
@@ -305,7 +305,7 @@ footer{background:var(--charcoal);padding:44px 52px}
     </div>
     <div class="footer-email">contact@icy-immobilier.fr</div>
   </div>
-  <div <div class="footer-bottom">
+   <div class="footer-bottom">
     <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
     <div class="footer-carte">Carte T &mdash; Meilleurs Biens Immobilier</div>
   </div>
