@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICY Direct — Vendre sans commission à 990€</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pine:#2B5141;--pine-dark:#1e3a2e;--pine-mid:#3a6b56;
+  --pine-10:rgba(43,81,65,0.08);--pine-20:rgba(43,81,65,0.16);
+  --caramel:#C46210;--caramel-light:#d4751e;
+  --beige:#EEE8D3;--beige-mid:#e5ddc6;--beige-dark:#d9d0b4;
+  --charcoal:#3E403A;--charcoal-60:#6b6d66;--charcoal-30:#a8a9a4;
+  --charcoal-08:rgba(62,64,58,0.08);
+  --white:#fff;--pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0;text-decoration:none}
+.nav-center{display:flex;gap:32px}
+.nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;text-decoration:none}
+.nav-center a:hover{color:var(--beige)}
+.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
+.nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
+.nav-mobile a{font-size:15px;color:rgba(238,232,211,0.65);padding:14px 0;border-bottom:1px solid rgba(238,232,211,0.06);text-decoration:none;font-weight:400}
+.nav-mobile a:last-child{border-bottom:none;color:var(--caramel);margin-top:8px;font-weight:500}
+.nav-mobile.open{display:flex}
+
+/* HERO */
+.hero{background:var(--pine);padding:88px 52px;border-bottom:2px solid var(--caramel)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(196,98,16,0.15);border:1px solid rgba(196,98,16,0.3);padding:6px 14px;border-radius:var(--pill);margin-bottom:28px}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+.badge-text{font-size:11px;font-weight:700;color:var(--caramel);letter-spacing:0.14em;text-transform:uppercase}
+h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-height:1.06;color:var(--beige);margin-bottom:20px;letter-spacing:-0.025em}
+.h1-accent{color:var(--caramel)}
+.hero-desc{font-size:16px;color:rgba(238,232,211,0.6);line-height:1.8;font-weight:300;margin-bottom:40px;max-width:440px}
+.hero-desc strong{color:rgba(238,232,211,0.9);font-weight:600}
+.btn-cta{padding:18px 40px;font-size:16px;font-weight:700;letter-spacing:0.03em;background:var(--caramel);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif;display:inline-block}
+.btn-cta:hover{background:var(--caramel-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(196,98,16,0.3)}
+.hero-right{display:flex;flex-direction:column;gap:0}
+.prix-card{background:rgba(255,255,255,0.06);border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.12);padding:44px;text-align:center}
+.prix-label{font-size:11px;font-weight:700;color:rgba(238,232,211,0.4);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px}
+.prix-montant{font-family:'Clash Display',sans-serif;font-size:72px;font-weight:600;color:var(--white);line-height:1;letter-spacing:-0.04em;margin-bottom:8px}
+.prix-ttc{font-size:13px;color:rgba(238,232,211,0.35);font-weight:300;margin-bottom:24px}
+.prix-duree{display:inline-block;background:rgba(196,98,16,0.2);border:1px solid rgba(196,98,16,0.4);padding:6px 18px;border-radius:var(--pill);font-size:12px;font-weight:700;color:var(--caramel);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px}
+.prix-note{font-size:13px;color:rgba(238,232,211,0.45);font-weight:300;line-height:1.6;border-top:1px solid rgba(238,232,211,0.08);padding-top:20px;margin-top:4px}
+
+/* INCLUSIONS */
+.inclus-section{padding:80px 52px;background:var(--beige)}
+.s-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
+.s-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+.s-title{font-family:'Clash Display',sans-serif;font-size:36px;font-weight:600;color:var(--pine);margin-bottom:12px;letter-spacing:-0.02em}
+.s-intro{font-size:15px;color:var(--charcoal-60);margin-bottom:48px;line-height:1.7}
+.inclus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.inclus-card{background:var(--white);padding:32px 28px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08)}
+.inclus-num{font-size:11px;font-weight:700;color:var(--caramel);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px}
+.inclus-title{font-family:'Clash Display',sans-serif;font-size:17px;font-weight:600;color:var(--pine);margin-bottom:10px;line-height:1.3;letter-spacing:-0.01em}
+.inclus-desc{font-size:13px;color:var(--charcoal-60);line-height:1.8;font-weight:300}
+
+/* OBJECTIONS */
+.objections-section{padding:80px 52px;background:var(--pine)}
+.objections-section .s-eyebrow{color:rgba(238,232,211,0.4)}
+.objections-section .s-dot{background:var(--caramel)}
+.objections-section .s-title{color:var(--beige)}
+.objections-section .s-intro{color:rgba(238,232,211,0.48)}
+.objections{display:flex;flex-direction:column;gap:2px}
+.objection{background:rgba(255,255,255,0.04);padding:32px 36px;border-radius:0;border-bottom:1px solid rgba(238,232,211,0.06);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.objection:first-child{border-radius:var(--r-lg) var(--r-lg) 0 0}
+.objection:last-child{border-radius:0 0 var(--r-lg) var(--r-lg);border-bottom:none}
+.objection:hover{background:rgba(255,255,255,0.07)}
+.obj-question{font-family:'Clash Display',sans-serif;font-size:18px;font-weight:600;color:rgba(238,232,211,0.6);line-height:1.35;letter-spacing:-0.01em}
+.obj-question::before{content:'"';font-size:28px;line-height:0;vertical-align:-8px;margin-right:4px;color:var(--caramel);font-family:'Clash Display',sans-serif}
+.obj-reponse{font-size:14px;color:rgba(238,232,211,0.65);line-height:1.85;font-weight:300}
+.obj-reponse strong{color:var(--beige);font-weight:600}
+
+/* DÉDUCTIBILITÉ */
+.deduct-section{padding:52px;background:var(--beige-mid);display:flex;align-items:center;justify-content:space-between;gap:40px}
+.deduct-text{}
+.deduct-title{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);margin-bottom:8px;letter-spacing:-0.01em}
+.deduct-desc{font-size:14px;color:var(--charcoal-60);font-weight:300;line-height:1.7;max-width:560px}
+.deduct-prix{font-family:'Clash Display',sans-serif;font-size:32px;font-weight:600;color:var(--caramel);flex-shrink:0;white-space:nowrap}
+
+/* CTA FINAL */
+.cta-section{padding:88px 52px;background:var(--beige);text-align:center}
+.cta-section h2{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);margin-bottom:16px;letter-spacing:-0.025em}
+.cta-section p{font-size:16px;color:var(--charcoal-60);font-weight:300;margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
+.btn-cta-pine{padding:18px 40px;font-size:16px;font-weight:700;letter-spacing:0.03em;background:var(--pine);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
+.btn-cta-pine:hover{background:var(--pine-mid);transform:translateY(-2px)}
+.cta-note{font-size:13px;color:var(--charcoal-30);margin-top:20px}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:44px 52px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:24px}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-nav a{font-size:12px;color:rgba(238,232,211,0.28);letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400;text-decoration:none}
+.footer-nav a:hover{color:rgba(238,232,211,0.68)}
+.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400;white-space:nowrap}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);gap:16px}
+.footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
+.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
+
+/* RESPONSIVE */
+@media(max-width:1024px){nav{padding:0 32px}.hero,.inclus-section,.objections-section,.cta-section{padding:64px 32px}.deduct-section{padding:40px 32px}h1{font-size:40px}footer{padding:36px 32px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-inner{grid-template-columns:1fr;gap:40px}.hero{padding:48px 20px}h1{font-size:32px}.inclus-grid{grid-template-columns:1fr}.objection{grid-template-columns:1fr;gap:16px}.inclus-section,.objections-section,.cta-section{padding:56px 20px}.deduct-section{flex-direction:column;padding:36px 20px;text-align:center}.cta-section h2{font-size:30px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+@media(max-width:480px){h1{font-size:28px}.prix-montant{font-size:56px}.s-title{font-size:28px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
+      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
+      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+  </a>
+  <div class="nav-center">
+    <a href="vendre.html">Vendre</a>
+    <a href="acheter.html">Acheter</a>
+    <a href="methode.html">Notre m&#233;thode</a>
+    <a href="honoraires.html">Honoraires</a>
+  </div>
+  <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
+  <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="vendre.html">Vendre</a>
+  <a href="acheter.html">Acheter</a>
+  <a href="methode.html">Notre m&#233;thode</a>
+  <a href="honoraires.html">Honoraires</a>
+  <a href="estimation.html">Estimer mon bien</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="badge"><span class="badge-dot"></span><span class="badge-text">Offre vente autonome</span></div>
+      <h1>Vendez votre bien.<br><span class="h1-accent">Sans commission.</span></h1>
+      <p class="hero-desc">Vous g&#233;rez vos visites, <strong>ICY s'occupe du reste</strong> — estimation, annonce, diffusion, dossier ALUR, analyse des offres, assistant 24/7. Tout inclus pour un forfait fixe.</p>
+      <button class="btn-cta" onclick="return false">Je commence avec ICY Direct &#8594;</button>
+    </div>
+    <div class="hero-right">
+      <div class="prix-card">
+        <div class="prix-label">Forfait ICY Direct</div>
+        <div class="prix-montant">990&#8364;</div>
+        <div class="prix-ttc">TTC &mdash; tout inclus</div>
+        <div class="prix-duree">6 mois d'accompagnement</div>
+        <div class="prix-note">Pas de commission sur la vente. Vous payez une fois, quelle que soit l'issue. Int&#233;gralement d&#233;duit si vous passez &#224; ICY Connect.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUSIONS -->
+<section class="inclus-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Ce qui est inclus</div>
+  <div class="s-title">Tout ce qu'ICY fait pour vous</div>
+  <p class="s-intro">Neuf prestations incluses dans le forfait. Vous ne g&#233;rez que vos visites.</p>
+  <div class="inclus-grid">
+    <div class="inclus-card">
+      <div class="inclus-num">01</div>
+      <div class="inclus-title">Estimation argument&#233;e par ICY</div>
+      <div class="inclus-desc">Analyse des ventes r&#233;centes de votre secteur, prix de mise en march&#233; recommand&#233;, points forts et faibles de votre bien. R&#233;ponse sous 24h.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">02</div>
+      <div class="inclus-title">Strat&#233;gie de mise en valeur</div>
+      <div class="inclus-desc">Conseil sur la pr&#233;sentation du bien, les am&#233;liorations &#224; faire avant les visites, et le positionnement prix pour d&#233;clencher des offres s&#233;rieuses rapidement.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">03</div>
+      <div class="inclus-title">Photos professionnelles coordonn&#233;es</div>
+      <div class="inclus-desc">ICY coordonne la prise de vue avec un photographe professionnel partenaire. Des visuels qui font la diff&#233;rence sur les portails.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">04</div>
+      <div class="inclus-title">Annonce r&#233;dig&#233;e aux normes ICY</div>
+      <div class="inclus-desc">Accroche &#233;motionnelle, description pr&#233;cise, mise en avant des atouts du bien. Une annonce qui attire les bons acheteurs, pas tous les acheteurs.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">05</div>
+      <div class="inclus-title">Diffusion sur les portails immobiliers</div>
+      <div class="inclus-desc">SeLoger, Leboncoin, Bien'ici — diffusion imm&#233;diate sur les principales plateformes. Votre bien visible par des milliers d'acheteurs d&#232;s le lancement.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">06</div>
+      <div class="inclus-title">Dossier ALUR automatis&#233;</div>
+      <div class="inclus-desc">G&#233;n&#233;ration automatique du dossier de vente conforme &#224; la loi ALUR. Tous les documents obligatoires pr&#233;ts avant les visites.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">07</div>
+      <div class="inclus-title">Analyse des offres par l'assistant IA</div>
+      <div class="inclus-desc">Chaque offre re&#231;ue est analys&#233;e — montant, conditions, financement. ICY vous donne sa recommandation avant que vous r&#233;pondiez.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">08</div>
+      <div class="inclus-title">V&#233;rification de financement</div>
+      <div class="inclus-desc">ICY travaille avec un courtier partenaire qui v&#233;rifie la capacit&#233; de financement des acheteurs s&#233;rieux. Vous &#233;vitez les faux acheteurs.</div>
+    </div>
+    <div class="inclus-card">
+      <div class="inclus-num">09</div>
+      <div class="inclus-title">Assistant ICY WhatsApp 24/7</div>
+      <div class="inclus-desc">Pendant 6 mois, l'assistant ICY conna&#238;t votre dossier et r&#233;pond &#224; vos questions &#224; toute heure — march&#233;, d&#233;lais, documents, strat&#233;gie.</div>
+    </div>
+    <div class="inclus-card" style="border-color:var(--caramel);background:linear-gradient(135deg,var(--white) 0%,rgba(196,98,16,0.04) 100%);grid-column:1/-1">
+      <div class="inclus-num" style="color:var(--pine)">Suivi intelligent</div>
+      <div class="inclus-title">L'IA qui suit votre projet &#224; votre place</div>
+      <div class="inclus-desc">Rappels de RDV automatis&#233;s, comptes-rendus de visite consign&#233;s dans votre dossier, alertes avant chaque &#233;ch&#233;ance cl&#233;. Le r&#233;troplanning tourne en arri&#232;re-plan — conditions suspensives, d&#233;lais notaire, documents &#224; fournir. Vous &#234;tes pr&#233;venu avant d'&#234;tre en retard. Votre projet avance m&#234;me quand vous n'y pensez pas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="objections-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Ce que vous vous demandez</div>
+  <div class="s-title">Les vraies questions sur ICY Direct</div>
+  <p class="s-intro" style="margin-bottom:40px">Les r&#233;ponses directes, sans d&#233;tour.</p>
+  <div class="objections">
+    <div class="objection">
+      <div class="obj-question">Pourquoi payer si ma vente n'aboutit pas&nbsp;?</div>
+      <div class="obj-reponse">ICY Direct est une prestation de services — comme un photographe ou un avocat, ICY est r&#233;mun&#233;r&#233; pour le travail effectu&#233;, pas pour le r&#233;sultat. En contrepartie, <strong>vous ne payez aucune commission sur la vente</strong>. Si la vente aboutit, vous &#233;conomisez des milliers d'euros. Si elle n'aboutit pas, vous avez tout de m&#234;me b&#233;n&#233;fici&#233; de l'ensemble des prestations incluses.</div>
+    </div>
+    <div class="objection">
+      <div class="obj-question">Et si je veux passer &#224; une offre avec plus d'accompagnement&nbsp;?</div>
+      <div class="obj-reponse">Les 990&#8364; sont <strong>int&#233;gralement d&#233;duits</strong> de vos honoraires ICY Connect ou ICY Signature. Vous pouvez &#233;voluer &#224; tout moment, sans frais suppl&#233;mentaires par rapport au prix de l'offre sup&#233;rieure. Vous ne payez jamais deux fois.</div>
+    </div>
+    <div class="objection">
+      <div class="obj-question">ICY Direct, c'est vraiment diff&#233;rent d'une annonce PAP&nbsp;?</div>
+      <div class="obj-reponse">Oui. PAP vous donne un espace d'annonce. ICY Direct vous donne <strong>un expert qui pr&#233;pare votre vente</strong> — estimation, strat&#233;gie, annonce professionnelle, dossier ALUR, analyse des offres, v&#233;rification de financement, et un assistant disponible 24/7. Vous g&#233;rez vos visites. ICY g&#232;re tout le reste.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DÉDUCTIBILITÉ -->
+<div class="deduct-section">
+  <div class="deduct-text">
+    <div class="deduct-title">R&#232;gle ICY &mdash; D&#233;ductibilit&#233; totale</div>
+    <div class="deduct-desc">Si vous &#233;voluez vers ICY Connect ou ICY Signature apr&#232;s avoir souscrit ICY Direct, les 990&#8364; sont int&#233;gralement d&#233;duits de vos honoraires. Vous partez avec ICY Direct, vous restez libre de changer de niveau &#224; tout moment.</div>
+  </div>
+  <div class="deduct-prix">&#8722;990&#8364; d&#233;duits</div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="s-eyebrow" style="justify-content:center"><span class="s-dot"></span>Pr&#234;t &#224; commencer&nbsp;?</div>
+  <h2>D&#233;marrez avec ICY Direct</h2>
+  <p>990&#8364; TTC, tout inclus, 6 mois d'accompagnement. Vous g&#233;rez vos visites. ICY s'occupe du reste.</p>
+  <button class="btn-cta" onclick="return false">Je commence avec ICY Direct &#8594;</button>
+  <p class="cta-note">Paiement s&#233;curis&#233; &mdash; Activation imm&#233;diate &mdash; Sans engagement au-del&#224;</p>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
+      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
+      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+    <div class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="vendre.html">Vendre</a>
+      <a href="acheter.html">Acheter</a>
+      <a href="methode.html">Notre m&#233;thode</a>
+      <a href="honoraires.html">Honoraires</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions l&#233;gales</a>
+    </div>
+    <div class="footer-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b2824253f2a283f0b2228326622262624292227222e39652d39">[email&#160;protected]</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#
