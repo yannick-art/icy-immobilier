@@ -18,6 +18,8 @@
   --white:#fff;--pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
 nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
 .nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0;text-decoration:none}
 .nav-center{display:flex;gap:32px}
@@ -44,6 +46,8 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 .hero-intro strong{color:rgba(238,232,211,0.9);font-weight:600}
 .btn-fill{padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;background:var(--caramel);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
 .btn-fill:hover{background:var(--caramel-light);transform:translateY(-1px)}
+.btn-ghost{padding:14px 30px;font-size:14px;font-weight:400;background:transparent;color:rgba(238,232,211,0.75);border:1.5px solid rgba(238,232,211,0.18);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
+.btn-ghost:hover{border-color:rgba(238,232,211,0.45);background:rgba(238,232,211,0.05)}
 .hero-right{display:flex;flex-direction:column;gap:12px}
 .hero-reassurance{background:rgba(255,255,255,0.05);padding:24px 28px;border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.09)}
 .hero-reassurance-title{font-size:14px;font-weight:600;color:var(--beige);margin-bottom:6px}
@@ -52,45 +56,49 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 /* SECTIONS */
 .s-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
 .s-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
-.s-title{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);margin-bottom:12px;letter-spacing:-0.025em}
+.s-title{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);margin-bottom:12px;letter-spacing:-0.025em;line-height:1.1}
 .s-intro{font-size:15px;color:var(--charcoal-60);font-weight:400;margin-bottom:52px}
 
-/* CE QUE VOUS VIVEZ */
+/* EXPÉRIENCE — 6 étapes */
 .experience-section{padding:88px 52px;background:var(--beige)}
 .experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.exp-card{background:var(--white);padding:44px 40px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:20px;transition:box-shadow 0.2s,transform 0.2s}
+.exp-card{background:var(--white);padding:40px 36px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:16px;transition:box-shadow 0.2s,transform 0.2s}
 .exp-card:hover{box-shadow:0 8px 40px rgba(43,81,65,0.08);transform:translateY(-2px)}
 .exp-step{font-size:11px;font-weight:700;color:var(--caramel);letter-spacing:0.16em;text-transform:uppercase}
-.exp-title{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);line-height:1.25;letter-spacing:-0.01em}
-.exp-desc{font-size:14px;color:var(--charcoal-60);line-height:1.85;font-weight:300}
-.exp-you{font-size:12px;font-weight:600;color:var(--pine);background:var(--pine-10);padding:8px 14px;border-radius:var(--r-sm);display:inline-block;margin-top:4px}
+.exp-title{font-family:'Clash Display',sans-serif;font-size:20px;font-weight:600;color:var(--pine);line-height:1.3;letter-spacing:-0.01em}
+.exp-desc{font-size:13px;color:var(--charcoal-60);line-height:1.85;font-weight:300}
+.exp-you{font-size:11px;font-weight:700;color:var(--pine);background:var(--pine-10);padding:6px 12px;border-radius:var(--r-sm);display:inline-block;margin-top:4px;letter-spacing:0.04em}
 
-/* CE QU'ICY FAIT POUR VOUS */
-.travail-section{padding:88px 52px;background:var(--pine)}
-.travail-section .s-eyebrow{color:rgba(238,232,211,0.4)}
-.travail-section .s-dot{background:var(--caramel)}
-.travail-section .s-title{color:var(--beige)}
-.travail-section .s-intro{color:rgba(238,232,211,0.48)}
-.travail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.travail-card{background:rgba(255,255,255,0.04);padding:36px 32px;border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.09)}
-.travail-icon{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--caramel);margin-bottom:16px}
-.travail-title{font-family:'Clash Display',sans-serif;font-size:20px;font-weight:600;color:var(--beige);margin-bottom:12px;line-height:1.3;letter-spacing:-0.01em}
-.travail-desc{font-size:13px;color:rgba(238,232,211,0.52);line-height:1.8;font-weight:300}
+/* CTA MI-PAGE */
+.cta-mid{padding:52px;background:var(--beige-mid);display:flex;align-items:center;justify-content:space-between;gap:40px}
+.cta-mid-text{font-family:'Clash Display',sans-serif;font-size:24px;font-weight:600;color:var(--pine);letter-spacing:-0.015em;max-width:520px;line-height:1.3}
+.cta-mid-text span{color:var(--caramel)}
 
-/* LES VRAIES QUESTIONS */
-.questions-section{padding:88px 52px;background:var(--beige-mid)}
-.questions-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.question-card{background:var(--white);padding:36px 32px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08)}
-.question-q{font-family:'Clash Display',sans-serif;font-size:18px;font-weight:600;color:var(--pine);margin-bottom:16px;line-height:1.3;letter-spacing:-0.01em}
-.question-a{font-size:14px;color:var(--charcoal-60);line-height:1.85;font-weight:300}
+/* SCHÉMA COULISSES */
+.schema-section{padding:88px 52px;background:var(--pine)}
+.schema-section .s-eyebrow{color:rgba(238,232,211,0.4)}
+.schema-section .s-dot{background:var(--caramel)}
+.schema-section .s-title{color:var(--beige)}
+.schema-section .s-intro{color:rgba(238,232,211,0.48);margin-bottom:40px}
+.schema-wrap{background:rgba(255,255,255,0.04);border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.09);padding:48px 40px;overflow-x:auto}
+/* Contenu textuel pour LLM — invisible visuellement */
+.schema-text-llm{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 
-/* TÉMOIGNAGES */
+/* CHIFFRES MARCHÉ */
+.chiffres-section{padding:88px 52px;background:var(--beige-mid)}
+.chiffres-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.chiffre-card{background:var(--white);padding:40px 32px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08)}
+.chiffre-n{font-family:'Clash Display',sans-serif;font-size:52px;font-weight:600;color:var(--pine);line-height:1;letter-spacing:-0.03em;margin-bottom:12px}
+.chiffre-label{font-size:14px;color:var(--charcoal-60);font-weight:400;line-height:1.6}
+.chiffre-source{font-size:11px;color:var(--charcoal-30);margin-top:10px;font-style:italic}
+
+/* QUESTIONS */
 .questions-section{padding:88px 52px;background:var(--pine)}
 .questions-section .s-eyebrow{color:rgba(238,232,211,0.4)}
 .questions-section .s-dot{background:var(--caramel)}
 .questions-section .s-title{color:var(--beige)}
-.questions-section .s-intro{color:rgba(238,232,211,0.48)}
-.question-item{border-bottom:1px solid rgba(238,232,211,0.1);padding:0}
+.questions-section .s-intro{color:rgba(238,232,211,0.48);margin-bottom:40px}
+.question-item{border-bottom:1px solid rgba(238,232,211,0.1)}
 .question-item:first-of-type{border-top:1px solid rgba(238,232,211,0.1)}
 .question-q{padding:24px 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:24px}
 .question-q-text{font-size:16px;font-weight:500;color:var(--beige);line-height:1.4}
@@ -98,33 +106,22 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 .question-a{padding:0 0 24px;font-size:14px;color:rgba(238,232,211,0.55);line-height:1.85;font-weight:300;display:none;max-width:680px}
 .question-item.open .question-arrow{transform:rotate(45deg)}
 .question-item.open .question-a{display:block}
-.temoignages-section{padding:88px 52px;background:var(--beige)}
-.temoignages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.temoignage{background:var(--white);padding:36px 32px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:20px}
-.temoignage-quote{font-size:32px;color:var(--caramel);font-family:'Clash Display',sans-serif;line-height:1}
-.temoignage-text{font-size:14px;color:var(--charcoal);line-height:1.8;font-weight:300;font-style:italic;flex:1}
-.temoignage-nom{font-size:13px;font-weight:600;color:var(--pine)}
-.temoignage-detail{font-size:11px;color:var(--charcoal-60);margin-top:2px}
 
 /* FONDATEUR */
-.fondateur-section{padding:88px 52px;background:var(--white)}
+.fondateur-section{padding:88px 52px;background:var(--beige)}
 .fondateur-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.fondateur-chiffres{display:flex;flex-direction:column;gap:12px;margin-top:40px}
-.fondateur-chiffre{display:flex;align-items:center;gap:20px;padding:20px 24px;background:var(--beige);border-radius:var(--r-md)}
-.fondateur-chiffre-n{font-family:'Clash Display',sans-serif;font-size:28px;font-weight:600;color:var(--pine);flex-shrink:0;min-width:72px;line-height:1;letter-spacing:-0.02em}
-.fondateur-chiffre-l{font-size:13px;color:var(--charcoal-60);font-weight:300;line-height:1.5}
 .fondateur-quote{background:var(--pine);padding:48px 44px;border-radius:var(--r-lg)}
-.fondateur-quote-text{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:300;font-style:italic;color:rgba(238,232,211,0.72);line-height:1.5;margin-bottom:28px}
+.fondateur-quote-text{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:300;font-style:italic;color:rgba(238,232,211,0.72);line-height:1.5;margin-bottom:24px}
 .fondateur-quote-body{font-size:14px;color:rgba(238,232,211,0.45);line-height:1.85;font-weight:300}
 .fondateur-quote-sig{margin-top:20px;font-size:13px;font-weight:600;color:rgba(238,232,211,0.6)}
 
-/* CTA */
-.cta-section{padding:88px 52px;background:var(--pine);text-align:center}
-.cta-section h2{font-family:'Clash Display',sans-serif;font-size:44px;font-weight:600;color:var(--beige);margin-bottom:16px;letter-spacing:-0.025em}
-.cta-section p{font-size:16px;color:rgba(238,232,211,0.55);font-weight:300;margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
+/* CTA FINAL */
+.cta-section{padding:88px 52px;background:var(--beige-mid);text-align:center}
+.cta-section h2{font-family:'Clash Display',sans-serif;font-size:44px;font-weight:600;color:var(--pine);margin-bottom:16px;letter-spacing:-0.025em}
+.cta-section p{font-size:16px;color:var(--charcoal-60);font-weight:300;margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn-ghost{padding:14px 30px;font-size:14px;font-weight:400;background:transparent;color:rgba(238,232,211,0.75);border:1.5px solid rgba(238,232,211,0.18);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
-.btn-ghost:hover{border-color:rgba(238,232,211,0.45);background:rgba(238,232,211,0.05)}
+.btn-fill-pine{padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;background:var(--pine);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
+.btn-fill-pine:hover{background:var(--pine-mid);transform:translateY(-1px)}
 
 /* FOOTER */
 footer{background:var(--charcoal);padding:44px 52px}
@@ -138,9 +135,40 @@ footer{background:var(--charcoal);padding:44px 52px}
 .footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
 
 /* RESPONSIVE */
-@media(max-width:1024px){nav{padding:0 32px}.hero-methode,.experience-section,.travail-section,.questions-section,.temoignages-section,.fondateur-section,.cta-section{padding:72px 32px}.hero-inner{gap:48px}h1{font-size:40px}footer{padding:36px 32px}}
-@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-methode{padding:52px 20px}.hero-inner{grid-template-columns:1fr;gap:40px}h1{font-size:34px}.hero-intro{margin-bottom:32px}.experience-grid,.questions-grid,.fondateur-inner{grid-template-columns:1fr}.travail-grid{grid-template-columns:1fr}.temoignages-grid{grid-template-columns:1fr}.experience-section,.travail-section,.questions-section,.temoignages-section,.fondateur-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}.ctas{flex-direction:column;align-items:center}.btn-fill,.btn-ghost{width:100%;text-align:center}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
-@media(max-width:480px){h1{font-size:28px}.s-title{font-size:30px}.cta-section h2{font-size:26px}}
+@media(max-width:1024px){
+  nav{padding:0 32px}
+  .hero-methode,.experience-section,.schema-section,.chiffres-section,.questions-section,.fondateur-section,.cta-section{padding:72px 32px}
+  .cta-mid{padding:40px 32px}
+  .hero-inner{gap:48px}
+  h1{font-size:40px}
+  footer{padding:36px 32px}
+}
+@media(max-width:768px){
+  nav{padding:0 20px;height:60px}
+  .nav-center,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .hero-methode{padding:52px 20px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  h1{font-size:34px}
+  .hero-intro{margin-bottom:32px}
+  .experience-grid,.fondateur-inner{grid-template-columns:1fr}
+  .chiffres-grid{grid-template-columns:1fr}
+  .cta-mid{flex-direction:column;padding:36px 20px;text-align:center}
+  .experience-section,.schema-section,.chiffres-section,.questions-section,.fondateur-section,.cta-section{padding:56px 20px}
+  .schema-wrap{padding:24px 16px}
+  .cta-section h2{font-size:32px}
+  .ctas{flex-direction:column;align-items:center}
+  .btn-fill,.btn-ghost,.btn-fill-pine{width:100%;text-align:center}
+  footer{padding:32px 20px}
+  .footer-top{flex-direction:column;align-items:flex-start;gap:20px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media(max-width:480px){
+  h1{font-size:28px}
+  .s-title{font-size:30px}
+  .chiffre-n{font-size:40px}
+  .cta-section h2{font-size:26px}
+}
 </style>
 </head>
 <body>
@@ -197,78 +225,199 @@ footer{background:var(--charcoal);padding:44px 52px}
   </div>
 </section>
 
-<!-- CE QUE VOUS VIVEZ -->
+<!-- EXPÉRIENCE CLIENT -->
 <section class="experience-section">
   <div class="s-eyebrow"><span class="s-dot"></span>Votre exp&#233;rience</div>
   <div class="s-title">Ce que vous vivez avec ICY</div>
-  <p class="s-intro">Pas un processus. Une exp&#233;rience — du premier contact &#224; la signature.</p>
+  <p class="s-intro">Du premier contact &#224; la signature — ce que chaque &#233;tape change pour vous concr&#232;tement.</p>
   <div class="experience-grid">
     <div class="exp-card">
       <div class="exp-step">&#201;tape 1</div>
       <div class="exp-title">Une estimation claire, pas un chiffre en l'air</div>
-      <div class="exp-desc">En moins de 24h, ICY vous donne une estimation argument&#233;e — appuy&#233;e sur les ventes r&#233;centes de votre secteur. Pas un algorithme. Une analyse humaine, avec les chiffres pour la soutenir.</div>
+      <div class="exp-desc">En moins de 24h, ICY vous donne une estimation argument&#233;e appuy&#233;e sur les ventes r&#233;centes de votre secteur. Une analyse humaine, avec les chiffres pour la soutenir.</div>
       <span class="exp-you">Gratuit &amp; sans engagement</span>
     </div>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 2</div>
-      <div class="exp-title">Votre bien est mis en valeur sans que vous ayez &#224; y passer des heures</div>
-      <div class="exp-desc">L'annonce est r&#233;dig&#233;e, les photos coordonn&#233;es, la diffusion lanc&#233;e. Vous relisez et validez. ICY fait le travail.</div>
+      <div class="exp-title">Votre bien mis en valeur — sans y passer vos week-ends</div>
+      <div class="exp-desc">L'annonce est r&#233;dig&#233;e, les photos coordonn&#233;es, la diffusion lanc&#233;e sur les portails. Vous relisez et validez. ICY ex&#233;cute.</div>
       <span class="exp-you">Vous validez. ICY ex&#233;cute.</span>
     </div>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 3</div>
-      <div class="exp-title">Votre bien est vu par les bonnes personnes, pas par tout le monde</div>
+      <div class="exp-title">Votre bien vu par les bonnes personnes, pas par tout le monde</div>
       <div class="exp-desc">En plus des portails, votre bien circule dans le r&#233;seau ICY — agences partenaires, chasseurs actifs, acheteurs qualifi&#233;s en recherche active. Des contacts s&#233;rieux, pas des curieux.</div>
       <span class="exp-you">R&#233;seau actif d&#232;s 48h</span>
     </div>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 4</div>
-      <div class="exp-title">Vous avez une r&#233;ponse quand vous en avez besoin — m&#234;me le dimanche soir</div>
+      <div class="exp-title">Une r&#233;ponse quand vous en avez besoin — m&#234;me le dimanche soir</div>
       <div class="exp-desc">L'assistant ICY conna&#238;t votre dossier et r&#233;pond &#224; vos questions &#224; toute heure. Pour les d&#233;cisions importantes, Yannick est l&#224;.</div>
-      <span class="exp-you">Assistant disponible 24/7</span>
+      <span class="exp-you">Assistant 24/7</span>
     </div>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 5</div>
-      <div class="exp-title">La n&#233;gociation est men&#233;e par quelqu'un qui sait ce qu'il fait</div>
+      <div class="exp-title">La n&#233;gociation men&#233;e par quelqu'un qui sait ce qu'il fait</div>
       <div class="exp-desc">Recevoir une offre et savoir quoi r&#233;pondre, c'est difficile. ICY analyse chaque offre, vous donne sa recommandation, et conduit la n&#233;gociation si vous le souhaitez.</div>
       <span class="exp-you">Vous d&#233;cidez. ICY n&#233;gocie.</span>
     </div>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 6</div>
-      <div class="exp-title">Le dossier est pr&#234;t quand il le faut — sans relance de votre part</div>
+      <div class="exp-title">Z&#233;ro stress administratif jusqu'&#224; la signature</div>
       <div class="exp-desc">Dossier ALUR, r&#233;troplanning, coordination notaire — ICY suit les &#233;ch&#233;ances et vous alerte en amont. Vous signez quand tout est en ordre.</div>
-      <span class="exp-you">Z&#233;ro stress administratif</span>
+      <span class="exp-you">Z&#233;ro relance &#224; faire</span>
     </div>
   </div>
 </section>
 
-<!-- CE QU'ICY FAIT EN COULISSES -->
-<section class="travail-section">
+<!-- CTA MI-PAGE -->
+<div class="cta-mid">
+  <div class="cta-mid-text">Pr&#234;t &#224; commencer ? <span>L'estimation est gratuite.</span></div>
+  <button class="btn-fill" onclick="window.location='estimation.html'">Estimer mon bien &#8594;</button>
+</div>
+
+<!-- SCHÉMA COULISSES -->
+<section class="schema-section">
   <div class="s-eyebrow"><span class="s-dot"></span>Dans les coulisses</div>
-  <div class="s-title" style="color:var(--beige)">Ce qu'ICY fait pour vous,<br>sans vous le demander</div>
-  <p class="s-intro">Vous ne voyez pas tout ce qui se passe. C'est fait expr&#232;s.</p>
-  <div class="travail-grid">
-    <div class="travail-card">
-      <div class="travail-icon">R&#233;seau</div>
-      <div class="travail-title">Votre bien circule dans le r&#233;seau avant m&#234;me d'&#234;tre en ligne</div>
-      <div class="travail-desc">D&#232;s la signature du mandat, ICY informe ses agences partenaires et ses chasseurs actifs. Les premiers acheteurs s&#233;rieux arrivent souvent avant la mise en ligne publique.</div>
+  <div class="s-title">Ce qu'ICY fait sans vous le demander</div>
+  <p class="s-intro">&#192; chaque &#233;tape, ICY travaille en parall&#232;le — visible pour vous en haut, invisible en dessous.</p>
+
+  <!-- Contenu textuel pour indexation LLM -->
+  <div class="schema-text-llm" aria-hidden="true">
+    Apr&#232;s votre signature : votre bien est diffus&#233; sur les portails (SeLoger, Leboncoin, Bien'ici) et dans le r&#233;seau inter-agences ICY. Les contacts entrants sont qualifi&#233;s par l'assistant IA qui filtre les curieux et v&#233;rifie le financement via un courtier partenaire. Les offres sont analys&#233;es et pr&#233;sent&#233;es avec une recommandation. Le r&#233;troplanning et les &#233;ch&#233;ances notaire sont suivis automatiquement. Dossier ALUR g&#233;n&#233;r&#233; automatiquement.
+  </div>
+
+  <div class="schema-wrap">
+    <svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:900px;display:block;margin:0 auto;font-family:'DM Sans',sans-serif">
+
+      <!-- LÉGENDE -->
+      <rect x="20" y="12" width="14" height="14" rx="4" fill="#EEE8D3" opacity="0.9"/>
+      <text x="40" y="23" font-size="11" fill="rgba(238,232,211,0.6)" font-weight="400">Ce que vous voyez</text>
+      <rect x="180" y="12" width="14" height="14" rx="4" fill="#C46210" opacity="0.7"/>
+      <text x="200" y="23" font-size="11" fill="rgba(238,232,211,0.6)" font-weight="400">Ce qu'ICY fait en coulisse</text>
+
+      <!-- LIGNE DE SÉPARATION -->
+      <line x1="20" y1="160" x2="880" y2="160" stroke="rgba(238,232,211,0.08)" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="20" y="175" font-size="10" fill="rgba(238,232,211,0.2)" font-weight="600" letter-spacing="0.12em" text-transform="uppercase">COULISSES</text>
+
+      <!-- NŒUDS NIVEAU CLIENT (haut) -->
+      <!-- Nœud 1 -->
+      <rect x="20" y="50" width="140" height="80" rx="10" fill="rgba(238,232,211,0.1)" stroke="rgba(238,232,211,0.25)" stroke-width="1.5"/>
+      <text x="90" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#EEE8D3">Vous signez</text>
+      <text x="90" y="100" text-anchor="middle" font-size="11" fill="rgba(238,232,211,0.5)" font-weight="300">le mandat</text>
+
+      <!-- Flèche 1→2 -->
+      <line x1="162" y1="90" x2="198" y2="90" stroke="rgba(238,232,211,0.3)" stroke-width="1.5"/>
+      <polygon points="196,86 204,90 196,94" fill="rgba(238,232,211,0.3)"/>
+
+      <!-- Nœud 2 -->
+      <rect x="205" y="50" width="140" height="80" rx="10" fill="rgba(238,232,211,0.1)" stroke="rgba(238,232,211,0.25)" stroke-width="1.5"/>
+      <text x="275" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#EEE8D3">Contacts</text>
+      <text x="275" y="100" text-anchor="middle" font-size="11" fill="rgba(238,232,211,0.5)" font-weight="300">entrants</text>
+
+      <!-- Flèche 2→3 -->
+      <line x1="347" y1="90" x2="383" y2="90" stroke="rgba(238,232,211,0.3)" stroke-width="1.5"/>
+      <polygon points="381,86 389,90 381,94" fill="rgba(238,232,211,0.3)"/>
+
+      <!-- Nœud 3 -->
+      <rect x="390" y="50" width="140" height="80" rx="10" fill="rgba(238,232,211,0.1)" stroke="rgba(238,232,211,0.25)" stroke-width="1.5"/>
+      <text x="460" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#EEE8D3">Visites</text>
+      <text x="460" y="100" text-anchor="middle" font-size="11" fill="rgba(238,232,211,0.5)" font-weight="300">qualifi&#233;es</text>
+
+      <!-- Flèche 3→4 -->
+      <line x1="532" y1="90" x2="568" y2="90" stroke="rgba(238,232,211,0.3)" stroke-width="1.5"/>
+      <polygon points="566,86 574,90 566,94" fill="rgba(238,232,211,0.3)"/>
+
+      <!-- Nœud 4 -->
+      <rect x="575" y="50" width="140" height="80" rx="10" fill="rgba(238,232,211,0.1)" stroke="rgba(238,232,211,0.25)" stroke-width="1.5"/>
+      <text x="645" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#EEE8D3">Offre re&#231;ue</text>
+      <text x="645" y="100" text-anchor="middle" font-size="11" fill="rgba(238,232,211,0.5)" font-weight="300">analys&#233;e</text>
+
+      <!-- Flèche 4→5 -->
+      <line x1="717" y1="90" x2="753" y2="90" stroke="rgba(238,232,211,0.3)" stroke-width="1.5"/>
+      <polygon points="751,86 759,90 751,94" fill="rgba(238,232,211,0.3)"/>
+
+      <!-- Nœud 5 -->
+      <rect x="760" y="50" width="120" height="80" rx="10" fill="#C46210" opacity="0.85"/>
+      <text x="820" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#EEE8D3">Vous</text>
+      <text x="820" y="100" text-anchor="middle" font-size="11" fill="rgba(238,232,211,0.8)" font-weight="300">signez &#127881;</text>
+
+      <!-- NŒUDS COULISSES (bas) -->
+      <!-- Coulisse 1 -->
+      <rect x="20" y="195" width="140" height="108" rx="10" fill="rgba(196,98,16,0.12)" stroke="rgba(196,98,16,0.3)" stroke-width="1.5"/>
+      <text x="90" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(238,232,211,0.7)">R&#233;seau activ&#233;</text>
+      <text x="90" y="240" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">Portails + agences</text>
+      <text x="90" y="257" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">partenaires + chasseurs</text>
+      <text x="90" y="278" text-anchor="middle" font-size="10" fill="#C46210" font-weight="600">D&#232;s 48h</text>
+
+      <!-- Flèche verticale 1 -->
+      <line x1="90" y1="132" x2="90" y2="193" stroke="rgba(196,98,16,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="86,191 90,199 94,191" fill="rgba(196,98,16,0.4)"/>
+
+      <!-- Coulisse 2 -->
+      <rect x="205" y="195" width="140" height="108" rx="10" fill="rgba(196,98,16,0.12)" stroke="rgba(196,98,16,0.3)" stroke-width="1.5"/>
+      <text x="275" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(238,232,211,0.7)">Qualification IA</text>
+      <text x="275" y="240" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">Filtrage des curieux</text>
+      <text x="275" y="257" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">V&#233;rif. financement</text>
+      <text x="275" y="278" text-anchor="middle" font-size="10" fill="#C46210" font-weight="600">24/7 automatique</text>
+
+      <!-- Flèche verticale 2 -->
+      <line x1="275" y1="132" x2="275" y2="193" stroke="rgba(196,98,16,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="271,191 275,199 279,191" fill="rgba(196,98,16,0.4)"/>
+
+      <!-- Coulisse 3 -->
+      <rect x="390" y="195" width="140" height="108" rx="10" fill="rgba(196,98,16,0.12)" stroke="rgba(196,98,16,0.3)" stroke-width="1.5"/>
+      <text x="460" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(238,232,211,0.7)">Dossier ALUR</text>
+      <text x="460" y="240" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">G&#233;n&#233;r&#233; automatiquement</text>
+      <text x="460" y="257" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">Documents complets</text>
+      <text x="460" y="278" text-anchor="middle" font-size="10" fill="#C46210" font-weight="600">Z&#233;ro relance</text>
+
+      <!-- Flèche verticale 3 -->
+      <line x1="460" y1="132" x2="460" y2="193" stroke="rgba(196,98,16,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="456,191 460,199 464,191" fill="rgba(196,98,16,0.4)"/>
+
+      <!-- Coulisse 4 -->
+      <rect x="575" y="195" width="140" height="108" rx="10" fill="rgba(196,98,16,0.12)" stroke="rgba(196,98,16,0.3)" stroke-width="1.5"/>
+      <text x="645" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(238,232,211,0.7)">Analyse offre</text>
+      <text x="645" y="240" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">Comparatif + conseil</text>
+      <text x="645" y="257" text-anchor="middle" font-size="10" fill="rgba(238,232,211,0.4)" font-weight="300">Strat&#233;gie n&#233;gociation</text>
+      <text x="645" y="278" text-anchor="middle" font-size="10" fill="#C46210" font-weight="600">ICY n&#233;gocie</text>
+
+      <!-- Flèche verticale 4 -->
+      <line x1="645" y1="132" x2="645" y2="193" stroke="rgba(196,98,16,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="641,191 645,199 649,191" fill="rgba(196,98,16,0.4)"/>
+
+    </svg>
+  </div>
+</section>
+
+<!-- CHIFFRES MARCHÉ -->
+<section class="chiffres-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Le march&#233; aujourd'hui</div>
+  <div class="s-title">Pourquoi bien s'entourer est d&#233;cisif</div>
+  <p class="s-intro">Trois chiffres qui expliquent pourquoi la m&#233;thode ICY fait la diff&#233;rence.</p>
+  <div class="chiffres-grid">
+    <div class="chiffre-card">
+      <div class="chiffre-n">75j</div>
+      <div class="chiffre-label">D&#233;lai moyen de vente &#224; Paris en 2025. Le r&#233;seau ICY activ&#233; d&#232;s J+1 permet de viser bien en dessous.</div>
+      <div class="chiffre-source">Source : MeilleursAgents, f&#233;vrier 2025</div>
     </div>
-    <div class="travail-card">
-      <div class="travail-icon">Qualification</div>
-      <div class="travail-title">Chaque acheteur est qualifi&#233; avant votre premi&#232;re interaction</div>
-      <div class="travail-desc">L'assistant ICY r&#233;pond aux contacts entrants, filtre les curieux, et v&#233;rifie la capacit&#233; de financement avec notre courtier partenaire. Vous ne perdez pas de temps avec de faux acheteurs.</div>
+    <div class="chiffre-card">
+      <div class="chiffre-n">72%</div>
+      <div class="chiffre-label">Des ventes PAP n'aboutissent pas. La plupart finissent par passer par un professionnel — plus tard et au prix fort.</div>
+      <div class="chiffre-source">Source : MeilleursAgents / Paris Dauphine / IFOP</div>
     </div>
-    <div class="travail-card">
-      <div class="travail-icon">Suivi</div>
-      <div class="travail-title">Les d&#233;lais sont suivis automatiquement — vous &#234;tes alert&#233; en amont</div>
-      <div class="travail-desc">Conditions suspensives, d&#233;lais notaire, documents manquants — ICY surveille le r&#233;troplanning et vous pr&#233;vient avant que &#231;a devienne urgent. Pas de mauvaise surprise.</div>
+    <div class="chiffre-card">
+      <div class="chiffre-n">&#8722;30%</div>
+      <div class="chiffre-label">De transactions vs 2022 en Île-de-France. Dans ce march&#233; tendu, le bon positionnement prix est d&#233;cisif d&#232;s le premier jour.</div>
+      <div class="chiffre-source">Source : Notaires du Grand Paris, T4 2024</div>
     </div>
   </div>
 </section>
 
-<!-- LES VRAIES QUESTIONS -->
+<!-- QUESTIONS -->
 <section class="questions-section">
-  <div class="s-eyebrow"><span class="s-dot"></span>Ce que vous vous demandez vraiment</div>
+  <div class="s-eyebrow"><span class="s-dot"></span>Ce que vous vous demandez</div>
   <div class="s-title">Les bonnes questions m&#233;ritent des r&#233;ponses directes</div>
   <p class="s-intro">Pas de jargon. Pas de d&#233;tour.</p>
   <div>
@@ -295,43 +444,10 @@ footer{background:var(--charcoal);padding:44px 52px}
     </div>
     <div class="question-item">
       <div class="question-q" onclick="toggleQuestion(this)">
-        <span class="question-q-text">Et si &#231;a ne se vend pas ?</span>
+        <span class="question-q-text">Comment ICY s'adapte si la situation &#233;volue ?</span>
         <span class="question-arrow">+</span>
       </div>
       <div class="question-a">ICY ne disparaît pas. On analyse ensemble — le prix, la pr&#233;sentation, la strat&#233;gie — et on ajuste. Si vous avez commenc&#233; avec ICY Direct, vous pouvez &#233;voluer vers ICY Connect ou ICY Signature avec les 990 &#8364; d&#233;j&#224; d&#233;duits. Vous ne payez jamais deux fois.</div>
-    </div>
-  </div>
-</section>
-
-<!-- T&#201;MOIGNAGES -->
-<section class="temoignages-section">
-  <div class="s-eyebrow"><span class="s-dot"></span>Ils nous ont fait confiance</div>
-  <div class="s-title">Ce qu'ils en pensent</div>
-  <p class="s-intro">Des vendeurs et acheteurs &#224; diff&#233;rents niveaux d'accompagnement.</p>
-  <div class="temoignages-grid">
-    <div class="temoignage">
-      <div class="temoignage-quote">&#8220;</div>
-      <div class="temoignage-text">Vendu en 3 semaines au prix demand&#233;. L'assistant ICY r&#233;pondait &#224; mes questions le soir m&#234;me — je n'avais jamais eu &#231;a avec une agence classique.</div>
-      <div>
-        <div class="temoignage-nom">Sophie M.</div>
-        <div class="temoignage-detail">Vente 3 pi&#232;ces — Paris 11e &middot; ICY Direct</div>
-      </div>
-    </div>
-    <div class="temoignage">
-      <div class="temoignage-quote">&#8220;</div>
-      <div class="temoignage-text">ICY Connect nous a trouv&#233; un acheteur hors march&#233; avant m&#234;me la mise en ligne. La n&#233;gociation a &#233;t&#233; men&#233;e de main de ma&#238;tre.</div>
-      <div>
-        <div class="temoignage-nom">Thomas &amp; Julie R.</div>
-        <div class="temoignage-detail">Vente appartement — Paris 10e &middot; ICY Connect</div>
-      </div>
-    </div>
-    <div class="temoignage">
-      <div class="temoignage-quote">&#8220;</div>
-      <div class="temoignage-text">En 2 mois, ICY Radar m'a permis d'&#233;viter 4 mauvaises visites. Quand j'ai trouv&#233;, l'analyse du bien &#233;tait pr&#234;te en 10 minutes.</div>
-      <div>
-        <div class="temoignage-nom">Marc D.</div>
-        <div class="temoignage-detail">Achat studio — Paris 20e &middot; ICY Radar</div>
-      </div>
     </div>
   </div>
 </section>
@@ -342,38 +458,24 @@ footer{background:var(--charcoal);padding:44px 52px}
     <div>
       <div class="s-eyebrow"><span class="s-dot"></span>Qui est derri&#232;re ICY</div>
       <div class="s-title">Une agence fond&#233;e par un agent qui en a vu les limites</div>
-      <p class="s-intro" style="margin-bottom:0">Avant ICY, des ann&#233;es de transactions immobili&#232;res &#224; Paris. Cette exp&#233;rience terrain a rendu &#233;vident ce qui manquait — la transparence des offres, l'acc&#232;s au r&#233;seau, et les outils qui font vraiment gagner du temps.</p>
-      <div class="fondateur-chiffres">
-        <div class="fondateur-chiffre">
-          <div class="fondateur-chiffre-n">75 jours</div>
-          <div class="fondateur-chiffre-l">d&#233;lai moyen de vente &#224; Paris en 2025 — ICY vise mieux gr&#226;ce au r&#233;seau activ&#233; d&#232;s J+1</div>
-        </div>
-        <div class="fondateur-chiffre">
-          <div class="fondateur-chiffre-n">72%</div>
-          <div class="fondateur-chiffre-l">des ventes PAP n&#8217;aboutissent pas — la plupart finissent par passer par un professionnel, plus tard et au prix fort</div>
-        </div>
-        <div class="fondateur-chiffre">
-          <div class="fondateur-chiffre-n">&#8722;30%</div>
-          <div class="fondateur-chiffre-l">de transactions en moins vs 2022 — dans ce march&#233; tendu, le bon positionnement est d&#233;cisif</div>
-        </div>
-      </div>
+      <p style="font-size:15px;color:var(--charcoal-60);line-height:1.85;font-weight:300;margin-top:16px">Avant ICY, des ann&#233;es de transactions immobili&#232;res &#224; Paris chez Prello et Fredelion. Cette exp&#233;rience terrain a rendu &#233;vident ce qui manquait — la transparence des offres, l'acc&#232;s au r&#233;seau, et les outils qui font vraiment gagner du temps. ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets.</p>
     </div>
     <div class="fondateur-quote">
       <div class="fondateur-quote-text">"Connecter les bonnes personnes aux bonnes opportunit&#233;s."</div>
-      <div class="fondateur-quote-body">L'acc&#232;s au r&#233;seau, la lisibilit&#233; des honoraires, les outils qui font vraiment gagner du temps — ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets.</div>
+      <div class="fondateur-quote-body">L'acc&#232;s au r&#233;seau, la lisibilit&#233; des honoraires, les outils de l'IA — ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets. Sans supprimer l'agent. En le rendant meilleur.</div>
       <div class="fondateur-quote-sig">Yannick Iradukunda — Fondateur, ICY Immobilier</div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA FINAL -->
 <section class="cta-section">
   <div class="s-eyebrow" style="justify-content:center"><span class="s-dot"></span>Maintenant que vous savez</div>
   <h2>Passons &#224; votre projet</h2>
   <p>Commencez par une estimation gratuite — ou explorez les offres pour trouver celle qui correspond &#224; votre situation.</p>
   <div class="ctas">
     <button class="btn-fill" onclick="window.location='estimation.html'">Estimer mon bien gratuitement &#8594;</button>
-    <button class="btn-ghost" onclick="window.location='vendre.html'">Voir les offres vente</button>
+    <button class="btn-ghost" style="color:var(--charcoal-60);border-color:var(--charcoal-08)" onclick="window.location='vendre.html'">Voir les offres vente</button>
   </div>
 </section>
 
@@ -395,4 +497,12 @@ footer{background:var(--charcoal);padding:44px 52px}
     <div class="footer-email">contact@icy-immobilier.fr</div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#
+    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
+    <div class="footer-carte">Carte T &mdash; Meilleurs Biens Immobilier</div>
+  </div>
+</footer>
+
+<script src="methode.js"></script>
+
+</body>
+</html>
