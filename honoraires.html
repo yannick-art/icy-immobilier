@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honoraires — ICY Immobilier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pine:#2B5141;--pine-dark:#1e3a2e;--pine-mid:#3a6b56;
+  --pine-10:rgba(43,81,65,0.08);--pine-20:rgba(43,81,65,0.16);
+  --caramel:#C46210;--caramel-light:#d4751e;
+  --beige:#EEE8D3;--beige-mid:#e5ddc6;--beige-dark:#d9d0b4;
+  --charcoal:#3E403A;--charcoal-60:#6b6d66;--charcoal-30:#a8a9a4;
+  --charcoal-08:rgba(62,64,58,0.08);
+  --white:#fff;--pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0;text-decoration:none}
+.nav-center{display:flex;gap:32px}
+.nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
+.nav-center a:hover{color:var(--beige)}
+.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
+.nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
+.nav-mobile a{font-size:15px;color:rgba(238,232,211,0.65);padding:14px 0;border-bottom:1px solid rgba(238,232,211,0.06);text-decoration:none;font-weight:400}
+.nav-mobile a:last-child{border-bottom:none;color:var(--caramel);margin-top:8px;font-weight:500}
+.nav-mobile.open{display:flex}
+
+/* HERO */
+.hero{background:var(--pine);padding:72px 52px;border-bottom:2px solid var(--caramel)}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(238,232,211,0.4);font-weight:600;margin-bottom:20px}
+.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+h1{font-family:'Clash Display',sans-serif;font-size:44px;font-weight:600;line-height:1.1;color:var(--beige);margin-bottom:16px;letter-spacing:-0.025em;max-width:680px}
+.hero-sub{font-size:16px;color:rgba(238,232,211,0.58);max-width:600px;font-weight:300;line-height:1.8}
+
+/* SECTIONS */
+.section{padding:72px 52px}
+.s-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
+.s-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+.s-title{font-family:'Clash Display',sans-serif;font-size:32px;font-weight:600;color:var(--pine);margin-bottom:8px;letter-spacing:-0.02em}
+.s-intro{font-size:14px;color:var(--charcoal-60);margin-bottom:36px;line-height:1.7}
+
+/* BLOC FORFAIT */
+.forfait-section{padding:72px 52px;background:var(--beige)}
+.forfait-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.forfait-card{background:var(--white);border-radius:var(--r-lg);border:2px solid var(--charcoal-08);overflow:hidden}
+.forfait-header{padding:20px 28px;background:var(--beige-mid);border-bottom:1px solid var(--beige-dark);display:flex;align-items:center;justify-content:space-between}
+.forfait-nom{font-family:'Clash Display',sans-serif;font-size:20px;font-weight:600;color:var(--pine);letter-spacing:-0.01em}
+.forfait-type{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--charcoal-30)}
+.forfait-body{padding:28px}
+.forfait-montant{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);line-height:1;letter-spacing:-0.02em;margin-bottom:6px}
+.forfait-duree{font-size:12px;font-weight:700;color:var(--caramel);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px}
+.forfait-desc{font-size:13px;color:var(--charcoal-60);line-height:1.8;font-weight:300;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--charcoal-08)}
+.forfait-note{font-size:12px;color:var(--charcoal-30);line-height:1.6;font-style:italic}
+.forfait-badge{font-size:11px;font-weight:700;color:var(--white);background:var(--caramel);padding:3px 10px;border-radius:var(--pill);letter-spacing:0.06em}
+
+/* BLOC HONORAIRES AU SUCCÈS */
+.succes-section{padding:72px 52px;background:var(--white)}
+.succes-intro-box{background:var(--beige);border-radius:var(--r-lg);border:1px solid var(--beige-dark);padding:28px 32px;margin-bottom:40px}
+.succes-intro-box p{font-size:14px;color:var(--charcoal-60);line-height:1.8;font-weight:300}
+.succes-intro-box strong{color:var(--pine);font-weight:600}
+
+/* TABLEAUX */
+.table-wrap{overflow-x:auto;margin-bottom:40px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{background:var(--pine);color:var(--beige);font-weight:600;padding:14px 20px;text-align:left;font-size:12px;letter-spacing:0.04em}
+thead th:first-child{border-radius:var(--r-sm) 0 0 0}
+thead th:last-child{border-radius:0 var(--r-sm) 0 0}
+tbody tr{border-bottom:1px solid var(--charcoal-08)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:var(--beige)}
+tbody td{padding:14px 20px;color:var(--charcoal);vertical-align:middle}
+tbody td:first-child{font-weight:500;color:var(--pine)}
+tbody td.montant{font-family:'Clash Display',sans-serif;font-size:15px;font-weight:600;color:var(--pine);letter-spacing:-0.01em}
+.table-label{font-family:'Clash Display',sans-serif;font-size:18px;font-weight:600;color:var(--pine);margin-bottom:14px;letter-spacing:-0.01em}
+.table-sublabel{font-size:12px;color:var(--charcoal-60);margin-bottom:16px;font-weight:300}
+
+/* RÈGLE DÉDUCTIBILITÉ */
+.deduct-box{background:var(--pine);border-radius:var(--r-lg);padding:32px 36px;display:flex;align-items:flex-start;gap:20px}
+.deduct-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.deduct-title{font-family:'Clash Display',sans-serif;font-size:18px;font-weight:600;color:var(--beige);margin-bottom:8px;letter-spacing:-0.01em}
+.deduct-desc{font-size:13px;color:rgba(238,232,211,0.65);line-height:1.8;font-weight:300}
+
+/* CONFORMITÉ */
+.conformite-section{padding:72px 52px;background:var(--beige-mid)}
+.conformite-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.conformite-card{background:var(--white);padding:28px 28px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08)}
+.conformite-title{font-size:14px;font-weight:600;color:var(--pine);margin-bottom:10px}
+.conformite-desc{font-size:13px;color:var(--charcoal-60);line-height:1.8;font-weight:300}
+
+/* MENTION LÉGALE */
+.mention-section{padding:48px 52px;background:var(--beige)}
+.mention-box{background:var(--white);border-radius:var(--r-md);border:1px solid var(--charcoal-08);padding:28px 32px}
+.mention-box p{font-size:12px;color:var(--charcoal-60);line-height:1.8;font-weight:300}
+.mention-box strong{color:var(--charcoal);font-weight:600}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:44px 52px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:24px}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-nav a{font-size:12px;color:rgba(238,232,211,0.28);letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400;text-decoration:none}
+.footer-nav a:hover{color:rgba(238,232,211,0.68)}
+.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400;white-space:nowrap}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);gap:16px}
+.footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
+.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
+
+/* RESPONSIVE */
+@media(max-width:1024px){nav{padding:0 32px}.hero,.forfait-section,.succes-section,.conformite-section,.mention-section,.section{padding:56px 32px}footer{padding:36px 32px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero{padding:44px 20px}h1{font-size:32px}.forfait-grid,.conformite-grid{grid-template-columns:1fr}.forfait-section,.succes-section,.conformite-section,.mention-section,.section{padding:48px 20px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+@media(max-width:480px){h1{font-size:26px}.forfait-montant{font-size:32px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
+      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
+      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+  </a>
+  <div class="nav-center">
+    <a href="vendre.html">Vendre</a>
+    <a href="acheter.html">Acheter</a>
+    <a href="methode.html">Notre m&#233;thode</a>
+    <a href="resultats.html">R&#233;sultats</a>
+  </div>
+  <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
+  <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="vendre.html">Vendre</a>
+  <a href="acheter.html">Acheter</a>
+  <a href="methode.html">Notre m&#233;thode</a>
+  <a href="resultats.html">R&#233;sultats</a>
+  <a href="estimation.html">Estimer mon bien</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow"><span class="eyebrow-dot"></span>Transparence ICY</div>
+  <h1>Nos honoraires, clairs d&#232;s le d&#233;part</h1>
+  <p class="hero-sub">Chez ICY, les tarifs sont communiqu&#233;s avant toute signature. Pas de surprise, pas de commission cach&#233;e. Vous savez exactement ce que vous payez, pourquoi, et quand.</p>
+</section>
+
+<!-- FORFAITS FIXES -->
+<section class="forfait-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Offres &#224; forfait fixe</div>
+  <div class="s-title">ICY Direct &amp; ICY Radar</div>
+  <p class="s-intro">Ces deux offres sont des prestations de services &#224; forfait fixe. Elles ne sont pas soumises &#224; la loi Hoguet (pas de mandat, pas de mise en relation acheteur-vendeur). Le paiement est d&#251; &#224; l'activation de la prestation, quelle que soit l'issue de votre projet.</p>
+  <div class="forfait-grid">
+    <div class="forfait-card">
+      <div class="forfait-header">
+        <div class="forfait-nom">ICY Direct</div>
+        <div class="forfait-badge">Vente</div>
+      </div>
+      <div class="forfait-body">
+        <div class="forfait-montant">990 &#8364;</div>
+        <div class="forfait-duree">Forfait fixe TTC &middot; 6 mois</div>
+        <div class="forfait-desc">Prestation de services comprenant : estimation argument&#233;e, strat&#233;gie de mise en valeur, r&#233;daction d'annonce aux normes ICY, coordination photos professionnelles, diffusion sur les portails immobiliers, dossier ALUR automatis&#233;, suivi du r&#233;troplanning, analyse des offres par l'assistant IA, et acc&#232;s &#224; l'assistant ICY WhatsApp 24/7 pendant 6 mois.</div>
+        <div class="forfait-note">Prestation de service pure — hors champ de la loi Hoguet (loi n&#176; 70-9 du 2 janvier 1970). Aucun mandat n'est requis. Le forfait est d&#251; &#224; l'activation, ind&#233;pendamment du r&#233;sultat de la vente.</div>
+      </div>
+    </div>
+    <div class="forfait-card">
+      <div class="forfait-header">
+        <div class="forfait-nom">ICY Radar</div>
+        <div class="forfait-badge">Achat</div>
+      </div>
+      <div class="forfait-body">
+        <div class="forfait-montant">490 &#8364;</div>
+        <div class="forfait-duree">Forfait fixe TTC &middot; 2 mois</div>
+        <div class="forfait-desc">Prestation de services comprenant : analyse d'annonces par l'assistant IA, d&#233;cryptage des prix du march&#233; local, suivi du r&#233;troplanning automatis&#233;, et acc&#232;s &#224; l'assistant ICY WhatsApp 24/7 pendant 2 mois.</div>
+        <div class="forfait-note">Prestation de service pure — hors champ de la loi Hoguet (loi n&#176; 70-9 du 2 janvier 1970). Aucun mandat n'est requis. Le forfait est d&#251; &#224; l'activation, ind&#233;pendamment du r&#233;sultat de l'achat.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Règle déductibilité -->
+  <div class="deduct-box">
+    <div class="deduct-icon">&#8594;</div>
+    <div>
+      <div class="deduct-title">R&#232;gle de d&#233;ductibilit&#233; ICY</div>
+      <div class="deduct-desc">Les 990 &#8364; ICY Direct et les 490 &#8364; ICY Radar sont int&#233;gralement d&#233;duits des honoraires si vous &#233;voluez vers une offre sup&#233;rieure (ICY Connect ou ICY Signature pour la vente, ICY Connect achat ou ICY Chasse pour l'achat). Vous ne payez jamais deux fois pour le m&#234;me service.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HONORAIRES AU SUCCÈS -->
+<section class="succes-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Honoraires au succ&#232;s</div>
+  <div class="s-title">ICY Connect &amp; ICY Signature &amp; ICY Chasse</div>
+  <p class="s-intro">Ces offres sont soumises &#224; la loi Hoguet. Les honoraires sont dus uniquement en cas de transaction effective. Ils sont communiqu&#233;s par &#233;crit avant toute signature de mandat et indiqu&#233;s dans le mandat conform&#233;ment &#224; la r&#233;glementation en vigueur. <strong>Les honoraires de vente sont &#224; la charge du vendeur</strong> — le r&#233;seau ICY permettant une diffusion inter-agences syst&#233;matique, le prix affich&#233; est net vendeur. Les honoraires d'achat sont &#224; la charge de l'acqu&#233;reur.</p>
+
+  <div class="succes-intro-box">
+    <p><strong>Principe de transparence :</strong> conform&#233;ment &#224; l'arr&#234;t&#233; du 10 janvier 2017, les honoraires ICY sont affich&#233;s toutes taxes comprises (TTC) et indiqu&#233;s &#224; la charge de l'acqu&#233;reur ou du vendeur selon le cas. Le montant est pr&#233;cis&#233; dans chaque mandat sign&#233;. Aucun honoraire ne peut &#234;tre per&#231;u avant la signature de l'acte authentique de vente.</p>
+  </div>
+
+  <!-- Tableau vente ICY Connect -->
+  <div class="table-label">ICY Connect &mdash; Vente</div>
+  <div class="table-sublabel">Honoraires r&#233;duits &middot; Mandat semi-exclusif &middot; &#224; la charge du vendeur</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Prix de vente</th>
+          <th>Honoraires TTC</th>
+          <th>% indicatif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jusqu'&#224; 250 000 &#8364;</td><td class="montant">12 000 &#8364;</td><td>4,8%</td></tr>
+        <tr><td>Jusqu'&#224; 500 000 &#8364;</td><td class="montant">20 000 &#8364;</td><td>4,0%</td></tr>
+        <tr><td>Jusqu'&#224; 750 000 &#8364;</td><td class="montant">28 000 &#8364;</td><td>3,7%</td></tr>
+        <tr><td>Jusqu'&#224; 1 000 000 &#8364;</td><td class="montant">36 000 &#8364;</td><td>3,6%</td></tr>
+        <tr><td>Jusqu'&#224; 1 500 000 &#8364;</td><td class="montant">48 000 &#8364;</td><td>3,2%</td></tr>
+        <tr><td>Jusqu'&#224; 2 000 000 &#8364;</td><td class="montant">60 000 &#8364;</td><td>3,0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tableau vente ICY Signature -->
+  <div class="table-label">ICY Signature &mdash; Vente</div>
+  <div class="table-sublabel">Grille standard &middot; Mandat exclusif &middot; &#224; la charge du vendeur</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Prix de vente</th>
+          <th>Honoraires TTC</th>
+          <th>% indicatif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jusqu'&#224; 250 000 &#8364;</td><td class="montant">15 000 &#8364;</td><td>6,0%</td></tr>
+        <tr><td>Jusqu'&#224; 500 000 &#8364;</td><td class="montant">25 000 &#8364;</td><td>5,0%</td></tr>
+        <tr><td>Jusqu'&#224; 750 000 &#8364;</td><td class="montant">35 000 &#8364;</td><td>4,7%</td></tr>
+        <tr><td>Jusqu'&#224; 1 000 000 &#8364;</td><td class="montant">45 000 &#8364;</td><td>4,5%</td></tr>
+        <tr><td>Jusqu'&#224; 1 500 000 &#8364;</td><td class="montant">60 000 &#8364;</td><td>4,0%</td></tr>
+        <tr><td>Jusqu'&#224; 2 000 000 &#8364;</td><td class="montant">75 000 &#8364;</td><td>3,75%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tableau achat ICY Connect -->
+  <div class="table-label">ICY Connect &mdash; Achat</div>
+  <div class="table-sublabel">1 490 &#8364; TTC &#224; l'activation + 10% de la baisse obtenue &middot; &#224; la charge de l'acqu&#233;reur</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Composante</th>
+          <th>Montant TTC</th>
+          <th>Condition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Forfait d'activation</td><td class="montant">1 490 &#8364;</td><td>D&#251; &#224; la signature du mandat de recherche</td></tr>
+        <tr><td>Bonus n&#233;gociation</td><td class="montant">10% de la baisse</td><td>D&#251; uniquement si une baisse de prix est obtenue</td></tr>
+        <tr><td>Si aucune baisse obtenue</td><td class="montant">0 &#8364; suppl.</td><td>Le forfait 1 490 &#8364; reste seul d&#251;</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tableau achat ICY Chasse -->
+  <div class="table-label">ICY Chasse &mdash; Achat</div>
+  <div class="table-sublabel">Grille standard &middot; &#224; la charge de l'acqu&#233;reur &middot; per&#231;us &#224; la signature de l'acte</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Prix d'acquisition</th>
+          <th>Honoraires TTC</th>
+          <th>% indicatif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jusqu'&#224; 250 000 &#8364;</td><td class="montant">7 500 &#8364;</td><td>3,0%</td></tr>
+        <tr><td>Jusqu'&#224; 500 000 &#8364;</td><td class="montant">10 000 &#8364;</td><td>2,0%</td></tr>
+        <tr><td>Jusqu'&#224; 750 000 &#8364;</td><td class="montant">12 500 &#8364;</td><td>1,67%</td></tr>
+        <tr><td>Jusqu'&#224; 1 000 000 &#8364;</td><td class="montant">15 000 &#8364;</td><td>1,5%</td></tr>
+        <tr><td>Jusqu'&#224; 1 500 000 &#8364;</td><td class="montant">20 000 &#8364;</td><td>1,33%</td></tr>
+        <tr><td>Jusqu'&#224; 2 000 000 &#8364;</td><td class="montant">25 000 &#8364;</td><td>1,25%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CONFORMITÉ -->
+<section class="conformite-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>Cadre l&#233;gal</div>
+  <div class="s-title">Conformit&#233; r&#233;glementaire</div>
+  <p class="s-intro">ICY Immobilier exerce dans le cadre de la r&#233;glementation en vigueur applicable aux agents immobiliers.</p>
+  <div class="conformite-grid">
+    <div class="conformite-card">
+      <div class="conformite-title">Carte professionnelle</div>
+      <div class="conformite-desc">ICY Immobilier op&#232;re sous carte T (Transactions sur immeubles et fonds de commerce) d&#233;livr&#233;e par la CCI, via le r&#233;seau Meilleurs Biens Immobilier. Num&#233;ro de carte disponible sur demande.</div>
+    </div>
+    <div class="conformite-card">
+      <div class="conformite-title">Loi Hoguet &amp; loi ALUR</div>
+      <div class="conformite-desc">Les offres ICY Connect, ICY Signature et ICY Chasse sont exerc&#233;es conform&#233;ment &#224; la loi n&#176; 70-9 du 2 janvier 1970 et ses d&#233;crets d'application, ainsi qu'&#224; la loi ALUR du 24 mars 2014.</div>
+    </div>
+    <div class="conformite-card">
+      <div class="conformite-title">Affichage des honoraires</div>
+      <div class="conformite-desc">Conform&#233;ment &#224; l'arr&#234;t&#233; du 10 janvier 2017, les honoraires sont affich&#233;s TTC, mentionn&#233;s dans chaque mandat, et indiqu&#233;s dans toutes les annonces immobili&#232;res.</div>
+    </div>
+    <div class="conformite-card">
+      <div class="conformite-title">Garantie financi&#232;re &amp; assurance</div>
+      <div class="conformite-desc">ICY Immobilier b&#233;n&#233;ficie d'une assurance Responsabilit&#233; Civile Professionnelle et d'une garantie financi&#232;re conform&#233;ment aux obligations l&#233;gales applicables aux agents immobiliers titulaires de la carte T.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTION LÉGALE HONORAIRES -->
+<section class="mention-section">
+  <div class="mention-box">
+    <p><strong>Modalit&#233;s de paiement des honoraires &mdash; offres au succ&#232;s :</strong> Conform&#233;ment &#224; l'article 6 de la loi du 2 janvier 1970, aucun honoraire ne peut &#234;tre r&#233;clam&#233; ou per&#231;u avant la r&#233;alisation de l'op&#233;ration pour laquelle le mandat a &#233;t&#233; donn&#233; et la signature de l'acte constatant cette op&#233;ration devant notaire. Les honoraires de vente (ICY Connect et ICY Signature) sont &#224; la charge exclusive du vendeur. Les honoraires d'achat (ICY Connect achat et ICY Chasse) sont &#224; la charge exclusive de l'acqu&#233;reur. Le montant exact des honoraires est mentionn&#233; dans le mandat sign&#233; par les parties.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
+      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
+      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
+    <div class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="vendre.html">Vendre</a>
+      <a href="acheter.html">Acheter</a>
+      <a href="methode.html">Notre m&#233;thode</a>
+      <a href="resultats.html">R&#233;sultats</a>
+      <a href="contact.html">Contact</a>
+      <a href="honoraires.html">Honoraires</a>
+      <a href="mentions-legales.html">Mentions l&#233;gales</a>
+    </div>
+    <div class="footer-email">contact@icy-immobilier.fr</div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
+    <div class="footer-carte">Carte T &mdash; Meilleurs Biens Immobilier</div>
+  </div>
+</footer>
+
+</body>
+</html>
