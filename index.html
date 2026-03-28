@@ -9,119 +9,53 @@
 @import url('https://fonts.cdnfonts.com/css/clash-display');
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --pine:#2B5141;
-  --pine-dark:#1e3a2e;
-  --pine-mid:#3a6b56;
-  --pine-10:rgba(43,81,65,0.08);
-  --pine-20:rgba(43,81,65,0.16);
-  --caramel:#C46210;
-  --caramel-light:#d4751e;
-  --beige:#EEE8D3;
-  --beige-mid:#e5ddc6;
-  --beige-dark:#d9d0b4;
-  --charcoal:#3E403A;
-  --charcoal-60:#6b6d66;
-  --charcoal-30:#a8a9a4;
+  --pine:#2B5141;--pine-dark:#1e3a2e;--pine-mid:#3a6b56;
+  --pine-10:rgba(43,81,65,0.08);--pine-20:rgba(43,81,65,0.16);
+  --caramel:#C46210;--caramel-light:#d4751e;
+  --beige:#EEE8D3;--beige-mid:#e5ddc6;--beige-dark:#d9d0b4;
+  --charcoal:#3E403A;--charcoal-60:#6b6d66;--charcoal-30:#a8a9a4;
   --charcoal-08:rgba(62,64,58,0.08);
   --white:#fff;
-  --pill:100px;
-  --r-lg:16px;
-  --r-md:10px;
-  --r-sm:8px;
+  --pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
 }
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--beige);color:var(--charcoal);
-  font-size:15px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
 
 /* ── NAV ── */
-nav{
-  height:64px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 52px;background:var(--pine);
-  position:sticky;top:0;z-index:100;
-  border-bottom:1px solid rgba(238,232,211,0.07);
-}
-.nav-logo{display:flex;align-items:center;text-decoration:none;cursor:pointer}
+nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0}
+.nav-logo svg{overflow:visible;display:block}
 .nav-center{display:flex;gap:32px}
-.nav-center a{
-  font-size:13px;color:rgba(238,232,211,0.55);
-  cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;
-}
+.nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em}
 .nav-center a:hover{color:var(--beige)}
-.nav-cta{
-  font-size:13px;color:var(--caramel);font-weight:500;
-  cursor:pointer;transition:color 0.15s;letter-spacing:0.02em;
-}
+.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;white-space:nowrap}
 .nav-cta:hover{color:var(--caramel-light)}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px;transition:all 0.2s}
+.nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
+.nav-mobile a{font-size:15px;color:rgba(238,232,211,0.65);padding:14px 0;border-bottom:1px solid rgba(238,232,211,0.06);cursor:pointer;font-weight:400}
+.nav-mobile a:last-child{border-bottom:none;color:var(--caramel);margin-top:8px;font-weight:500}
+.nav-mobile.open{display:flex}
 
 /* ── HERO ── */
 .hero{display:grid;grid-template-columns:55fr 45fr;min-height:calc(100vh - 64px)}
-.hero-left{
-  background:var(--pine);
-  padding:80px 64px 80px 52px;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.eyebrow{
-  display:flex;align-items:center;gap:8px;
-  font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
-  color:rgba(238,232,211,0.4);font-weight:600;margin-bottom:36px;
-}
+.hero-left{background:var(--pine);padding:80px 64px 80px 52px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(238,232,211,0.4);font-weight:600;margin-bottom:32px}
 .eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
-h1{
-  font-family:'Clash Display',sans-serif;
-  font-size:42px;font-weight:600;line-height:1.1;
-  color:var(--beige);margin-bottom:8px;letter-spacing:-0.02em;
-}
-h1 .h1-sub{
-  display:block;
-  font-size:40px;font-weight:300;font-style:italic;
-  color:rgba(238,232,211,0.55);letter-spacing:-0.015em;
-  margin-top:4px;
-}
-.hero-sub{
-  font-size:16px;color:rgba(238,232,211,0.58);
-  line-height:1.8;font-weight:300;
-  margin:28px 0 52px;max-width:400px;
-}
+h1{font-family:'Clash Display',sans-serif;font-size:42px;font-weight:600;line-height:1.1;color:var(--beige);margin-bottom:8px;letter-spacing:-0.02em}
+.h1-sub{display:block;font-size:38px;font-weight:300;font-style:italic;color:rgba(238,232,211,0.55);letter-spacing:-0.015em;margin-top:6px}
+.hero-sub{font-size:16px;color:rgba(238,232,211,0.58);line-height:1.8;font-weight:300;margin:28px 0 48px;max-width:400px}
 .hero-sub strong{color:rgba(238,232,211,0.88);font-weight:600}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn-fill{
-  padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;
-  background:var(--caramel);color:var(--white);
-  border:none;cursor:pointer;border-radius:var(--pill);
-  transition:all 0.18s;font-family:'DM Sans',sans-serif;
-}
+.btn-fill{padding:15px 30px;font-size:14px;font-weight:600;letter-spacing:0.03em;background:var(--caramel);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
 .btn-fill:hover{background:var(--caramel-light);transform:translateY(-1px)}
-.btn-ghost{
-  padding:14px 30px;font-size:14px;font-weight:400;letter-spacing:0.03em;
-  background:transparent;color:rgba(238,232,211,0.75);
-  border:1.5px solid rgba(238,232,211,0.18);
-  cursor:pointer;border-radius:var(--pill);
-  transition:all 0.18s;font-family:'DM Sans',sans-serif;
-}
+.btn-ghost{padding:14px 30px;font-size:14px;font-weight:400;letter-spacing:0.03em;background:transparent;color:rgba(238,232,211,0.75);border:1.5px solid rgba(238,232,211,0.18);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
 .btn-ghost:hover{border-color:rgba(238,232,211,0.45);background:rgba(238,232,211,0.05)}
-
-.hero-right{
-  background:var(--pine-dark);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:background 0.2s;overflow:hidden;
-}
+.hero-right{background:var(--pine-dark);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;overflow:hidden;min-height:320px}
 .hero-right:hover{background:#162b22}
 .video-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;padding:48px;text-align:center}
-.play-ring{
-  width:76px;height:76px;border-radius:50%;
-  border:1.5px solid rgba(238,232,211,0.22);
-  display:flex;align-items:center;justify-content:center;
-  transition:all 0.2s;
-}
+.play-ring{width:76px;height:76px;border-radius:50%;border:1.5px solid rgba(238,232,211,0.22);display:flex;align-items:center;justify-content:center;transition:all 0.2s}
 .hero-right:hover .play-ring{border-color:rgba(238,232,211,0.55);transform:scale(1.05)}
-.play-tri{
-  width:0;height:0;margin-left:5px;
-  border-top:12px solid transparent;border-bottom:12px solid transparent;
-  border-left:22px solid rgba(238,232,211,0.65);
-}
+.play-tri{width:0;height:0;margin-left:5px;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:22px solid rgba(238,232,211,0.65)}
 .video-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(238,232,211,0.28);font-weight:600}
 .video-desc{font-size:15px;color:rgba(238,232,211,0.5);font-weight:300}
 
@@ -129,205 +63,165 @@ h1 .h1-sub{
 .chiffres{background:var(--caramel);display:grid;grid-template-columns:repeat(4,1fr)}
 .chiffre{padding:36px 32px;border-right:1px solid rgba(255,255,255,0.12)}
 .chiffre:last-child{border-right:none}
-.chiffre-n{
-  font-family:'Clash Display',sans-serif;font-size:38px;font-weight:600;
-  color:var(--white);line-height:1;letter-spacing:-0.025em;margin-bottom:8px;
-}
+.chiffre-n{font-family:'Clash Display',sans-serif;font-size:38px;font-weight:600;color:var(--white);line-height:1;letter-spacing:-0.025em;margin-bottom:8px}
 .chiffre-l{font-size:12px;color:rgba(255,255,255,0.62);font-weight:400;line-height:1.45}
 
 /* ── SECTIONS ── */
 .section{padding:88px 52px;background:var(--beige)}
-.s-eyebrow{
-  display:flex;align-items:center;gap:8px;
-  font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--caramel);font-weight:600;margin-bottom:14px;
-}
+.s-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
 .s-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
-.s-title{
-  font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;
-  color:var(--pine);margin-bottom:12px;letter-spacing:-0.025em;
-}
+.s-title{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);margin-bottom:12px;letter-spacing:-0.025em}
 .s-intro{font-size:15px;color:var(--charcoal-60);font-weight:400;margin-bottom:56px}
 
-/* ── BÉNÉFICES 2×2 — GELÉ ── */
+/* ── BÉNÉFICES ── */
 .benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.benefit{
-  background:var(--white);padding:44px 40px;border-radius:var(--r-lg);
-  border:1px solid var(--charcoal-08);
-  display:flex;flex-direction:column;gap:16px;
-  transition:box-shadow 0.2s,transform 0.2s;
-}
+.benefit{background:var(--white);padding:44px 40px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:16px;transition:box-shadow 0.2s,transform 0.2s}
 .benefit:hover{box-shadow:0 8px 40px rgba(43,81,65,0.08);transform:translateY(-2px)}
 .benefit-num{font-size:11px;font-weight:700;color:var(--caramel);letter-spacing:0.16em;text-transform:uppercase}
-.benefit-title{
-  font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;
-  color:var(--pine);line-height:1.25;letter-spacing:-0.01em;
-}
+.benefit-title{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);line-height:1.25;letter-spacing:-0.01em}
 .benefit-desc{font-size:14px;color:var(--charcoal-60);line-height:1.8;font-weight:300}
 
-/* ── OFFRES — corrections ciblées ── */
+/* ── OFFRES ── */
 .offres-section{padding:88px 52px;background:var(--pine)}
 .offres-section .s-eyebrow{color:rgba(238,232,211,0.4)}
 .offres-section .s-dot{background:var(--caramel)}
 .offres-section .s-title{color:var(--beige)}
 .offres-section .s-intro{color:rgba(238,232,211,0.48)}
 .offres-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
-.offre-card{
-  background:rgba(255,255,255,0.04);padding:44px 40px;border-radius:var(--r-lg);
-  border:1px solid rgba(238,232,211,0.09);display:flex;flex-direction:column;
-  transition:background 0.18s,border-color 0.18s;
-}
+.offre-card{background:rgba(255,255,255,0.04);padding:44px 40px;border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.09);display:flex;flex-direction:column;transition:background 0.18s,border-color 0.18s}
 .offre-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(238,232,211,0.18)}
-.offre-eyebrow{
-  display:flex;align-items:center;gap:7px;
-  font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
-  color:var(--caramel);font-weight:600;margin-bottom:20px;
-}
+.offre-eyebrow{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:20px}
 .offre-dot{width:4px;height:4px;border-radius:50%;background:var(--caramel);flex-shrink:0}
-.offre-title{
-  font-family:'Clash Display',sans-serif;font-size:26px;font-weight:600;
-  color:var(--beige);margin-bottom:16px;line-height:1.2;letter-spacing:-0.015em;
-}
-.offre-desc{
-  font-size:13px;color:rgba(238,232,211,0.52);line-height:1.8;
-  font-weight:300;margin-bottom:40px;flex:1;
-}
+.offre-title{font-family:'Clash Display',sans-serif;font-size:26px;font-weight:600;color:var(--beige);margin-bottom:16px;line-height:1.2;letter-spacing:-0.015em}
+.offre-desc{font-size:13px;color:rgba(238,232,211,0.52);line-height:1.8;font-weight:300;margin-bottom:40px;flex:1}
 .offre-footer{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
-.offre-prix-wrap{}
-.offre-prix{
-  font-family:'Clash Display',sans-serif;font-size:36px;font-weight:600;
-  color:var(--white);letter-spacing:-0.02em;
-  white-space:nowrap;display:block;line-height:1;
-}
-.offre-duree{
-  font-size:12px;font-weight:600;color:var(--caramel);
-  font-family:'DM Sans',sans-serif;margin-top:6px;
-  letter-spacing:0.04em;text-transform:uppercase;display:block;
-}
-.btn-offre{
-  background:var(--caramel);color:var(--white);
-  padding:12px 24px;font-size:13px;font-weight:600;letter-spacing:0.03em;
-  border:none;cursor:pointer;border-radius:var(--pill);
-  transition:all 0.18s;font-family:'DM Sans',sans-serif;white-space:nowrap;flex-shrink:0;
-}
+.offre-prix{font-family:'Clash Display',sans-serif;font-size:36px;font-weight:600;color:var(--white);letter-spacing:-0.02em;white-space:nowrap;display:block;line-height:1}
+.offre-duree{font-size:12px;font-weight:600;color:var(--caramel);font-family:'DM Sans',sans-serif;margin-top:6px;letter-spacing:0.04em;text-transform:uppercase;display:block}
+.btn-offre{background:var(--caramel);color:var(--white);padding:12px 24px;font-size:13px;font-weight:600;letter-spacing:0.03em;border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif;white-space:nowrap;flex-shrink:0}
 .btn-offre:hover{background:var(--caramel-light);transform:translateY(-1px)}
 .offres-links{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.offre-link{
-  background:rgba(255,255,255,0.03);padding:18px 28px;border-radius:var(--r-md);
-  border:1px solid rgba(238,232,211,0.07);
-  display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;transition:all 0.15s;gap:16px;
-}
+.offre-link{background:rgba(255,255,255,0.03);padding:18px 28px;border-radius:var(--r-md);border:1px solid rgba(238,232,211,0.07);display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.15s;gap:16px}
 .offre-link:hover{background:rgba(255,255,255,0.06);border-color:rgba(238,232,211,0.16)}
 .offre-link-text{font-size:13px;color:rgba(238,232,211,0.42);font-weight:400}
 .offre-link-text strong{color:rgba(238,232,211,0.72);font-weight:600}
 .offre-link-arr{color:var(--caramel);font-size:16px;flex-shrink:0}
-.deduct{
-  margin-top:18px;padding:14px 24px;background:rgba(255,255,255,0.03);
-  border-radius:var(--r-md);border:1px solid rgba(238,232,211,0.06);
-  font-size:12px;color:rgba(238,232,211,0.32);text-align:center;
-}
+.deduct{margin-top:18px;padding:14px 24px;background:rgba(255,255,255,0.03);border-radius:var(--r-md);border:1px solid rgba(238,232,211,0.06);font-size:12px;color:rgba(238,232,211,0.32);text-align:center}
 .deduct strong{color:rgba(238,232,211,0.58);font-weight:600}
 
-/* ── ESTIMATION — formulaire plus large ── */
+/* ── ESTIMATION ── */
 .estimation-section{padding:88px 52px;background:var(--beige-mid)}
 .est-inner{display:grid;grid-template-columns:35fr 65fr;gap:72px;align-items:start}
 .est-points{display:flex;flex-direction:column;gap:14px;margin-top:32px}
 .est-point{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--charcoal-60);font-weight:400}
 .est-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
-.form-card{
-  background:var(--white);padding:44px 48px;border-radius:var(--r-lg);
-  border:1px solid var(--charcoal-08);
-  box-shadow:0 4px 32px rgba(43,81,65,0.06);
-}
+.form-card{background:var(--white);padding:44px 48px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);box-shadow:0 4px 32px rgba(43,81,65,0.06)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .f-label{font-size:11px;font-weight:600;color:var(--charcoal-30);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
-.f-input{
-  width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);
-  padding:13px 16px;color:var(--charcoal);
-  font-family:'DM Sans',sans-serif;font-size:14px;
-  outline:none;transition:border-color 0.15s;border-radius:var(--r-sm);display:block;
-}
+.f-input{width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);padding:13px 16px;color:var(--charcoal);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.15s;border-radius:var(--r-sm);display:block}
 .f-input::placeholder{color:var(--charcoal-30)}
 .f-input:focus{border-color:var(--pine)}
-.f-select{
-  width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);
-  padding:13px 16px;color:var(--charcoal-60);
-  font-family:'DM Sans',sans-serif;font-size:14px;
-  outline:none;appearance:none;cursor:pointer;border-radius:var(--r-sm);display:block;
-}
+.f-select{width:100%;background:var(--beige);border:1.5px solid var(--beige-dark);padding:13px 16px;color:var(--charcoal-60);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;border-radius:var(--r-sm);display:block}
 .f-radios{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.f-radio{
-  display:flex;align-items:center;gap:8px;
-  padding:11px 14px;border:1.5px solid var(--beige-dark);
-  cursor:pointer;font-size:13px;color:var(--charcoal-60);
-  border-radius:var(--r-sm);background:var(--beige);
-  transition:all 0.15s;font-weight:400;
-}
+.f-radio{display:flex;align-items:center;gap:8px;padding:11px 14px;border:1.5px solid var(--beige-dark);cursor:pointer;font-size:13px;color:var(--charcoal-60);border-radius:var(--r-sm);background:var(--beige);transition:all 0.15s;font-weight:400}
 .f-radio:hover{border-color:var(--pine);color:var(--pine)}
 .f-radio input{accent-color:var(--pine)}
-.btn-submit{
-  width:100%;background:var(--pine);color:var(--white);
-  padding:16px;font-family:'DM Sans',sans-serif;font-size:14px;
-  font-weight:600;letter-spacing:0.04em;border:none;cursor:pointer;
-  border-radius:var(--pill);margin-top:8px;transition:all 0.18s;
-}
+.btn-submit{width:100%;background:var(--pine);color:var(--white);padding:16px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;border:none;cursor:pointer;border-radius:var(--pill);margin-top:8px;transition:all 0.18s}
 .btn-submit:hover{background:var(--pine-mid);transform:translateY(-1px)}
 .f-rgpd{font-size:11px;color:var(--charcoal-30);margin-top:12px;line-height:1.6}
 
-/* ── SOCIAL — GELÉ ── */
-.social-section{
-  padding:88px 52px;background:var(--beige);
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
-}
+/* ── SOCIAL ── */
+.social-section{padding:88px 52px;background:var(--beige);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .social-links{display:flex;flex-direction:column;gap:10px;margin-top:32px}
-.social-link{
-  background:var(--white);padding:20px 24px;
-  display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;transition:all 0.15s;
-  border-radius:var(--r-md);border:1px solid var(--charcoal-08);
-}
+.social-link{background:var(--white);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all 0.15s;border-radius:var(--r-md);border:1px solid var(--charcoal-08)}
 .social-link:hover{border-color:var(--caramel);box-shadow:0 4px 20px rgba(196,98,16,0.08)}
 .social-link-name{font-size:14px;font-weight:600;color:var(--pine);margin-bottom:3px}
 .social-link-desc{font-size:12px;color:var(--charcoal-60);font-weight:400}
 .social-link-arr{font-size:16px;color:var(--caramel)}
 .social-card{background:var(--pine);padding:48px 44px;border-radius:var(--r-lg)}
-.social-card-quote{
-  font-family:'Clash Display',sans-serif;font-size:22px;font-weight:300;
-  font-style:italic;color:rgba(238,232,211,0.68);line-height:1.45;margin-bottom:24px;
-}
+.social-card-quote{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:300;font-style:italic;color:rgba(238,232,211,0.68);line-height:1.45;margin-bottom:24px}
 .social-card-body{font-size:14px;color:rgba(238,232,211,0.42);line-height:1.85;font-weight:300}
 
-/* ── FOOTER — GELÉ ── */
+/* ── FOOTER ── */
 footer{background:var(--charcoal);padding:44px 52px}
-.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-.footer-logo svg text{font-family:'Clash Display',sans-serif}
-.footer-nav{display:flex;gap:24px}
-.footer-nav a{
-  font-size:12px;color:rgba(238,232,211,0.28);
-  letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400;
-}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:24px}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-nav a{font-size:12px;color:rgba(238,232,211,0.28);letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400}
 .footer-nav a:hover{color:rgba(238,232,211,0.68)}
-.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400}
-.footer-bottom{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);
+.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400;white-space:nowrap}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);gap:16px}
+.footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
+.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em;white-space:nowrap}
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px){
+  nav{padding:0 32px}
+  .hero-left{padding:60px 40px}
+  h1{font-size:36px}
+  .h1-sub{font-size:32px}
+  .section{padding:72px 32px}
+  .offres-section{padding:72px 32px}
+  .estimation-section{padding:72px 32px}
+  .social-section{padding:72px 32px;gap:48px}
+  footer{padding:36px 32px}
+  .est-inner{gap:48px}
 }
-.footer-baseline{
-  font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;
-  font-weight:300;color:rgba(238,232,211,0.22);
+@media (max-width:768px){
+  nav{padding:0 20px;height:60px}
+  .nav-center{display:none}
+  .nav-cta{display:none}
+  .nav-burger{display:flex}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:52px 24px}
+  h1{font-size:34px}
+  .h1-sub{font-size:30px}
+  .hero-sub{font-size:15px;margin:20px 0 36px}
+  .ctas{flex-direction:column}
+  .btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}
+  .hero-right{min-height:240px}
+  .chiffres{grid-template-columns:1fr 1fr}
+  .chiffre{padding:24px 20px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.12)}
+  .chiffre:nth-child(odd){border-right:1px solid rgba(255,255,255,0.12)}
+  .chiffre:last-child,.chiffre:nth-last-child(2):nth-child(odd){border-bottom:none}
+  .chiffre-n{font-size:30px}
+  .section{padding:56px 20px}
+  .s-title{font-size:32px}
+  .benefits{grid-template-columns:1fr}
+  .offres-section{padding:56px 20px}
+  .offres-grid{grid-template-columns:1fr}
+  .offres-links{grid-template-columns:1fr}
+  .offre-footer{flex-direction:column;align-items:flex-start;gap:20px}
+  .btn-offre{width:100%;text-align:center;padding:14px}
+  .estimation-section{padding:56px 20px}
+  .est-inner{grid-template-columns:1fr;gap:40px}
+  .form-card{padding:28px 24px}
+  .form-row{grid-template-columns:1fr}
+  .f-radios{grid-template-columns:1fr}
+  .social-section{padding:56px 20px;grid-template-columns:1fr;gap:40px}
+  footer{padding:32px 20px}
+  .footer-top{flex-direction:column;align-items:flex-start;gap:20px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
 }
-.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
+@media (max-width:480px){
+  h1{font-size:28px}
+  .h1-sub{font-size:26px}
+  .chiffres{grid-template-columns:1fr}
+  .chiffre{border-right:none;border-bottom:1px solid rgba(255,255,255,0.12)}
+  .chiffre:last-child{border-bottom:none}
+  .s-title{font-size:28px}
+  .benefit{padding:32px 24px}
+  .offre-card{padding:32px 24px}
+  .offre-title{font-size:22px}
+  .offre-prix{font-size:30px}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="38" style="display:block;overflow:visible">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
       <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
-      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.45)" letter-spacing="3.5">IMMOBILIER</text>
+      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
     </svg>
   </div>
   <div class="nav-center">
@@ -337,21 +231,23 @@ footer{background:var(--charcoal);padding:44px 52px}
     <a href="#">Résultats</a>
   </div>
   <a class="nav-cta" href="#">Estimer mon bien</a>
+  <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+<div class="nav-mobile">
+  <a href="#">Vendre</a>
+  <a href="#">Acheter</a>
+  <a href="#">Notre méthode</a>
+  <a href="#">Résultats</a>
+  <a href="#">Estimer mon bien</a>
+</div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="eyebrow"><span class="eyebrow-dot"></span>Paris &amp; toute la France</div>
-    <h1>
-      Le bon bien, le bon acheteur.
-      <span class="h1-sub">Au bon moment.</span>
-    </h1>
-    <p class="hero-sub">
-      <strong>Le réseau qu'il faut</strong> pour être vu des bons acheteurs.
-      Un expert dans votre poche, disponible à toute heure.
-      Autonome ou accompagné — c'est vous qui choisissez.
-    </p>
+    <h1>Le bon bien, le bon acheteur.<span class="h1-sub">Au bon moment.</span></h1>
+    <p class="hero-sub"><strong>Le réseau qu'il faut</strong> pour être vu des bons acheteurs. Un expert dans votre poche, disponible à toute heure. Autonome ou accompagné — c'est vous qui choisissez.</p>
     <div class="ctas">
       <button class="btn-fill">Je vends mon bien →</button>
       <button class="btn-ghost">Je cherche un bien</button>
@@ -366,7 +262,6 @@ footer{background:var(--charcoal);padding:44px 52px}
   </div>
 </section>
 
-<!-- CHIFFRES -->
 <div class="chiffres">
   <div class="chiffre"><div class="chiffre-n">6,5M€</div><div class="chiffre-l">de transactions réalisées avant ICY</div></div>
   <div class="chiffre"><div class="chiffre-n">48h</div><div class="chiffre-l">votre bien activé dans le réseau</div></div>
@@ -374,36 +269,18 @@ footer{background:var(--charcoal);padding:44px 52px}
   <div class="chiffre"><div class="chiffre-n">990€</div><div class="chiffre-l">pour vendre en autonomie, tout inclus</div></div>
 </div>
 
-<!-- BÉNÉFICES -->
 <section class="section">
   <div class="s-eyebrow"><span class="s-dot"></span>Ce qui change avec ICY</div>
   <div class="s-title">Quatre raisons de faire différemment</div>
   <p class="s-intro">Pas un discours. Des bénéfices concrets, dès le premier jour.</p>
   <div class="benefits">
-    <div class="benefit">
-      <div class="benefit-num">01</div>
-      <div class="benefit-title">Votre bien vu par les bons acheteurs</div>
-      <div class="benefit-desc">Dès la mise en ligne, votre bien circule dans le réseau ICY — agences partenaires, chasseurs actifs, acheteurs qualifiés. Quelle que soit l'offre choisie.</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-num">02</div>
-      <div class="benefit-title">Un expert disponible quand vous en avez besoin</div>
-      <div class="benefit-desc">Votre assistant ICY connaît votre dossier et répond à vos questions à toute heure. Plus besoin d'attendre un rappel pour avancer.</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-num">03</div>
-      <div class="benefit-title">Vous choisissez votre niveau d'implication</div>
-      <div class="benefit-desc">Vous gérez vos visites en autonomie ou vous déléguez tout à ICY. L'offre s'adapte à vous — pas l'inverse.</div>
-    </div>
-    <div class="benefit">
-      <div class="benefit-num">04</div>
-      <div class="benefit-title">Vous payez ce que vous utilisez</div>
-      <div class="benefit-desc">Pas de commission sur une vente que vous avez gérée vous-même. Des offres claires, des tarifs justes, une règle simple.</div>
-    </div>
+    <div class="benefit"><div class="benefit-num">01</div><div class="benefit-title">Votre bien vu par les bons acheteurs</div><div class="benefit-desc">Dès la mise en ligne, votre bien circule dans le réseau ICY — agences partenaires, chasseurs actifs, acheteurs qualifiés. Quelle que soit l'offre choisie.</div></div>
+    <div class="benefit"><div class="benefit-num">02</div><div class="benefit-title">Un expert disponible quand vous en avez besoin</div><div class="benefit-desc">Votre assistant ICY connaît votre dossier et répond à vos questions à toute heure. Plus besoin d'attendre un rappel pour avancer.</div></div>
+    <div class="benefit"><div class="benefit-num">03</div><div class="benefit-title">Vous choisissez votre niveau d'implication</div><div class="benefit-desc">Vous gérez vos visites en autonomie ou vous déléguez tout à ICY. L'offre s'adapte à vous — pas l'inverse.</div></div>
+    <div class="benefit"><div class="benefit-num">04</div><div class="benefit-title">Vous payez ce que vous utilisez</div><div class="benefit-desc">Pas de commission sur une vente que vous avez gérée vous-même. Des offres claires, des tarifs justes, une règle simple.</div></div>
   </div>
 </section>
 
-<!-- OFFRES -->
 <section class="offres-section">
   <div class="s-eyebrow"><span class="s-dot"></span>Les offres</div>
   <div class="s-title">Commencez dès aujourd'hui</div>
@@ -414,10 +291,7 @@ footer{background:var(--charcoal);padding:44px 52px}
       <div class="offre-title">Vous gérez,<br>ICY vous prépare</div>
       <div class="offre-desc">De l'estimation à la diffusion, on vous accompagne pour mettre votre bien en valeur et le positionner au bon prix. Vous gérez ensuite vos visites en autonomie. Assistant ICY disponible 24/7.</div>
       <div class="offre-footer">
-        <div class="offre-prix-wrap">
-          <span class="offre-prix">990 €</span>
-          <span class="offre-duree">Forfait · 6 mois</span>
-        </div>
+        <div><span class="offre-prix">990 €</span><span class="offre-duree">Forfait · 6 mois</span></div>
         <button class="btn-offre">Je commence →</button>
       </div>
     </div>
@@ -426,28 +300,18 @@ footer{background:var(--charcoal);padding:44px 52px}
       <div class="offre-title">Cherchez mieux,<br>perdez moins de temps</div>
       <div class="offre-desc">Les outils pour analyser les annonces, décrypter les prix et qualifier les biens avant de vous déplacer. Assistant ICY disponible 24/7 pour vous guider à chaque étape.</div>
       <div class="offre-footer">
-        <div class="offre-prix-wrap">
-          <span class="offre-prix">490 €</span>
-          <span class="offre-duree">Forfait · 2 mois</span>
-        </div>
+        <div><span class="offre-prix">490 €</span><span class="offre-duree">Forfait · 2 mois</span></div>
         <button class="btn-offre">Je commence →</button>
       </div>
     </div>
   </div>
   <div class="offres-links">
-    <div class="offre-link">
-      <span class="offre-link-text">Vous préférez être accompagné ? <strong>ICY Connect &amp; ICY Signature</strong></span>
-      <span class="offre-link-arr">→</span>
-    </div>
-    <div class="offre-link">
-      <span class="offre-link-text">Vous voulez aller plus loin ? <strong>ICY Connect &amp; ICY Chasse</strong></span>
-      <span class="offre-link-arr">→</span>
-    </div>
+    <div class="offre-link"><span class="offre-link-text">Vous préférez être accompagné ? <strong>ICY Connect &amp; ICY Signature</strong></span><span class="offre-link-arr">→</span></div>
+    <div class="offre-link"><span class="offre-link-text">Vous voulez aller plus loin ? <strong>ICY Connect &amp; ICY Chasse</strong></span><span class="offre-link-arr">→</span></div>
   </div>
   <div class="deduct"><strong>Règle ICY</strong> — Les 990 € et 490 € sont intégralement déduits si vous évoluez vers une offre supérieure.</div>
 </section>
 
-<!-- ESTIMATION -->
 <section class="estimation-section">
   <div class="est-inner">
     <div>
@@ -471,12 +335,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <div><div class="f-label">Pièces</div><input class="f-input" type="text" placeholder="3"></div>
       </div>
       <div style="margin-bottom:12px"><div class="f-label">Votre situation</div>
-        <select class="f-select">
-          <option value="" disabled selected>Choisir...</option>
-          <option>Je veux vendre rapidement</option>
-          <option>Je réfléchis à vendre</option>
-          <option>Simple curiosité</option>
-        </select>
+        <select class="f-select"><option value="" disabled selected>Choisir...</option><option>Je veux vendre rapidement</option><option>Je réfléchis à vendre</option><option>Simple curiosité</option></select>
       </div>
       <div class="f-label">Disponibilité pour les visites</div>
       <div class="f-radios">
@@ -494,21 +353,14 @@ footer{background:var(--charcoal);padding:44px 52px}
   </div>
 </section>
 
-<!-- SOCIAL -->
 <section class="social-section">
   <div>
     <div class="s-eyebrow"><span class="s-dot"></span>ICY sur le terrain</div>
     <div class="s-title">Suivez l'activité de l'agence</div>
     <p class="s-intro" style="margin-bottom:0">Marché, conseils, transactions — l'expertise de Yannick en temps réel.</p>
     <div class="social-links">
-      <div class="social-link">
-        <div><div class="social-link-name">@ICY_IMMOBILIER</div><div class="social-link-desc">Instagram — marché, conseils, biens en cours</div></div>
-        <span class="social-link-arr">↗</span>
-      </div>
-      <div class="social-link">
-        <div><div class="social-link-name">Yannick Iradukunda</div><div class="social-link-desc">Profil pro — 6,5M€ de transactions avant ICY</div></div>
-        <span class="social-link-arr">↗</span>
-      </div>
+      <div class="social-link"><div><div class="social-link-name">@ICY_IMMOBILIER</div><div class="social-link-desc">Instagram — marché, conseils, biens en cours</div></div><span class="social-link-arr">↗</span></div>
+      <div class="social-link"><div><div class="social-link-name">Yannick Iradukunda</div><div class="social-link-desc">Profil pro — 6,5M€ de transactions avant ICY</div></div><span class="social-link-arr">↗</span></div>
     </div>
   </div>
   <div class="social-card">
@@ -517,15 +369,12 @@ footer{background:var(--charcoal);padding:44px 52px}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-top">
-    <div class="footer-logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="34" style="display:block;overflow:visible">
-        <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.5)" letter-spacing="-1">ICY</text>
-        <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.22)" letter-spacing="3.5">IMMOBILIER</text>
-      </svg>
-    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
+      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
+      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
+    </svg>
     <div class="footer-nav">
       <a href="#">Vendre</a><a href="#">Acheter</a><a href="#">Notre méthode</a>
       <a href="#">Résultats</a><a href="#">Contact</a><a href="#">Mentions légales</a>
