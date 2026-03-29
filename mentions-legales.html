@@ -51,6 +51,12 @@ footer{background:var(--charcoal);padding:44px 52px}
 .footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
 @media(max-width:1024px){nav{padding:0 32px}.hero{padding:52px 32px}.content{padding:56px 32px}footer{padding:36px 32px}}
 @media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero{padding:40px 20px}h1{font-size:30px}.content{padding:44px 20px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+
+@media(max-width:768px){
+nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:200}
+body{padding-top:60px}
+.nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
+}
 </style>
 </head>
 <body>

@@ -151,6 +151,12 @@ footer{background:var(--charcoal);padding:44px 52px}
 @media(max-width:1024px){nav{padding:0 32px}.hero-acheter{padding:72px 32px;gap:48px}h1{font-size:40px}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:72px 32px}footer{padding:36px 32px}}
 @media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-acheter{grid-template-columns:1fr;padding:52px 20px;gap:40px}h1{font-size:34px}.hero-sub{margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.steps{grid-template-columns:1fr}.offres-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
 @media(max-width:480px){h1{font-size:28px}.hero-stat-n{font-size:26px;min-width:60px}.s-title{font-size:30px}.offre-prix{font-size:26px}.cta-section h2{font-size:26px}}
+
+@media(max-width:768px){
+nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:200}
+body{padding-top:60px}
+.nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
+}
 </style>
 </head>
 <body>
@@ -274,7 +280,7 @@ footer{background:var(--charcoal);padding:44px 52px}
           <div class="offre-name offre-name-dark">ICY Connect</div>
           <div class="offre-tagline offre-tagline-dark">Le r&#233;seau ICY pour trouver mieux. Vous visitez, ICY n&#233;gocie.</div>
           <div class="offre-prix-wrap offre-prix-wrap-dark">
-            <div class="offre-prix offre-prix-dark">1 490 &#8364; TTC  TTC </div>
+            <div class="offre-prix offre-prix-dark">1 490 &#8364; TTC </div>
             <span class="offre-duree">+ 10% de la baisse obtenue · Au succ&#232;s</span>
           </div>
           <div class="offre-inclus">
@@ -296,7 +302,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <div class="offre-tagline offre-tagline-light">ICY trouve, visite et n&#233;gocie. Vous validez quand c'est le bon bien.</div>
         <div class="offre-prix-wrap offre-prix-wrap-light">
           <div class="offre-prix offre-prix-light">Au succ&#232;s</div>
-          <span class="offre-duree">Grille standard · Honor&#233;es &#224; l'achat</span>
+          <span class="offre-duree">Grille standard · Honoraires &#224; l'achat</span>
         </div>
         <div class="offre-inclus">
           <div class="offre-inclus-item offre-inclus-item-light"><span class="offre-check-light"></span>Recherche active men&#233;e par ICY</div>
@@ -308,7 +314,7 @@ footer{background:var(--charcoal);padding:44px 52px}
     </div>
 
   </div>
-  <div class="deduct"><strong>R&#232;gle ICY</strong> — Les 490 &#8364; TTC ICY Radar sont int&#233;gralement d&#233;duits si vous passez &#224; ICY Connect ou ICY Chasse.</div>
+  <div class="deduct"><strong>R&#232;gle ICY</strong> — Les 490 &#8364; ICY Radar sont int&#233;gralement d&#233;duits si vous passez &#224; ICY Connect ou ICY Chasse.</div>
 </section>
 
 <section class="faq-section">
@@ -328,7 +334,7 @@ footer{background:var(--charcoal);padding:44px 52px}
         <span class="faq-q-text">Comment fonctionne le "10% de la baisse obtenue" avec ICY Connect ?</span>
         <span class="faq-arrow">+</span>
       </div>
-      <div class="faq-answer">ICY n&#233;gocie le prix du bien &#224; votre place. Si le bien est affich&#233; &#224; 400 000 &#8364; et qu'ICY obtient 380 000 &#8364;, la baisse est de 20 000 &#8364;. ICY per&#231;oit 10% de cette baisse, soit 2 000 &#8364;. Si ICY n'obtient aucune baisse, cette part est nulle. Vous payez uniquement les 1 490 &#8364; TTC  TTC de base.</div>
+      <div class="faq-answer">ICY n&#233;gocie le prix du bien &#224; votre place. Si le bien est affich&#233; &#224; 400 000 &#8364; et qu'ICY obtient 380 000 &#8364;, la baisse est de 20 000 &#8364;. ICY per&#231;oit 10% de cette baisse, soit 2 000 &#8364;. Si ICY n'obtient aucune baisse, cette part est nulle. Vous payez uniquement les 1 490 &#8364; de base.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)">
