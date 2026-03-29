@@ -182,23 +182,23 @@ body{padding-top:60px}
     <div class="form-card" id="form-estimation">
       <div class="form-section-title">Votre bien</div>
       <div class="form-field">
-        <label class="f-label">Adresse compl&#232;te</label>
-        <input class="f-input" type="text" placeholder="11 rue de la Roquette, Paris 11e">
+        <label class="f-label" for="adresse">Adresse compl&#232;te</label>
+        <input class="f-input" id="adresse" name="adresse" type="text" placeholder="11 rue de la Roquette, Paris 11e">
       </div>
       <div class="form-row">
         <div>
-          <label class="f-label">Surface</label>
-          <input class="f-input" type="text" placeholder="65 m&#178;">
+          <label class="f-label" for="surface">Surface</label>
+          <input class="f-input" id="surface" name="surface" type="text" placeholder="65 m&#178;">
         </div>
         <div>
-          <label class="f-label">Nombre de pi&#232;ces</label>
-          <input class="f-input" type="text" placeholder="3">
+          <label class="f-label" for="pieces">Nombre de pi&#232;ces</label>
+          <input class="f-input" id="pieces" name="pieces" type="text" placeholder="3">
         </div>
       </div>
       <div class="form-row">
         <div>
-          <label class="f-label">Type de bien</label>
-          <select class="f-select">
+          <label class="f-label" for="type_bien">Type de bien</label>
+          <select class="f-select" id="type_bien" name="type_bien">
             <option value="" disabled selected>Choisir...</option>
             <option>Appartement</option>
             <option>Maison</option>
@@ -208,8 +208,8 @@ body{padding-top:60px}
           </select>
         </div>
         <div>
-          <label class="f-label">&#201;tage</label>
-          <input class="f-input" type="text" placeholder="3e / RDC / Maison">
+          <label class="f-label" for="etage">&#201;tage</label>
+          <input class="f-input" id="etage" name="etage" type="text" placeholder="3e / RDC / Maison">
         </div>
       </div>
       <div class="form-field">
@@ -226,8 +226,8 @@ body{padding-top:60px}
       <div class="form-section-title">Votre projet</div>
 
       <div class="form-field">
-        <label class="f-label">Votre situation</label>
-        <select class="f-select">
+        <label class="f-label" for="situation">Votre situation</label>
+        <select class="f-select" id="situation" name="situation">
           <option value="" disabled selected>Choisir...</option>
           <option>Je souhaite vendre rapidement</option>
           <option>Je r&#233;fl&#233;chis &#224; vendre</option>
@@ -248,22 +248,22 @@ body{padding-top:60px}
 
       <div class="form-row">
         <div>
-          <label class="f-label">Pr&#233;nom</label>
-          <input class="f-input" type="text" placeholder="Pr&#233;nom">
+          <label class="f-label" for="prenom">Pr&#233;nom</label>
+          <input class="f-input" id="prenom" name="prenom" type="text" placeholder="Pr&#233;nom">
         </div>
         <div>
-          <label class="f-label">Nom</label>
-          <input class="f-input" type="text" placeholder="Nom">
+          <label class="f-label" for="nom">Nom</label>
+          <input class="f-input" id="nom" name="nom" type="text" placeholder="Nom">
         </div>
       </div>
       <div class="form-row">
         <div>
-          <label class="f-label">Email</label>
-          <input class="f-input" type="email" placeholder="vous@email.fr">
+          <label class="f-label" for="email">Email</label>
+          <input class="f-input" id="email" name="email" type="email" required placeholder="vous@email.fr">
         </div>
         <div>
-          <label class="f-label">T&#233;l&#233;phone</label>
-          <input class="f-input" type="tel" placeholder="06 XX XX XX XX">
+          <label class="f-label" for="tel">T&#233;l&#233;phone</label>
+          <input class="f-input" id="tel" name="tel" type="tel" placeholder="06 XX XX XX XX">
         </div>
       </div>
 
