@@ -187,17 +187,17 @@ body{padding-top:60px}
     <div class="section-label">Envoyer un message</div>
     <p class="section-intro">Pr&#233;cisez votre projet et ICY vous recontacte sous 24h.</p>
     <div class="form-card">
-      <label class="f-label">Pr&#233;nom &amp; Nom</label>
-      <input class="f-input" type="text" placeholder="Pr&#233;nom et nom">
+      <label class="f-label" for="prenom_nom">Pr&#233;nom &amp; Nom</label>
+      <input class="f-input" id="prenom_nom" name="prenom_nom" type="text" placeholder="Pr&#233;nom et nom">
 
-      <label class="f-label">Email</label>
-      <input class="f-input" type="email" placeholder="vous@email.fr">
+      <label class="f-label" for="email">Email</label>
+      <input class="f-input" id="email" name="email" type="email" required placeholder="vous@email.fr">
 
       <label class="f-label">T&#233;l&#233;phone <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:10px">(optionnel)</span></label>
       <input class="f-input" type="tel" placeholder="06 XX XX XX XX">
 
-      <label class="f-label">Votre projet</label>
-      <select class="f-select">
+      <label class="f-label" for="projet">Votre projet</label>
+      <select class="f-select" id="projet" name="projet">
         <option value="" disabled selected>Choisir...</option>
         <option>Je veux vendre mon bien</option>
         <option>Je cherche un bien &#224; acheter</option>
@@ -207,8 +207,8 @@ body{padding-top:60px}
         <option>Autre</option>
       </select>
 
-      <label class="f-label">Message</label>
-      <textarea class="f-textarea" placeholder="D&#233;crivez votre projet en quelques lignes..."></textarea>
+      <label class="f-label" for="message">Message</label>
+      <textarea class="f-textarea" id="message" name="message" placeholder="D&#233;crivez votre projet en quelques lignes..."></textarea>
 
       <button class="btn-submit" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')">Prendre un rendez-vous &#8594;</button>
       <p style="font-size:12px;color:var(--charcoal-30);margin-top:-8px;margin-bottom:12px;text-align:center">Vous serez redirig&#233; vers le calendrier de Yannick.</p>
