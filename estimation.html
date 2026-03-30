@@ -185,22 +185,22 @@ body{padding-top:60px}
       <div class="form-section-title">Votre bien</div>
       <div class="form-field">
         <label class="f-label" for="adresse">Adresse compl&#232;te</label>
-        <input class="f-input" id="adresse" name="adresse" type="text" placeholder="11 rue de la Roquette, Paris 11e">
+        <input class="f-input" id="adresse" name="adresse" type="text" placeholder="11 rue de la Roquette, Paris 11e" required>
       </div>
       <div class="form-row">
         <div>
           <label class="f-label" for="surface">Surface</label>
-          <input class="f-input" id="surface" name="surface" type="text" placeholder="65 m&#178;">
+          <input class="f-input" id="surface" name="surface" type="number" placeholder="65" required>
         </div>
         <div>
           <label class="f-label" for="pieces">Nombre de pi&#232;ces</label>
-          <input class="f-input" id="pieces" name="pieces" type="text" placeholder="3">
+          <input class="f-input" id="pieces" name="pieces" type="number" placeholder="3" required>
         </div>
       </div>
       <div class="form-row">
         <div>
           <label class="f-label" for="type_bien">Type de bien</label>
-          <select class="f-select" id="type_bien" name="type_bien">
+          <select class="f-select" id="type_bien" name="type_bien" required>
             <option value="" disabled selected>Choisir...</option>
             <option>Appartement</option>
             <option>Maison</option>
@@ -209,15 +209,21 @@ body{padding-top:60px}
             <option>Autre</option>
           </select>
         </div>
-        <div>
-          <label class="f-label" for="etage">&#201;tage</label>
-          <input class="f-input" id="etage" name="etage" type="text" placeholder="3e / RDC / Maison">
+        <div class="form-row">
+          <div>
+            <label class="f-label" for="etage">Étage du bien <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:10px">(optionnel)</span></label>
+            <input class="f-input" id="etage" name="etage" type="number" placeholder="3" min="0">
+          </div>
+          <div>
+            <label class="f-label" for="etage-total">Nb total d’étages <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:10px">(optionnel)</span></label>
+            <input class="f-input" id="etage-total" name="etage-total" type="number" placeholder="10" min="1">
+          </div>
         </div>
       </div>
       <div class="form-field">
         <label class="f-label">&#201;tat g&#233;n&#233;ral</label>
         <div class="f-radios">
-          <label class="f-radio"><input type="radio" name="etat"> Tr&#232;s bon &#233;tat</label>
+          <label class="f-radio"><input type="radio" name="etat" required> Tr&#232;s bon &#233;tat</label>
           <label class="f-radio"><input type="radio" name="etat"> Bon &#233;tat</label>
           <label class="f-radio"><input type="radio" name="etat"> Travaux &#224; pr&#233;voir</label>
           <label class="f-radio"><input type="radio" name="etat"> Travaux importants</label>
@@ -229,7 +235,7 @@ body{padding-top:60px}
 
       <div class="form-field">
         <label class="f-label" for="situation">Votre situation</label>
-        <select class="f-select" id="situation" name="situation">
+        <select class="f-select" id="situation" name="situation" required>
           <option value="" disabled selected>Choisir...</option>
           <option>Je souhaite vendre rapidement</option>
           <option>Je r&#233;fl&#233;chis &#224; vendre</option>
@@ -251,11 +257,11 @@ body{padding-top:60px}
       <div class="form-row">
         <div>
           <label class="f-label" for="prenom">Pr&#233;nom</label>
-          <input class="f-input" id="prenom" name="prenom" type="text" placeholder="Pr&#233;nom">
+          <input class="f-input" id="prenom" name="prenom" type="text" placeholder="Pr&#233;nom" required>
         </div>
         <div>
           <label class="f-label" for="nom">Nom</label>
-          <input class="f-input" id="nom" name="nom" type="text" placeholder="Nom">
+          <input class="f-input" id="nom" name="nom" type="text" placeholder="Nom" required>
         </div>
       </div>
       <div class="form-row">
@@ -265,7 +271,7 @@ body{padding-top:60px}
         </div>
         <div>
           <label class="f-label" for="tel">T&#233;l&#233;phone</label>
-          <input class="f-input" id="tel" name="tel" type="tel" placeholder="06 XX XX XX XX">
+          <input class="f-input" id="tel" name="tel" type="tel" placeholder="06 XX XX XX XX" required>
         </div>
       </div>
 
