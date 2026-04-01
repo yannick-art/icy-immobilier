@@ -14,10 +14,7 @@
     });
 
     var rGroups = {};
-    form.querySelectorAll('input[type="radio"][required]').forEach(function(r){
-      if(!rGroups[r.name]) rGroups[r.name] = [];
-      rGroups[r.name].push(r);
-    });
+    ['etat'].forEach(function(n){ var radios=Array.from(form.querySelectorAll('input[type="radio"][name="'+n+'"]'));if(radios.length) rGroups[n]=radios; })
     Object.keys(rGroups).forEach(function(n){
       var checked = rGroups[n].some(function(r){ return r.checked; });
       if(!checked){
