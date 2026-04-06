@@ -35,13 +35,10 @@
       if(key) data[key] = el.value;
     });
 
-    var params = new URLSearchParams();
-    Object.keys(data).forEach(function(k){ params.append(k, data[k]); });
-
     fetch('https://hook.eu1.make.com/jkvmdjx6wzez9aespn8jnl1ax48t9nu4', {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: params.toString()
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     }).catch(function(e){ console.error('Webhook error:', e); });
 
     alert('Merci ! Votre demande a bien ete envoyee. Reponse sous 24h.');
