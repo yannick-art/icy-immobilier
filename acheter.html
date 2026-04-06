@@ -31,8 +31,8 @@ nav{height:64px;display:flex;align-items:center;justify-content:space-between;pa
 .nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
 .nav-center a:hover,.nav-center a.active{color:var(--beige)}
 .nav-center a.active{font-weight:600}
-.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
-.nav-cta:hover{color:var(--caramel-light)}
+.nav-cta{font-size:13px;color:var(--beige);font-weight:500;cursor:pointer;transition:all 0.15s;text-decoration:none;padding:8px 16px;border:1.5px solid rgba(238,232,211,0.22);border-radius:var(--pill)}
+.nav-cta:hover{border-color:rgba(238,232,211,0.55);background:rgba(238,232,211,0.06)}
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
 .nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
@@ -174,16 +174,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav>
   <a class="nav-logo" href="index.html">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
-      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
-      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-header.svg" alt="ICY Immobilier" style="height:36px">
   </a>
   <div class="nav-center">
     <a href="vendre.html">Vendre</a>
     <a href="acheter.html" class="active">Acheter</a>
     <a href="methode.html">Notre méthode</a>
     <a href="honoraires.html">Honoraires</a>
+    <a href="nos-biens.html">Nos biens</a>
   </div>
   <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
   <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
@@ -195,6 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="acheter.html">Acheter</a>
   <a href="methode.html">Notre méthode</a>
   <a href="honoraires.html">Honoraires</a>
+  <a href="nos-biens.html">Nos biens</a>
   <a href="estimation.html">Estimer mon bien</a>
 </div>
 
@@ -202,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
     <div class="eyebrow"><span class="eyebrow-dot"></span>Acheter avec ICY</div>
     <h1>Achetez mieux.<br><span class="h1-accent">Sans perdre de temps.</span></h1>
-    <p class="hero-sub">Trop d'annonces, pas assez d'informations, des visites inutiles. <strong>ICY change ça</strong> — les bons outils pour chercher, analyser et trouver le bon bien. Autonome ou accompagné.</p>
+    <p class="hero-sub">Trop d'annonces, pas assez d'informations, des visites inutiles. <strong>ICY change ça</strong> &mdash; les bons outils pour chercher, analyser et trouver le bon bien. Autonome ou accompagné.</p>
     <div class="ctas">
       <button class="btn-fill" onclick="document.getElementById('offres').scrollIntoView({behavior:'smooth'})">Voir les offres &#8594;</button>
       <button class="btn-ghost" onclick="window.location='/estimation'">Estimer un bien</button>
@@ -232,19 +231,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="step">
       <div class="step-num">01</div>
       <div class="step-title">Définir votre projet</div>
-      <div class="step-desc">ICY vous aide à cadrer votre recherche — budget réel, secteurs prioritaires, critères non négociables. Une base solide avant de chercher.</div>
+      <div class="step-desc">ICY vous aide à cadrer votre recherche &mdash; budget réel, secteurs prioritaires, critères non négociables. Une base solide avant de chercher.</div>
       <div class="step-tag"><span class="step-tag-dot"></span>Inclus dans toutes les offres</div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-title">Analyser les annonces</div>
-      <div class="step-desc">L'assistant ICY décrypte les annonces pour vous — prix au m&#178;, points de vigilance, estimation de travaux, comparaison marché. Vous visitez uniquement ce qui vaut le déplacement.</div>
+      <div class="step-desc">L'assistant ICY décrypte les annonces pour vous &mdash; prix au m&#178;, points de vigilance, estimation de travaux, comparaison marché. Vous visitez uniquement ce qui vaut le déplacement.</div>
       <div class="step-tag"><span class="step-tag-dot"></span>ICY Radar &amp; Connect</div>
     </div>
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-title">Accéder au réseau</div>
-      <div class="step-desc">Biens hors marché, mandats partenaires, chasseurs actifs — ICY vous donne accès à des opportunités avant qu'elles soient diffusées publiquement.</div>
+      <div class="step-desc">Biens hors marché, mandats partenaires, chasseurs actifs &mdash; ICY vous donne accès à des opportunités avant qu'elles soient diffusées publiquement.</div>
       <div class="step-tag"><span class="step-tag-dot"></span>À partir d'ICY Connect</div>
     </div>
     <div class="step">
@@ -271,7 +270,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="offre-tagline offre-tagline-dark">Vous cherchez. ICY vous donne les bons outils pour ne pas perdre de temps.</div>
         <div class="offre-prix-wrap offre-prix-wrap-dark">
           <div class="offre-prix offre-prix-dark">490 &#8364; TTC </div>
-          <span class="offre-duree">Forfait fixe · 2 mois</span>
+          <span class="offre-duree">Forfait fixe &middot; 2 mois</span>
         </div>
         <div class="offre-inclus">
           <div class="offre-inclus-item offre-inclus-item-dark"><span class="offre-check-dark"></span>Analyse d'annonces par l'assistant IA</div>
@@ -294,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="offre-tagline offre-tagline-dark">Le réseau ICY pour trouver mieux. Vous visitez, ICY négocie.</div>
           <div class="offre-prix-wrap offre-prix-wrap-dark">
             <div class="offre-prix offre-prix-dark">1 490 &#8364; TTC </div>
-            <span class="offre-duree">+ 10% de la baisse obtenue · Au succès</span>
+            <span class="offre-duree">+ 10% de la baisse obtenue &middot; Au succès</span>
           </div>
           <div class="offre-inclus">
             <div class="offre-inclus-item offre-inclus-item-dark"><span class="offre-check-dark"></span>Accès aux biens hors marché ICY</div>
@@ -315,7 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="offre-tagline offre-tagline-light">ICY trouve, visite et négocie. Vous validez quand c'est le bon bien.</div>
         <div class="offre-prix-wrap offre-prix-wrap-light">
           <div class="offre-prix offre-prix-light">Au succès</div>
-          <span class="offre-duree">Grille standard · Honoraires à l'achat</span>
+          <span class="offre-duree">Grille standard &middot; Honoraires à l'achat</span>
         </div>
         <div class="offre-inclus">
           <div class="offre-inclus-item offre-inclus-item-light"><span class="offre-check-light"></span>Recherche active menée par ICY</div>
@@ -327,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
   </div>
-  <div class="deduct"><strong>Règle ICY</strong> — Les 490 &#8364; ICY Radar sont intégralement déduits si vous passez à ICY Connect ou ICY Chasse.</div>
+  <div class="deduct"><strong>Règle ICY</strong> &mdash; Les 490 &#8364; ICY Radar sont intégralement déduits si vous passez à ICY Connect ou ICY Chasse.</div>
 </section>
 
 <section class="faq-section">
@@ -340,7 +339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="faq-q-text">Quelle est la différence entre ICY Radar et un chasseur classique ?</span>
         <span class="faq-arrow">+</span>
       </div>
-      <div class="faq-answer">ICY Radar vous donne les outils pour chercher efficacement en autonomie — analyse d'annonces, prix marché, assistant 24/7. Un chasseur classique cherche à votre place mais facture des honoraires élevés. ICY Chasse combine les deux : la puissance du réseau ICY avec un chasseur dédié.</div>
+      <div class="faq-answer">ICY Radar vous donne les outils pour chercher efficacement en autonomie &mdash; analyse d'annonces, prix marché, assistant 24/7. Un chasseur classique cherche à votre place mais facture des honoraires élevés. ICY Chasse combine les deux : la puissance du réseau ICY avec un chasseur dédié.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)">
@@ -375,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="faq-q-text">Qu'est-ce qu'un bien hors marché chez ICY ?</span>
         <span class="faq-arrow">+</span>
       </div>
-      <div class="faq-answer">Ce sont des biens qui ne sont pas encore (ou pas du tout) diffusés sur les portails publics. Ils circulent dans le réseau ICY — agences partenaires, propriétaires qui souhaitent vendre discrètement, mandats en cours de signature. Accessibles uniquement via ICY Connect et ICY Chasse.</div>
+      <div class="faq-answer">Ce sont des biens qui ne sont pas encore (ou pas du tout) diffusés sur les portails publics. Ils circulent dans le réseau ICY &mdash; agences partenaires, propriétaires qui souhaitent vendre discrètement, mandats en cours de signature. Accessibles uniquement via ICY Connect et ICY Chasse.</div>
     </div>
   </div>
 </section>
@@ -392,18 +391,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="footer-top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
-      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
-      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-footer.svg" alt="ICY Immobilier" style="height:28px;flex-shrink:0">
     <div class="footer-nav">
       <a href="index.html">Accueil</a>
       <a href="vendre.html">Vendre</a>
       <a href="acheter.html">Acheter</a>
       <a href="methode.html">Notre méthode</a>
       <a href="honoraires.html">Honoraires</a>
+      <a href="nos-biens.html">Nos biens</a>
       <a href="contact.html">Contact</a>
       <a href="mentions-legales.html">Mentions légales</a>
+      <a href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
     <div class="footer-email"><a href="/cdn-cgi/l/email-protection#7d1e1213091c1e093d141e0450141010121f141114180f531b0f" style="color:inherit;text-decoration:none"><span class="__cf_email__" data-cfemail="dcbfb3b2a8bdbfa89cb5bfa5f1b5b1b1b3beb5b0b5b9aef2baae">[email&#160;protected]</span></a></div>
   </div>

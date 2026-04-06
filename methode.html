@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notre méthode — ICY Immobilier</title>
+<title>Notre méthode &mdash; ICY Immobilier</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.cdnfonts.com/css/clash-display');
@@ -33,8 +33,8 @@ nav{height:64px;display:flex;align-items:center;justify-content:space-between;pa
 .nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
 .nav-center a:hover,.nav-center a.active{color:var(--beige)}
 .nav-center a.active{font-weight:600}
-.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
-.nav-cta:hover{color:var(--caramel-light)}
+.nav-cta{font-size:13px;color:var(--beige);font-weight:500;cursor:pointer;transition:all 0.15s;text-decoration:none;padding:8px 16px;border:1.5px solid rgba(238,232,211,0.22);border-radius:var(--pill)}
+.nav-cta:hover{border-color:rgba(238,232,211,0.55);background:rgba(238,232,211,0.06)}
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
 .nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
@@ -66,7 +66,7 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 .s-title{font-family:'Clash Display',sans-serif;font-size:40px;font-weight:600;color:var(--pine);margin-bottom:12px;letter-spacing:-0.025em;line-height:1.1}
 .s-intro{font-size:15px;color:var(--charcoal-60);font-weight:400;margin-bottom:52px}
 
-/* EXPÉRIENCE — 6 étapes */
+/* EXPÉRIENCE &mdash; 6 étapes */
 .experience-section{padding:88px 52px;background:var(--beige)}
 .experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .exp-card{background:var(--white);padding:40px 36px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:16px;transition:box-shadow 0.2s,transform 0.2s}
@@ -88,7 +88,7 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 .schema-section .s-title{color:var(--beige)}
 .schema-section .s-intro{color:rgba(238,232,211,0.48);margin-bottom:40px}
 .schema-wrap{background:rgba(255,255,255,0.04);border-radius:var(--r-lg);border:1px solid rgba(238,232,211,0.09);padding:48px 40px;overflow-x:auto}
-/* Contenu textuel pour LLM — invisible visuellement */
+/* Contenu textuel pour LLM &mdash; invisible visuellement */
 .schema-text-llm{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 
 /* CHIFFRES MARCHÉ */
@@ -192,16 +192,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav>
   <a class="nav-logo" href="index.html">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
-      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
-      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-header.svg" alt="ICY Immobilier" style="height:36px">
   </a>
   <div class="nav-center">
     <a href="vendre.html">Vendre</a>
     <a href="acheter.html">Acheter</a>
     <a href="methode.html" class="active">Notre m&#233;thode</a>
     <a href="honoraires.html">Honoraires</a>
+    <a href="nos-biens.html">Nos biens</a>
   </div>
   <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
   <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
@@ -213,6 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="acheter.html">Acheter</a>
   <a href="methode.html">Notre m&#233;thode</a>
   <a href="honoraires.html">Honoraires</a>
+  <a href="nos-biens.html">Nos biens</a>
   <a href="estimation.html">Estimer mon bien</a>
 </div>
 
@@ -222,17 +221,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="eyebrow"><span class="eyebrow-dot"></span>Comment ICY travaille</div>
       <h1>Moins de stress.<br><span class="h1-accent">Plus de r&#233;sultats.</span></h1>
-      <p class="hero-intro">Vendre ou acheter un bien immobilier est l'une des d&#233;cisions les plus importantes de votre vie. ICY est l&#224; pour que vous n'ayez pas &#224; g&#233;rer ce que vous ne devriez pas avoir &#224; g&#233;rer — <strong>et pour que vous gardiez le contr&#244;le sur le reste.</strong></p>
+      <p class="hero-intro">Vendre ou acheter un bien immobilier est l'une des d&#233;cisions les plus importantes de votre vie. ICY est l&#224; pour que vous n'ayez pas &#224; g&#233;rer ce que vous ne devriez pas avoir &#224; g&#233;rer &mdash; <strong>et pour que vous gardiez le contr&#244;le sur le reste.</strong></p>
       <button class="btn-fill" onclick="window.location='/estimation'">Estimer mon bien gratuitement &#8594;</button>
     </div>
     <div class="hero-right">
       <div class="hero-reassurance">
         <div class="hero-reassurance-title">Vous n'avez pas &#224; tout comprendre</div>
-        <div class="hero-reassurance-desc">ICY s'occupe des parties complexes — les annonces, les relances, les diagnostics, la n&#233;gociation. Vous restez inform&#233; &#224; chaque &#233;tape, sans &#234;tre submerg&#233;.</div>
+        <div class="hero-reassurance-desc">ICY s'occupe des parties complexes &mdash; les annonces, les relances, les diagnostics, la n&#233;gociation. Vous restez inform&#233; &#224; chaque &#233;tape, sans &#234;tre submerg&#233;.</div>
       </div>
       <div class="hero-reassurance">
         <div class="hero-reassurance-title">Vous choisissez votre niveau d'implication</div>
-        <div class="hero-reassurance-desc">Certains veulent tout g&#233;rer eux-m&#234;mes. D'autres pr&#233;f&#232;rent tout d&#233;l&#233;guer. ICY s'adapte &#224; vous — pas l'inverse.</div>
+        <div class="hero-reassurance-desc">Certains veulent tout g&#233;rer eux-m&#234;mes. D'autres pr&#233;f&#232;rent tout d&#233;l&#233;guer. ICY s'adapte &#224; vous &mdash; pas l'inverse.</div>
       </div>
       <div class="hero-reassurance">
         <div class="hero-reassurance-title">Vous payez ce que vous utilisez</div>
@@ -246,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="experience-section">
   <div class="s-eyebrow"><span class="s-dot"></span>Votre exp&#233;rience</div>
   <div class="s-title">Ce que vous vivez avec ICY</div>
-  <p class="s-intro">Du premier contact &#224; la signature — ce que chaque &#233;tape change pour vous concr&#232;tement.</p>
+  <p class="s-intro">Du premier contact &#224; la signature &mdash; ce que chaque &#233;tape change pour vous concr&#232;tement.</p>
   <div class="experience-grid">
     <div class="exp-card">
       <div class="exp-step">&#201;tape 1</div>
@@ -263,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 3</div>
       <div class="exp-title">Votre bien vu par les bonnes personnes, pas par tout le monde</div>
-      <div class="exp-desc">En plus des portails, votre bien circule dans le r&#233;seau ICY — agences partenaires, chasseurs actifs, acheteurs qualifi&#233;s en recherche active. Des contacts s&#233;rieux, pas des curieux.</div>
+      <div class="exp-desc">En plus des portails, votre bien circule dans le r&#233;seau ICY &mdash; agences partenaires, chasseurs actifs, acheteurs qualifi&#233;s en recherche active. Des contacts s&#233;rieux, pas des curieux.</div>
       <span class="exp-you">R&#233;seau actif d&#232;s 48h</span>
     </div>
     <div class="exp-card">
@@ -281,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="exp-card">
       <div class="exp-step">&#201;tape 6</div>
       <div class="exp-title">Z&#233;ro stress administratif jusqu'&#224; la signature</div>
-      <div class="exp-desc">Dossier ALUR, r&#233;troplanning, coordination notaire — ICY suit les &#233;ch&#233;ances et vous alerte en amont. Vous signez quand tout est en ordre.</div>
+      <div class="exp-desc">Dossier ALUR, r&#233;troplanning, coordination notaire &mdash; ICY suit les &#233;ch&#233;ances et vous alerte en amont. Vous signez quand tout est en ordre.</div>
       <span class="exp-you">Z&#233;ro relance &#224; faire</span>
     </div>
   </div>
@@ -421,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="chiffre-card">
       <div class="chiffre-n">72%</div>
-      <div class="chiffre-label">Des ventes PAP n'aboutissent pas. La plupart finissent par passer par un professionnel — plus tard et au prix fort.</div>
+      <div class="chiffre-label">Des ventes PAP n'aboutissent pas. La plupart finissent par passer par un professionnel &mdash; plus tard et au prix fort.</div>
       <div class="chiffre-source">Source : MeilleursAgents / Paris Dauphine / IFOP</div>
     </div>
     <div class="chiffre-card">
@@ -443,28 +442,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="question-q-text">Est-ce que l'IA remplace l'humain chez ICY ?</span>
         <span class="question-arrow">+</span>
       </div>
-      <div class="question-a">Non. L'IA g&#232;re les t&#226;ches r&#233;p&#233;titives — les relances, les r&#233;ponses aux demandes entrantes, les dossiers administratifs. Les d&#233;cisions importantes, la n&#233;gociation, et les moments cl&#233;s de votre transaction restent entre les mains de Yannick. L'IA lib&#232;re du temps pour que l'humain soit plus disponible pour vous.</div>
+      <div class="question-a">Non. L'IA g&#232;re les t&#226;ches r&#233;p&#233;titives &mdash; les relances, les r&#233;ponses aux demandes entrantes, les dossiers administratifs. Les d&#233;cisions importantes, la n&#233;gociation, et les moments cl&#233;s de votre transaction restent entre les mains de Yannick. L'IA lib&#232;re du temps pour que l'humain soit plus disponible pour vous.</div>
     </div>
     <div class="question-item">
       <div class="question-q" onclick="toggleQuestion(this)">
         <span class="question-q-text">Comment ICY est-il r&#233;mun&#233;r&#233; ?</span>
         <span class="question-arrow">+</span>
       </div>
-      <div class="question-a">Selon l'offre choisie. ICY Direct et ICY Radar sont des forfaits fixes — vous payez une fois, quelle que soit l'issue. ICY Connect et ICY Signature (vente), ICY Connect achat et ICY Chasse sont r&#233;mun&#233;r&#233;s uniquement &#224; la transaction — aucun honoraire si la vente ou l'achat n'aboutit pas, au-del&#224; du forfait de base. Le montant des honoraires est communiqu&#233; clairement avant toute signature.</div>
+      <div class="question-a">Selon l'offre choisie. ICY Direct et ICY Radar sont des forfaits fixes &mdash; vous payez une fois, quelle que soit l'issue. ICY Connect et ICY Signature (vente), ICY Connect achat et ICY Chasse sont r&#233;mun&#233;r&#233;s uniquement &#224; la transaction &mdash; aucun honoraire si la vente ou l'achat n'aboutit pas, au-del&#224; du forfait de base. Le montant des honoraires est communiqu&#233; clairement avant toute signature.</div>
     </div>
     <div class="question-item">
       <div class="question-q" onclick="toggleQuestion(this)">
         <span class="question-q-text">Quelle est la diff&#233;rence avec une agence classique ?</span>
         <span class="question-arrow">+</span>
       </div>
-      <div class="question-a">Une agence classique propose un seul mod&#232;le — elle prend tout en charge et facture entre 3 et 5% sur la vente. ICY propose plusieurs niveaux selon votre implication. Vous ne payez que ce que vous utilisez vraiment, avec des tarifs annonc&#233;s d&#232;s le d&#233;part.</div>
+      <div class="question-a">Une agence classique propose un seul mod&#232;le &mdash; elle prend tout en charge et facture entre 3 et 5% sur la vente. ICY propose plusieurs niveaux selon votre implication. Vous ne payez que ce que vous utilisez vraiment, avec des tarifs annonc&#233;s d&#232;s le d&#233;part.</div>
     </div>
     <div class="question-item">
       <div class="question-q" onclick="toggleQuestion(this)">
         <span class="question-q-text">Comment ICY s'adapte si la situation &#233;volue ?</span>
         <span class="question-arrow">+</span>
       </div>
-      <div class="question-a">ICY ne disparaît pas. On analyse ensemble — le prix, la pr&#233;sentation, la strat&#233;gie — et on ajuste. Si vous avez commenc&#233; avec ICY Direct, vous pouvez &#233;voluer vers ICY Connect ou ICY Signature avec les 990 &#8364; d&#233;j&#224; d&#233;duits. Vous ne payez jamais deux fois.</div>
+      <div class="question-a">ICY ne disparaît pas. On analyse ensemble &mdash; le prix, la pr&#233;sentation, la strat&#233;gie &mdash; et on ajuste. Si vous avez commenc&#233; avec ICY Direct, vous pouvez &#233;voluer vers ICY Connect ou ICY Signature avec les 990 &#8364; d&#233;j&#224; d&#233;duits. Vous ne payez jamais deux fois.</div>
     </div>
   </div>
 </section>
@@ -475,12 +474,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="s-eyebrow"><span class="s-dot"></span>Qui est derri&#232;re ICY</div>
       <div class="s-title">Une agence fond&#233;e par un agent qui en a vu les limites</div>
-      <p style="font-size:15px;color:var(--charcoal-60);line-height:1.85;font-weight:300;margin-top:16px">Avant ICY, des ann&#233;es de transactions immobili&#232;res &#224; Paris chez Prello et Fredelion. Cette exp&#233;rience terrain a rendu &#233;vident ce qui manquait — la transparence des offres, l'acc&#232;s au r&#233;seau, et les outils qui font vraiment gagner du temps. ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets.</p>
+      <p style="font-size:15px;color:var(--charcoal-60);line-height:1.85;font-weight:300;margin-top:16px">Avant ICY, des ann&#233;es de transactions immobili&#232;res &#224; Paris chez Prello et Fredelion. Cette exp&#233;rience terrain a rendu &#233;vident ce qui manquait &mdash; la transparence des offres, l'acc&#232;s au r&#233;seau, et les outils qui font vraiment gagner du temps. ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets.</p>
     </div>
     <div class="fondateur-quote">
       <div class="fondateur-quote-text">"Connecter les bonnes personnes aux bonnes opportunit&#233;s."</div>
-      <div class="fondateur-quote-body">L'acc&#232;s au r&#233;seau, la lisibilit&#233; des honoraires, les outils de l'IA — ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets. Sans supprimer l'agent. En le rendant meilleur.</div>
-      <div class="fondateur-quote-sig">Yannick Iradukunda — Fondateur, ICY Immobilier</div>
+      <div class="fondateur-quote-body">L'acc&#232;s au r&#233;seau, la lisibilit&#233; des honoraires, les outils de l'IA &mdash; ICY est n&#233; pour rendre accessible ce qui &#233;tait r&#233;serv&#233; aux plus grands cabinets. Sans supprimer l'agent. En le rendant meilleur.</div>
+      <div class="fondateur-quote-sig">Yannick Iradukunda &mdash; Fondateur, ICY Immobilier</div>
     </div>
   </div>
 </section>
@@ -489,7 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-section">
   <div class="s-eyebrow" style="justify-content:center"><span class="s-dot"></span>Maintenant que vous savez</div>
   <h2>Passons &#224; votre projet</h2>
-  <p>Commencez par une estimation gratuite — ou explorez les offres pour trouver celle qui correspond &#224; votre situation.</p>
+  <p>Commencez par une estimation gratuite &mdash; ou explorez les offres pour trouver celle qui correspond &#224; votre situation.</p>
   <div class="ctas">
     <button class="btn-fill" onclick="window.location='/estimation'">Estimer mon bien gratuitement &#8594;</button>
     <button class="btn-ghost" style="color:var(--charcoal-60);border-color:var(--charcoal-08)" onclick="window.location='/vendre'">Voir les offres vente</button>
@@ -498,18 +497,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="footer-top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
-      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
-      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-footer.svg" alt="ICY Immobilier" style="height:28px;flex-shrink:0">
     <div class="footer-nav">
       <a href="index.html">Accueil</a>
       <a href="vendre.html">Vendre</a>
       <a href="acheter.html">Acheter</a>
       <a href="methode.html">Notre m&#233;thode</a>
       <a href="honoraires.html">Honoraires</a>
+      <a href="nos-biens.html">Nos biens</a>
       <a href="contact.html">Contact</a>
       <a href="mentions-legales.html">Mentions l&#233;gales</a>
+      <a href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
     <div class="footer-email"><a href="/cdn-cgi/l/email-protection#74171b1a00151700341d170d591d19191b161d181d11065a1206" style="color:inherit;text-decoration:none"><span class="__cf_email__" data-cfemail="2b4844455f4a485f6b4248520642464644494247424e59054d59">[email&#160;protected]</span></a></div>
   </div>

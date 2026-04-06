@@ -30,8 +30,8 @@ nav{height:64px;display:flex;align-items:center;justify-content:space-between;pa
 .nav-center{display:flex;gap:32px}
 .nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
 .nav-center a:hover{color:var(--beige)}
-.nav-cta{font-size:13px;color:var(--caramel);font-weight:500;cursor:pointer;transition:color 0.15s;text-decoration:none}
-.nav-cta:hover{color:var(--caramel-light)}
+.nav-cta{font-size:13px;color:var(--beige);font-weight:500;cursor:pointer;transition:all 0.15s;text-decoration:none;padding:8px 16px;border:1.5px solid rgba(238,232,211,0.22);border-radius:var(--pill)}
+.nav-cta:hover{border-color:rgba(238,232,211,0.55);background:rgba(238,232,211,0.06)}
 .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
 .nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
@@ -157,16 +157,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav>
   <a class="nav-logo" href="index.html">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="36">
-      <text x="0" y="28" font-family="'Clash Display', sans-serif" font-size="30" font-weight="600" fill="#EEE8D3" letter-spacing="-1">ICY</text>
-      <text x="1" y="40" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.42)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-header.svg" alt="ICY Immobilier" style="height:36px">
   </a>
   <div class="nav-center">
     <a href="vendre.html">Vendre</a>
     <a href="acheter.html">Acheter</a>
     <a href="methode.html">Notre méthode</a>
     <a href="honoraires.html">Honoraires</a>
+    <a href="nos-biens.html">Nos biens</a>
   </div>
   <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
   <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
@@ -178,6 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="acheter.html">Acheter</a>
   <a href="methode.html">Notre méthode</a>
   <a href="honoraires.html">Honoraires</a>
+  <a href="nos-biens.html">Nos biens</a>
   <a href="estimation.html">Estimer mon bien</a>
 </div>
 
@@ -185,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-left">
     <div class="eyebrow"><span class="eyebrow-dot"></span>Paris &amp; toute la France</div>
     <h1>Le bon bien, le bon acheteur.<span class="h1-sub">Au bon moment.</span></h1>
-    <p class="hero-sub"><strong>Le réseau qu'il faut</strong> pour être vu des bons acheteurs. Un expert dans votre poche, disponible à toute heure. Autonome ou accompagné — c'est vous qui choisissez.</p>
+    <p class="hero-sub"><strong>Le réseau qu'il faut</strong> pour être vu des bons acheteurs. Un expert dans votre poche, disponible à toute heure. Autonome ou accompagné &mdash; c'est vous qui choisissez.</p>
     <div class="ctas">
       <button class="btn-fill" onclick="window.location='/vendre'">Je vends mon bien →</button>
       <button class="btn-ghost" onclick="window.location='/acheter'">Je cherche un bien</button>
@@ -204,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="chiffre"><div class="chiffre-n">6,5M€</div><div class="chiffre-l">de transactions réalisées avant ICY</div></div>
   <div class="chiffre"><div class="chiffre-n">48h</div><div class="chiffre-l">votre bien activé dans le réseau</div></div>
   <div class="chiffre"><div class="chiffre-n">24/7</div><div class="chiffre-l">votre assistant répond, même le dimanche</div></div>
-  <div class="chiffre"><div class="chiffre-n">990 € TTC</div><div class="chiffre-l">pour vendre en autonomie, tout inclus</div></div>
+  <div class="chiffre"><div class="chiffre-n">990&nbsp;€ TTC</div><div class="chiffre-l">pour vendre en autonomie, tout inclus</div></div>
 </div>
 
 <section class="section">
@@ -212,9 +211,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="s-title">Quatre raisons de faire différemment</div>
   <p class="s-intro">Pas un discours. Des bénéfices concrets, dès le premier jour.</p>
   <div class="benefits">
-    <div class="benefit"><div class="benefit-num">01</div><div class="benefit-title">Votre bien vu par les bons acheteurs</div><div class="benefit-desc">Dès la mise en ligne, votre bien circule dans le réseau ICY — agences partenaires, chasseurs actifs, acheteurs qualifiés. Quelle que soit l'offre choisie.</div></div>
+    <div class="benefit"><div class="benefit-num">01</div><div class="benefit-title">Votre bien vu par les bons acheteurs</div><div class="benefit-desc">Dès la mise en ligne, votre bien circule dans le réseau ICY &mdash; agences partenaires, chasseurs actifs, acheteurs qualifiés. Quelle que soit l'offre choisie.</div></div>
     <div class="benefit"><div class="benefit-num">02</div><div class="benefit-title">Un expert disponible quand vous en avez besoin</div><div class="benefit-desc">Votre assistant ICY connaît votre dossier et répond à vos questions à toute heure. Plus besoin d'attendre un rappel pour avancer.</div></div>
-    <div class="benefit"><div class="benefit-num">03</div><div class="benefit-title">Vous choisissez votre niveau d'implication</div><div class="benefit-desc">Vous gérez vos visites en autonomie ou vous déléguez tout à ICY. L'offre s'adapte à vous — pas l'inverse.</div></div>
+    <div class="benefit"><div class="benefit-num">03</div><div class="benefit-title">Vous choisissez votre niveau d'implication</div><div class="benefit-desc">Vous gérez vos visites en autonomie ou vous déléguez tout à ICY. L'offre s'adapte à vous &mdash; pas l'inverse.</div></div>
     <div class="benefit"><div class="benefit-num">04</div><div class="benefit-title">Vous payez ce que vous utilisez</div><div class="benefit-desc">Pas de commission sur une vente que vous avez gérée vous-même. Des offres claires, des tarifs justes, une règle simple.</div></div>
   </div>
 </section>
@@ -229,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="offre-title">Vous gérez,<br>ICY vous prépare</div>
       <div class="offre-desc">De l'estimation à la diffusion, on vous accompagne pour mettre votre bien en valeur et le positionner au bon prix. Vous gérez ensuite vos visites en autonomie. Assistant ICY disponible 24/7.</div>
       <div class="offre-footer">
-        <div><span class="offre-prix">990 € TTC</span><span class="offre-duree">Forfait · 6 mois</span></div>
+        <div><span class="offre-prix">990 € TTC</span><span class="offre-duree">Forfait &middot; 6 mois</span></div>
         <button class="btn-offre" onclick="window.location='/icy-direct'">Je commence →</button>
       </div>
     </div>
@@ -238,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="offre-title">Cherchez mieux,<br>perdez moins de temps</div>
       <div class="offre-desc">Les outils pour analyser les annonces, décrypter les prix et qualifier les biens avant de vous déplacer. Un assistant ICY disponible 24/7 pour vous guider à chaque étape.</div>
       <div class="offre-footer">
-        <div><span class="offre-prix">490 € TTC</span><span class="offre-duree">Forfait · 2 mois</span></div>
+        <div><span class="offre-prix">490 € TTC</span><span class="offre-duree">Forfait &middot; 2 mois</span></div>
         <button class="btn-offre" onclick="window.location='/icy-radar'">Je commence →</button>
       </div>
     </div>
@@ -247,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="offre-link" onclick="window.location='/vendre'"><span class="offre-link-text">Vous préférez être accompagné ? <strong>ICY Connect &amp; ICY Signature</strong></span><span class="offre-link-arr">→</span></div>
     <div class="offre-link" onclick="window.location='/acheter'"><span class="offre-link-text">Vous voulez aller plus loin ? <strong>ICY Connect &amp; ICY Chasse</strong></span><span class="offre-link-arr">→</span></div>
   </div>
-  <div class="deduct"><strong>Règle ICY</strong> — Les 990 € et 490 € sont intégralement déduits si vous évoluez vers une offre supérieure.</div>
+  <div class="deduct"><strong>Règle ICY</strong> &mdash; Les 990 € et 490 € sont intégralement déduits si vous évoluez vers une offre supérieure.</div>
 </section>
 
 <section class="estimation-section">
@@ -298,28 +297,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="s-title">Suivez l'activité de l'agence</div>
     <p class="s-intro" style="margin-bottom:0">Marché, conseils, transactions : l'expertise ICY en temps réel.</p>
     <div class="social-links">
-      <div class="social-link"><div><div class="social-link-name">@ICY_IMMOBILIER</div><div class="social-link-desc">Marché, conseils et biens en cours sur Instagram</div></div><span class="social-link-arr">↗</span></div>
+      <a href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener noreferrer" class="social-link"><div><div class="social-link-name">@ICY_IMMOBILIER</div><div class="social-link-desc">Marché, conseils et biens en cours sur Instagram</div></div><span class="social-link-arr">↗</span></div>
       <div class="social-link"><div><div class="social-link-name">Yannick Iradukunda</div><div class="social-link-desc">6,5M€ de transactions avant ICY</div></div><span class="social-link-arr">↗</span></div>
     </div>
   </div>
   <div class="social-card">
     <div class="social-card-quote">"Connecter les bonnes personnes aux bonnes opportunités."</div>
-    <p class="social-card-body">ICY Immobilier a été fondée par Yannick Iradukunda, fort de 6,5M€ de transactions immobilières. Cette expérience terrain, combinée à l'IA et au réseau inter-agences, est au cœur de chaque offre ICY — de Paris 11e à toute la France.</p>
+    <p class="social-card-body">ICY Immobilier a été fondée par Yannick Iradukunda, fort de 6,5M€ de transactions immobilières. Cette expérience terrain, combinée à l'IA et au réseau inter-agences, est au cœur de chaque offre ICY &mdash; de Paris 11e à toute la France.</p>
   </div>
 </section>
 
 <footer>
   <div class="footer-top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 42" height="32" style="overflow:visible;flex-shrink:0">
-      <text x="0" y="27" font-family="'Clash Display', sans-serif" font-size="28" font-weight="600" fill="rgba(238,232,211,0.45)" letter-spacing="-1">ICY</text>
-      <text x="1" y="39" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" fill="rgba(238,232,211,0.2)" letter-spacing="3.5">IMMOBILIER</text>
-    </svg>
+    <img src="/icy-immobilier-logo-footer.svg" alt="ICY Immobilier" style="height:28px;flex-shrink:0">
     <div class="footer-nav">
       <a href="index.html">Accueil</a>
       <a href="vendre.html">Vendre</a>
       <a href="acheter.html">Acheter</a>
       <a href="methode.html">Notre méthode</a>
       <a href="honoraires.html">Honoraires</a>
+      <a href="nos-biens.html">Nos biens</a>
       <a href="contact.html">Contact</a>
       <a href="mentions-legales.html">Mentions légales</a>
     </div>

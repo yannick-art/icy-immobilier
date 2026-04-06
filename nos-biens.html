@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-KKR6XMGH");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos biens &#8212; ICY Immobilier</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pine:#2B5141;--pine-dark:#1e3a2e;--pine-mid:#3a6b56;
+  --pine-10:rgba(43,81,65,0.08);--pine-20:rgba(43,81,65,0.16);
+  --caramel:#C46210;--caramel-light:#d4751e;
+  --beige:#EEE8D3;--beige-mid:#e5ddc6;--beige-dark:#d9d0b4;
+  --charcoal:#3E403A;--charcoal-60:#6b6d66;--charcoal-30:#a8a9a4;
+  --charcoal-08:rgba(62,64,58,0.08);
+  --white:#fff;--pill:100px;--r-lg:16px;--r-md:10px;--r-sm:8px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--charcoal);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+nav{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:var(--pine);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(238,232,211,0.07)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0;text-decoration:none}
+.nav-center{display:flex;gap:32px}
+.nav-center a{font-size:13px;color:rgba(238,232,211,0.55);cursor:pointer;transition:color 0.15s;font-weight:400;letter-spacing:0.02em;text-decoration:none}
+.nav-center a:hover,.nav-center a.active{color:var(--beige)}
+.nav-center a.active{font-weight:600}
+.nav-cta{font-size:13px;color:var(--beige);font-weight:500;cursor:pointer;transition:all 0.15s;text-decoration:none;padding:8px 16px;border:1.5px solid rgba(238,232,211,0.22);border-radius:var(--pill)}
+.nav-cta:hover{border-color:rgba(238,232,211,0.55);background:rgba(238,232,211,0.06)}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:22px;height:2px;background:rgba(238,232,211,0.7);border-radius:2px}
+.nav-mobile{display:none;flex-direction:column;background:var(--pine-dark);padding:24px 24px 32px;gap:0;border-top:1px solid rgba(238,232,211,0.07)}
+.nav-mobile a{font-size:15px;color:rgba(238,232,211,0.65);padding:14px 0;border-bottom:1px solid rgba(238,232,211,0.06);text-decoration:none;font-weight:400}
+.nav-mobile a:last-child{border-bottom:none;color:var(--caramel);margin-top:8px;font-weight:500}
+.nav-mobile.open{display:flex}
+/* Hero */
+.hero-biens{background:var(--pine);padding:80px 52px;border-bottom:2px solid var(--caramel)}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(238,232,211,0.4);font-weight:600;margin-bottom:28px}
+.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-height:1.06;color:var(--beige);margin-bottom:12px;letter-spacing:-0.025em}
+.hero-sub{font-size:16px;color:rgba(238,232,211,0.55);line-height:1.8;font-weight:300;max-width:580px}
+/* Section biens */
+.biens-section{padding:80px 52px;background:var(--white)}
+.s-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
+.s-dot{width:5px;height:5px;border-radius:50%;background:var(--caramel);flex-shrink:0}
+.s-title{font-family:'Clash Display',sans-serif;font-size:36px;font-weight:600;color:var(--pine);margin-bottom:44px;letter-spacing:-0.025em}
+/* Card bien */
+.bien-card{display:flex;gap:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--charcoal-08);background:var(--white);transition:box-shadow 0.2s,transform 0.2s;text-decoration:none;color:inherit}
+.bien-card:hover{box-shadow:0 8px 48px rgba(43,81,65,0.1);transform:translateY(-2px)}
+.card-photo-wrap{width:320px;flex-shrink:0;position:relative;overflow:hidden;min-height:280px}
+.card-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s}
+.bien-card:hover .card-photo{transform:scale(1.03)}
+.badge-vendre{position:absolute;top:16px;left:16px;background:var(--caramel);color:var(--white);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:var(--pill)}
+.badge-photos{position:absolute;bottom:16px;right:16px;background:rgba(43,81,65,0.82);color:var(--beige);font-size:10px;font-weight:600;padding:5px 10px;border-radius:var(--pill);backdrop-filter:blur(4px)}
+.card-body{padding:40px 44px;flex:1;display:flex;flex-direction:column;gap:14px}
+.card-ref{font-size:10px;font-weight:700;color:var(--caramel);letter-spacing:0.2em;text-transform:uppercase}
+.card-titre{font-family:'Clash Display',sans-serif;font-size:28px;font-weight:600;color:var(--pine);line-height:1.2;letter-spacing:-0.015em}
+.card-subtitle{font-size:14px;color:var(--charcoal-60);font-style:italic;font-weight:300;line-height:1.6}
+.card-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.tag{font-size:11px;font-weight:500;padding:5px 12px;border-radius:var(--pill);background:var(--beige);color:var(--charcoal-60);border:1px solid var(--beige-dark)}
+.tag-fill{background:var(--caramel);color:var(--white);border-color:var(--caramel)}
+.card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:20px;border-top:1px solid var(--charcoal-08)}
+.card-prix{font-family:'Clash Display',sans-serif;font-size:28px;font-weight:600;color:var(--caramel);letter-spacing:-0.02em}
+.btn-voir{display:inline-block;padding:13px 28px;font-size:13px;font-weight:600;letter-spacing:0.03em;background:var(--pine);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;text-decoration:none;font-family:'DM Sans',sans-serif}
+.btn-voir:hover{background:var(--pine-mid);transform:translateY(-1px)}
+/* Section conversion */
+.conv-section{padding:80px 52px;background:var(--beige)}
+.conv-section-header{margin-bottom:44px}
+.conv-section-eyebrow{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:14px}
+.conv-section-title{font-family:'Clash Display',sans-serif;font-size:36px;font-weight:600;color:var(--pine);letter-spacing:-0.025em}
+.conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.conv-card{background:var(--white);padding:48px 44px;border-radius:var(--r-lg);border:1px solid var(--charcoal-08);display:flex;flex-direction:column;gap:20px}
+.conv-label{font-size:10px;font-weight:700;color:var(--caramel);letter-spacing:0.2em;text-transform:uppercase}
+.conv-titre{font-family:'Clash Display',sans-serif;font-size:24px;font-weight:600;color:var(--pine);line-height:1.25;letter-spacing:-0.015em}
+.conv-text{font-size:14px;color:var(--charcoal-60);line-height:1.8;font-weight:300;flex:1}
+.conv-prix-tag{display:inline-flex;align-items:center;gap:6px;background:var(--beige);border:1px solid var(--beige-dark);border-radius:var(--pill);padding:8px 18px;font-size:13px;color:var(--charcoal-60);font-weight:400;width:fit-content}
+.conv-prix-tag strong{color:var(--pine);font-weight:700;font-family:'Clash Display',sans-serif;font-size:16px}
+.conv-ctas{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.btn-conv-fill{padding:15px;font-size:13px;font-weight:600;letter-spacing:0.03em;background:var(--caramel);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;text-decoration:none;font-family:'DM Sans',sans-serif;text-align:center;display:block}
+.btn-conv-fill:hover{background:var(--caramel-light);transform:translateY(-1px)}
+.btn-conv-outline{padding:14px;font-size:13px;font-weight:400;background:transparent;color:var(--pine);border:1.5px solid var(--pine);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;text-decoration:none;font-family:'DM Sans',sans-serif;text-align:center;display:block}
+.btn-conv-outline:hover{background:var(--pine);color:var(--white)}
+/* Instagram band */
+.insta-band{background:var(--pine);padding:52px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.insta-band-text h3{font-family:'Clash Display',sans-serif;font-size:24px;font-weight:600;color:var(--beige);line-height:1.3;letter-spacing:-0.015em}
+.insta-band-text p{font-size:14px;color:rgba(238,232,211,0.5);font-weight:300;margin-top:8px;line-height:1.6}
+.btn-insta{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;font-size:13px;font-weight:600;letter-spacing:0.03em;background:transparent;color:var(--beige);border:1.5px solid rgba(238,232,211,0.22);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;text-decoration:none;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif}
+.btn-insta:hover{border-color:rgba(238,232,211,0.55);background:rgba(238,232,211,0.05)}
+/* Footer */
+footer{background:var(--charcoal);padding:44px 52px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:24px}
+.footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.footer-nav a{font-size:12px;color:rgba(238,232,211,0.28);letter-spacing:0.04em;cursor:pointer;transition:color 0.15s;font-weight:400;text-decoration:none}
+.footer-nav a:hover{color:rgba(238,232,211,0.68)}
+.footer-email{font-size:12px;color:rgba(238,232,211,0.22);font-weight:400;white-space:nowrap}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(238,232,211,0.07);gap:16px}
+.footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
+.footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
+/* Responsive */
+@media(max-width:1024px){nav{padding:0 32px}.hero-biens{padding:72px 32px}.biens-section,.conv-section{padding:72px 32px}.insta-band{padding:44px 32px}footer{padding:36px 32px}}
+@media(max-width:768px){
+nav{padding:0 20px;height:60px;position:fixed;top:0;left:0;right:0;z-index:200}
+body{padding-top:60px}
+.nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
+.nav-center,.nav-cta{display:none}
+.nav-burger{display:flex}
+.hero-biens{padding:52px 20px}
+h1{font-size:34px}
+.biens-section,.conv-section{padding:56px 20px}
+.bien-card{flex-direction:column}
+.card-photo-wrap{width:100%;height:220px}
+.card-body{padding:28px 24px}
+.conv-grid{grid-template-columns:1fr}
+.insta-band{padding:40px 20px;flex-direction:column;text-align:center}
+footer{padding:32px 20px}
+.footer-top{flex-direction:column;align-items:flex-start;gap:20px}
+.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media(max-width:480px){h1{font-size:28px}.card-titre{font-size:22px}.conv-titre{font-size:20px}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKR6XMGH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="/icy-immobilier-logo-header.svg" alt="ICY Immobilier" style="height:36px">
+  </a>
+  <div class="nav-center">
+    <a href="vendre.html">Vendre</a>
+    <a href="acheter.html">Acheter</a>
+    <a href="methode.html">Notre m&#233;thode</a>
+    <a href="honoraires.html">Honoraires</a>
+    <a href="nos-biens.html" class="active" aria-current="page">Nos biens</a>
+  </div>
+  <a class="nav-cta" href="estimation.html">Estimer mon bien</a>
+  <div class="nav-burger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="vendre.html">Vendre</a>
+  <a href="acheter.html">Acheter</a>
+  <a href="methode.html">Notre m&#233;thode</a>
+  <a href="honoraires.html">Honoraires</a>
+  <a href="nos-biens.html">Nos biens</a>
+  <a href="estimation.html">Estimer mon bien</a>
+</div>
+
+<!-- Hero -->
+<section class="hero-biens">
+  <div class="eyebrow"><span class="eyebrow-dot"></span>Biens s&#233;lectionn&#233;s</div>
+  <h1>Les biens s&#233;lectionn&#233;s<br>par ICY et ses partenaires.</h1>
+  <p class="hero-sub">Chaque bien affich&#233; ici a &#233;t&#233; expertis&#233; avant d&#8217;&#234;tre mis en march&#233;. Prix, &#233;tat, documents. Vous visitez, vous d&#233;cidez.</p>
+</section>
+
+<!-- Biens en vente -->
+<section class="biens-section">
+  <div class="s-eyebrow"><span class="s-dot"></span>1 bien disponible</div>
+  <div class="s-title">En vente actuellement</div>
+
+  <a href="/biens/saint-maur-paris-11.html" class="bien-card">
+    <div class="card-photo-wrap">
+      <img src="/images/biens/v001/381A1612-HDR.jpg" alt="108 rue Saint-Maur, Paris 11e &#8212; Oberkampf, c&#244;t&#233; cour" class="card-photo" loading="lazy">
+      <span class="badge-vendre">&#192; vendre</span>
+      <span class="badge-photos">9 photos</span>
+    </div>
+    <div class="card-body">
+      <span class="card-ref">V001</span>
+      <div class="card-titre">Oberkampf, c&#244;t&#233; cour</div>
+      <div class="card-subtitle">La lumi&#232;re du matin. Le bruit de la ville qui reste dehors.</div>
+      <div class="card-tags">
+        <span class="tag tag-fill">&#192; vendre</span>
+        <span class="tag">Exposition sud-est</span>
+        <span class="tag">Cour int&#233;rieure</span>
+        <span class="tag">Sans vis-&#224;-vis</span>
+        <span class="tag">Gardien</span>
+        <span class="tag">&#192; r&#233;nover</span>
+      </div>
+      <div class="card-bottom">
+        <div class="card-prix">510&#160;000&#160;&#8364;</div>
+        <span class="btn-voir">Voir la fiche &#8594;</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<!-- Conversion -->
+<section class="conv-section">
+  <div class="conv-section-header">
+    <div class="conv-section-eyebrow"><span class="s-dot"></span>Nos offres</div>
+    <div class="conv-section-title">Vendeur ou acheteur, ICY travaille pour vous.</div>
+  </div>
+  <div class="conv-grid">
+
+    <div class="conv-card">
+      <div class="conv-label">Vous vendez</div>
+      <div class="conv-titre">Votre bien m&#233;rite mieux qu&#8217;une annonce de plus.</div>
+      <p class="conv-text">Estimation argument&#233;e, r&#233;daction d&#8217;annonce, diffusion r&#233;seau en 48h, qualification des acheteurs. ICY Direct est con&#231;u pour vendre vite et bien, sans commission au succ&#232;s.</p>
+      <div class="conv-prix-tag"><strong>990&#160;&#8364;</strong>&nbsp;TTC &mdash; 6 mois</div>
+      <div class="conv-ctas">
+        <a href="/icy-direct.html" class="btn-conv-fill">D&#233;couvrir ICY Direct</a>
+        <a href="/estimation.html" class="btn-conv-outline">Estimer mon bien</a>
+      </div>
+    </div>
+
+    <div class="conv-card">
+      <div class="conv-label">Vous achetez</div>
+      <div class="conv-titre">Arr&#234;tez de perdre des heures sur les portails.</div>
+      <p class="conv-text">ICY Radar analyse les annonces &#224; votre place&#160;: prix r&#233;el, points de vigilance, potentiel de n&#233;gociation. Vous recevez un verdict clair avant chaque visite.</p>
+      <div class="conv-prix-tag"><strong>490&#160;&#8364;</strong>&nbsp;TTC &mdash; 2 mois</div>
+      <div class="conv-ctas">
+        <a href="/icy-radar.html" class="btn-conv-fill">D&#233;couvrir ICY Radar</a>
+        <a href="/methode.html" class="btn-conv-outline">Notre m&#233;thode</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="insta-band">
+  <div class="insta-band-text">
+    <h3>ICY sur le terrain</h3>
+    <p>March&#233;, conseils et biens en cours sur Instagram.</p>
+  </div>
+  <a href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener noreferrer" class="btn-insta">Suivre @ICY_IMMOBILIER &#8594;</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <img src="/icy-immobilier-logo-footer.svg" alt="ICY Immobilier" style="height:28px;flex-shrink:0">
+    <div class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="vendre.html">Vendre</a>
+      <a href="acheter.html">Acheter</a>
+      <a href="methode.html">Notre m&#233;thode</a>
+      <a href="honoraires.html">Honoraires</a>
+      <a href="nos-biens.html">Nos biens</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions l&#233;gales</a>
+    </div>
+    <div class="footer-email"><a href="mailto:yannick@icy-immobilier.fr" style="color:inherit;text-decoration:none">yannick@icy-immobilier.fr</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
+    <div class="footer-carte">Carte professionnelle &#8212; Meilleurs Biens Immobilier</div>
+  </div>
+</footer>
+
+</body>
+</html>
