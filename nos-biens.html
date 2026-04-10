@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Découvrez les biens disponibles à la vente avec ICY Immobilier. Paris 11e, Oberkampf et Île-de-France. Fiches complètes, photos HDR, prix transparents.">
+<meta name="description" content="Découvrez les biens disponibles à la vente et à la location avec ICY Immobilier. Paris 11e, Paris 13e et Île-de-France. Fiches complètes, photos HDR, prix transparents.">
 <link rel="canonical" href="https://icy-immobilier.fr/nos-biens">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ICY Immobilier">
@@ -68,7 +68,9 @@ h1{font-family:'Clash Display',sans-serif;font-size:48px;font-weight:600;line-he
 .card-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s}
 .bien-card:hover .card-photo{transform:scale(1.03)}
 .badge-vendre{position:absolute;top:16px;left:16px;background:var(--caramel);color:var(--white);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:var(--pill)}
+.badge-louer{position:absolute;top:16px;left:16px;background:var(--pine-mid);color:var(--white);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:var(--pill)}
 .badge-photos{position:absolute;bottom:16px;right:16px;background:rgba(43,81,65,0.82);color:var(--beige);font-size:10px;font-weight:600;padding:5px 10px;border-radius:var(--pill);backdrop-filter:blur(4px)}
+.tag-louer{background:var(--pine-mid);color:var(--white);border-color:var(--pine-mid)}
 .card-body{padding:40px 44px;flex:1;display:flex;flex-direction:column;gap:14px}
 .card-ref{font-size:10px;font-weight:700;color:var(--caramel);letter-spacing:0.2em;text-transform:uppercase}
 .card-titre{font-family:'Clash Display',sans-serif;font-size:28px;font-weight:600;color:var(--pine);line-height:1.2;letter-spacing:-0.015em}
@@ -176,7 +178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Biens en vente -->
 <section class="biens-section">
-  <div class="s-eyebrow"><span class="s-dot"></span>1 bien disponible</div>
+  <div class="s-eyebrow"><span class="s-dot"></span>2 biens disponibles</div>
   <div class="s-title">En vente actuellement</div>
 
   <a href="/biens/saint-maur-paris-11.html" class="bien-card">
@@ -199,6 +201,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="card-bottom">
         <div class="card-prix">510&#160;000&#160;&#8364;</div>
+        <span class="btn-voir">Voir la fiche &#8594;</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<!-- Biens en location -->
+<section class="biens-section" style="background:var(--beige);border-top:1px solid var(--beige-dark)">
+  <div class="s-eyebrow"><span class="s-dot"></span>Location</div>
+  <div class="s-title">En location actuellement</div>
+
+  <a href="/biens/cantagrel-paris-13.html" class="bien-card">
+    <div class="card-photo-wrap">
+      <img src="/images/biens/l001/IMG_20260326_114245.jpg" alt="42 rue Cantagrel, Paris 13e &#8212; Cantagrel, cl&#233; en main" class="card-photo" loading="lazy">
+      <span class="badge-louer">&#192; louer</span>
+      <span class="badge-photos">7 photos</span>
+    </div>
+    <div class="card-body">
+      <span class="card-ref">L001</span>
+      <div class="card-titre">Cantagrel, cl&#233; en main</div>
+      <div class="card-subtitle">Posez vos affaires. Tout est d&#233;j&#224; l&#224;.</div>
+      <div class="card-tags">
+        <span class="tag tag-louer">&#192; louer</span>
+        <span class="tag">Meubl&#233;</span>
+        <span class="tag">R&#233;nov&#233;</span>
+        <span class="tag">Cuisine &#233;quip&#233;e</span>
+        <span class="tag">Bureau int&#233;gr&#233;</span>
+        <span class="tag">Disponible</span>
+      </div>
+      <div class="card-bottom">
+        <div class="card-prix">1&#160;700&#160;&#8364;<span style="font-size:14px;font-weight:400;color:var(--charcoal-60)">/mois</span></div>
         <span class="btn-voir">Voir la fiche &#8594;</span>
       </div>
     </div>
