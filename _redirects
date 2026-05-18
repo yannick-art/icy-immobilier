@@ -1,3 +1,17 @@
+/index.html    /    301
+/icy-direct.html    /icy-direct    301
+/icy-radar.html     /icy-radar     301
+/vendre.html        /vendre        301
+/acheter.html       /acheter       301
+/methode.html       /methode       301
+/estimation.html    /estimation    301
+/honoraires.html    /honoraires    301
+/nos-biens.html     /nos-biens     301
+/contact.html       /contact       301
+/mentions-legales.html  /mentions-legales  301
+/biens/saint-maur-paris-11.html  /biens/saint-maur-paris-11  301
+/biens/cantagrel-paris-13.html  /biens/cantagrel-paris-13  301
+
 /icy-direct    /icy-direct.html    200
 /icy-radar     /icy-radar.html     200
 /vendre        /vendre.html        200
@@ -5,5 +19,8 @@
 /methode       /methode.html       200
 /estimation    /estimation.html    200
 /honoraires    /honoraires.html    200
+/nos-biens     /nos-biens.html     200
 /contact       /contact.html       200
 /mentions-legales  /mentions-legales.html  200
+/biens/saint-maur-paris-11  /biens/saint-maur-paris-11.html  200
+/biens/cantagrel-paris-13  /biens/cantagrel-paris-13.html  200
