@@ -280,27 +280,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="form-card" id="form-estimation">
       <div class="form-row">
-        <div><div class="f-label">Prénom</div><input class="f-input" type="text" placeholder="Pr&#233;nom"></div>
-        <div><div class="f-label">Email</div><input class="f-input" type="email" placeholder="vous@email.fr"></div>
+        <div><label class="f-label" for="prenom">Prénom</label><input class="f-input" id="prenom" name="prenom" type="text" placeholder="Pr&#233;nom" required></div>
+        <div><label class="f-label" for="email">Email</label><input class="f-input" id="email" name="email" type="email" placeholder="vous@email.fr" required></div>
       </div>
-      <div style="margin-bottom:12px"><div class="f-label">Adresse du bien</div><input class="f-input" type="text" placeholder="11 rue de la Roquette, Paris 11e"></div>
+      <div style="margin-bottom:12px"><label class="f-label" for="adresse">Adresse du bien</label><input class="f-input" id="adresse" name="adresse" type="text" placeholder="11 rue de la Roquette, Paris 11e" required></div>
       <div class="form-row">
-        <div><div class="f-label">Surface</div><input class="f-input" type="text" placeholder="65 m²"></div>
-        <div><div class="f-label">Pièces</div><input class="f-input" type="text" placeholder="3"></div>
+        <div><label class="f-label" for="surface">Surface</label><input class="f-input" id="surface" name="surface" type="number" placeholder="65" required></div>
+        <div><label class="f-label" for="pieces">Pièces</label><input class="f-input" id="pieces" name="pieces" type="number" placeholder="3" required></div>
       </div>
-      <div style="margin-bottom:12px"><div class="f-label">Votre situation</div>
-        <select class="f-select"><option value="" disabled selected>Choisir...</option><option>Je souhaite vendre rapidement</option><option>Je réfléchis à vendre</option><option>Je veux conna&#238;tre la valeur de mon bien</option>
+      <div style="margin-bottom:12px"><label class="f-label" for="situation">Votre situation</label>
+        <select class="f-select" id="situation" name="situation" required><option value="" disabled selected>Choisir...</option><option>Je souhaite vendre rapidement</option><option>Je réfléchis à vendre</option><option>Je veux conna&#238;tre la valeur de mon bien</option>
               <option>Autre</option></select>
       </div>
       <div class="f-label">Disponibilité pour les visites</div>
       <div class="f-radios">
-        <label class="f-radio"><input type="radio" name="visites"> Je suis disponible</label>
-        <label class="f-radio"><input type="radio" name="visites"> Je préfère déléguer</label>
+        <label class="f-radio"><input type="radio" name="visites" value="Je suis disponible"> Je suis disponible</label>
+        <label class="f-radio"><input type="radio" name="visites" value="Je préfère déléguer"> Je préfère déléguer</label>
       </div>
       <div class="f-label">Connaissance du prix</div>
       <div class="f-radios">
-        <label class="f-radio"><input type="radio" name="prix"> J'ai une idée du prix</label>
-        <label class="f-radio"><input type="radio" name="prix"> Je pars de zéro</label>
+        <label class="f-radio"><input type="radio" name="prix" value="J'ai une idée du prix"> J'ai une idée du prix</label>
+        <label class="f-radio"><input type="radio" name="prix" value="Je pars de zéro"> Je pars de zéro</label>
       </div>
       <button class="btn-submit" onclick="envoyerFormulaire('form-estimation')">Recevoir mon estimation →</button>
       <p class="f-rgpd">Données utilisées uniquement pour votre estimation. Aucun démarchage.</p>
@@ -337,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="contact.html">Contact</a>
       <a href="mentions-legales.html">Mentions légales</a>
     </div>
-    <div class="footer-email"><a href="/cdn-cgi/l/email-protection#9af9f5f4eefbf9eedaf3f9e3b7f3f7f7f5f8f3f6f3ffe8b4fce8" style="color:inherit;text-decoration:none"><span class="__cf_email__" data-cfemail="4625292832272532062f253f6b2f2b2b29242f2a2f2334682034">[email&#160;protected]</span></a></div>
+    <div class="footer-email"><a href="mailto:contact@icy-immobilier.fr" style="color:inherit;text-decoration:none">contact@icy-immobilier.fr</a></div>
   </div>
    <div class="footer-bottom">
     <div class="footer-baseline">Connecter les bonnes personnes aux bonnes opportunit&#233;s.</div>
