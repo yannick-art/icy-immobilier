@@ -62,14 +62,13 @@ h1{font-family:'Clash Display',sans-serif;font-size:42px;font-weight:600;line-he
 .btn-fill:hover{background:var(--caramel-light);transform:translateY(-1px)}
 .btn-ghost{padding:14px 30px;font-size:14px;font-weight:400;background:transparent;color:rgba(238,232,211,0.75);border:1.5px solid rgba(238,232,211,0.18);cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif}
 .btn-ghost:hover{border-color:rgba(238,232,211,0.45);background:rgba(238,232,211,0.05)}
-.hero-right{background:var(--pine-dark);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;overflow:hidden;min-height:320px}
+.hero-right{background:var(--pine-dark);display:flex;align-items:center;justify-content:center;transition:background 0.2s;overflow:hidden;min-height:320px;padding:48px 32px}
 .hero-right:hover{background:#162b22}
-.video-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;padding:48px;text-align:center}
-.play-ring{width:76px;height:76px;border-radius:50%;border:1.5px solid rgba(238,232,211,0.22);display:flex;align-items:center;justify-content:center;transition:all 0.2s}
-.hero-right:hover .play-ring{border-color:rgba(238,232,211,0.55);transform:scale(1.05)}
-.play-tri{width:0;height:0;margin-left:5px;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:22px solid rgba(238,232,211,0.65)}
-.video-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(238,232,211,0.28);font-weight:600}
-.video-desc{font-size:15px;color:rgba(238,232,211,0.5);font-weight:300}
+.video-wrap{width:min(320px,78%);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.video-frame{position:relative;width:100%;aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:#111;box-shadow:0 28px 70px rgba(0,0,0,0.28);border:1px solid rgba(238,232,211,0.12)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(238,232,211,0.38);font-weight:600}
+.video-desc{font-size:15px;color:rgba(238,232,211,0.58);font-weight:300}
 .chiffres{background:var(--caramel);display:grid;grid-template-columns:repeat(4,1fr)}
 .chiffre{padding:36px 32px;border-right:1px solid rgba(255,255,255,0.12)}
 .chiffre:last-child{border-right:none}
@@ -150,7 +149,7 @@ footer{background:var(--charcoal);padding:44px 52px}
 .footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
 .footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
 @media(max-width:1024px){nav{padding:0 32px}.hero-left{padding:60px 40px}h1{font-size:36px}.h1-sub{font-size:32px}.section{padding:72px 32px}.offres-section{padding:72px 32px}.estimation-section{padding:72px 32px}.social-section{padding:72px 32px;gap:48px}footer{padding:36px 32px}.est-inner{gap:48px}}
-@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center{display:none}.nav-cta{display:none}.nav-burger{display:flex}.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:52px 24px}h1{font-size:34px}.h1-sub{font-size:30px}.hero-sub{font-size:15px;margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.hero-right{min-height:240px}.chiffres{grid-template-columns:1fr 1fr}.chiffre{padding:24px 20px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.12)}.chiffre:nth-child(odd){border-right:1px solid rgba(255,255,255,0.12)}.chiffre:last-child,.chiffre:nth-last-child(2):nth-child(odd){border-bottom:none}.chiffre-n{font-size:30px}.section{padding:56px 20px}.s-title{font-size:32px}.benefits{grid-template-columns:1fr}.offres-section{padding:56px 20px}.offres-grid{grid-template-columns:1fr}.offres-links{grid-template-columns:1fr}.offre-footer{flex-direction:column;align-items:flex-start;gap:20px}.btn-offre{width:100%;text-align:center;padding:14px}.estimation-section{padding:56px 20px}.est-inner{grid-template-columns:1fr;gap:40px}.form-card{padding:28px 24px}.form-row{grid-template-columns:1fr}.f-radios{grid-template-columns:1fr}.social-section{padding:56px 20px;grid-template-columns:1fr;gap:40px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center{display:none}.nav-cta{display:none}.nav-burger{display:flex}.hero{grid-template-columns:1fr;min-height:auto}.hero-left{padding:52px 24px}h1{font-size:34px}.h1-sub{font-size:30px}.hero-sub{font-size:15px;margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.hero-right{min-height:auto;padding:36px 20px}.video-wrap{width:min(280px,100%)}.chiffres{grid-template-columns:1fr 1fr}.chiffre{padding:24px 20px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.12)}.chiffre:nth-child(odd){border-right:1px solid rgba(255,255,255,0.12)}.chiffre:last-child,.chiffre:nth-last-child(2):nth-child(odd){border-bottom:none}.chiffre-n{font-size:30px}.section{padding:56px 20px}.s-title{font-size:32px}.benefits{grid-template-columns:1fr}.offres-section{padding:56px 20px}.offres-grid{grid-template-columns:1fr}.offres-links{grid-template-columns:1fr}.offre-footer{flex-direction:column;align-items:flex-start;gap:20px}.btn-offre{width:100%;text-align:center;padding:14px}.estimation-section{padding:56px 20px}.est-inner{grid-template-columns:1fr;gap:40px}.form-card{padding:28px 24px}.form-row{grid-template-columns:1fr}.f-radios{grid-template-columns:1fr}.social-section{padding:56px 20px;grid-template-columns:1fr;gap:40px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
 @media(max-width:480px){h1{font-size:28px}.h1-sub{font-size:26px}.chiffres{grid-template-columns:1fr}.chiffre{border-right:none;border-bottom:1px solid rgba(255,255,255,0.12)}.chiffre:last-child{border-bottom:none}.s-title{font-size:28px}.benefit{padding:32px 24px}.offre-card{padding:32px 24px}.offre-title{font-size:22px}.offre-prix{font-size:30px}}
 
 @media(max-width:768px){
@@ -201,11 +200,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="btn-ghost" onclick="window.location='/acheter'">Je cherche un bien</button>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="video-wrap" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">
-      <div class="play-ring"><div class="play-tri"></div></div>
-      <div class="video-tag" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">Présentation en 2 minutes</div>
-      <div class="video-desc" onclick="window.open('https://calendly.com/yannick-icy-immobilier/rendez-telephonique-clone','_blank')" style="cursor:pointer">Yannick vous présente ICY</div>
+  <div class="hero-right" aria-label="Vidéo de présentation ICY Immobilier">
+    <div class="video-wrap">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/vNodLg3Dyc0?rel=0&modestbranding=1&playsinline=1"
+          title="Présentation ICY Immobilier par Yannick"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="video-tag">Présentation en 2 minutes</div>
+      <div class="video-desc">Yannick vous présente ICY</div>
     </div>
   </div>
 </section>
