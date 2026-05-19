@@ -1,5 +1,4 @@
-// ICY Immobilier — Form handler → ICY OS via Supabase RPC
-// Remplace le webhook Make par un appel direct à l'OS
+// ICY Immobilier - Form handler vers ICY OS via Supabase RPC
 
 const ICY_OS_CONFIG = {
   supabaseUrl: "https://kwuiivaqvkopcxfecway.supabase.co",
@@ -115,7 +114,7 @@ function envoyerFormulaire(formId) {
     });
 }
 
-// Fallback Make — si Supabase est indisponible, le lead part par email
+// Fallback Make - si Supabase est indisponible, le lead part par email.
 function fallbackMake(formData, source) {
   const sourceLabel = source === "estimation" ? "Site /estimation" : source === "contact" ? "Site /contact" : "Site /" + source;
   return fetch("https://hook.eu1.make.com/jkvmdjx6wzez9aespn8jnl1ax48t9nu4", {
@@ -128,7 +127,7 @@ function fallbackMake(formData, source) {
     })
     .catch((err2) => {
       console.error("Make fallback also failed:", err2);
-      alert("Erreur de connexion. Appelez-nous au 06 XX XX XX XX ou envoyez un email à contact@icy-immobilier.fr");
+      alert("Erreur de connexion. Envoyez-nous un email à contact@icy-immobilier.fr.");
     });
 }
 

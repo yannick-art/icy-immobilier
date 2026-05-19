@@ -10,9 +10,9 @@ Site statique de l'agence immobilière ICY Immobilier (Paris & Île-de-France).
 |---|---|
 | Pages | HTML/CSS/JS vanilla — pas de framework |
 | Déploiement | **Netlify** — push sur `main` → déploiement automatique |
-| Analytics | Google Tag Manager `GTM-KKR6XMGH` |
+| Analytics | Google Tag Manager `GTM-KKR6XMGH` via consentement cookies |
 | Polices | Clash Display (cdnfonts) + DM Sans (Google Fonts) |
-| Formulaires | `form.js` → webhook Make.com |
+| Formulaires | `form.js` → Supabase RPC `web_intake` / ICY OS |
 | En-têtes HTTP | `_headers` (CSP, HSTS, etc.) |
 | Redirections | `_redirects` (routes Netlify sans `.html`) |
 
