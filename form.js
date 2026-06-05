@@ -114,10 +114,10 @@ function envoyerFormulaire(formId) {
     });
 }
 
-// Fallback Make - si Supabase est indisponible, le lead part par email.
+// Fallback Make via proxy Netlify Function — URL Make masquée côté serveur
 function fallbackMake(formData, source) {
   const sourceLabel = source === "estimation" ? "Site /estimation" : source === "contact" ? "Site /contact" : "Site /" + source;
-  return fetch("https://hook.eu1.make.com/jkvmdjx6wzez9aespn8jnl1ax48t9nu4", {
+  return fetch("/.netlify/functions/form-fallback", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...formData, source: sourceLabel }),
@@ -134,14 +134,20 @@ function fallbackMake(formData, source) {
 function showConfirmation(form, prenom) {
   sessionStorage.setItem("icy_last_submit", String(Date.now()));
   if (form) {
-    form.innerHTML = `
-      <div style="text-align:center; padding: 2rem;">
-        <h3 style="color:#1a1a1a;">Merci ${prenom || ""} !</h3>
-        <p style="color:#555; margin-top:1rem;">
-          Votre demande a bien été envoyée.<br>
-          Nous vous répondons sous 24h.
-        </p>
-      </div>
-    `;
+    const wrapper = document.createElement("div");
+    wrapper.style.cssText = "text-align:center; padding: 2rem;";
+
+    const h3 = document.createElement("h3");
+    h3.style.color = "#1a1a1a";
+    h3.textContent = "Merci " + (prenom || "") + " !";
+
+    const p = document.createElement("p");
+    p.style.cssText = "color:#555; margin-top:1rem;";
+    p.innerHTML = "Votre demande a bien &#233;t&#233; envoy&#233;e.<br>Nous vous r&#233;pondons sous 24h.";
+
+    wrapper.appendChild(h3);
+    wrapper.appendChild(p);
+    form.innerHTML = "";
+    form.appendChild(wrapper);
   }
 }
