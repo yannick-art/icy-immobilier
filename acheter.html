@@ -160,7 +160,7 @@ footer{background:var(--charcoal);padding:44px 52px}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){nav{padding:0 32px}.hero-acheter{padding:72px 32px;gap:48px}h1{font-size:40px}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:72px 32px}footer{padding:36px 32px}}
-@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-acheter{grid-template-columns:1fr;padding:52px 20px;gap:40px}h1{font-size:34px}.hero-sub{margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.steps{grid-template-columns:1fr}.offres-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-acheter{grid-template-columns:1fr;padding:52px 20px;gap:40px}h1{font-size:34px}.hero-sub{margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.steps{grid-template-columns:1fr}.offres-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}.prevenir-section{padding:56px 20px}.form-row{grid-template-columns:1fr}}
 @media(max-width:480px){h1{font-size:28px}.hero-stat-n{font-size:26px;min-width:60px}.s-title{font-size:30px}.offre-prix{font-size:26px}.cta-section h2{font-size:26px}}
 
 @media(max-width:768px){
@@ -168,6 +168,29 @@ nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:200}
 body{padding-top:60px}
 .nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
 }
+/* ── ALERTE BIEN ── */
+.prevenir-section{background:var(--beige);padding:80px 52px;border-top:1px solid var(--beige-dark)}
+.prevenir-inner{max-width:600px;margin:0 auto;text-align:center}
+.prevenir-eyebrow{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:16px}
+.prevenir-title{font-family:'Clash Display',sans-serif;font-size:32px;font-weight:600;color:var(--pine);letter-spacing:-0.025em;margin-bottom:12px}
+.prevenir-sub{font-size:15px;color:var(--charcoal-60);line-height:1.75;font-weight:300;margin-bottom:40px}
+.prevenir-form{display:flex;flex-direction:column;gap:16px;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:11px;font-weight:700;color:var(--charcoal);letter-spacing:0.1em;text-transform:uppercase}
+.form-input{padding:13px 16px;border:1.5px solid var(--beige-dark);border-radius:var(--r-md);background:var(--white);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--charcoal);outline:none;transition:border-color 0.18s}
+.form-input:focus{border-color:var(--pine)}
+.form-input::placeholder{color:var(--charcoal-30)}
+.form-interet{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
+.interet-btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:9px 18px;border-radius:var(--pill);border:1.5px solid var(--beige-dark);background:var(--white);color:var(--charcoal-60);cursor:pointer;transition:all 0.18s}
+.interet-btn.selected{background:var(--pine);color:var(--beige);border-color:var(--pine)}
+.btn-prevenir{padding:15px;font-size:14px;font-weight:600;letter-spacing:0.03em;background:var(--caramel);color:var(--white);border:none;cursor:pointer;border-radius:var(--pill);transition:all 0.18s;font-family:'DM Sans',sans-serif;width:100%;margin-top:8px}
+.btn-prevenir:hover{background:var(--caramel-light);transform:translateY(-1px)}
+.btn-prevenir:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.form-success{display:none;padding:40px 32px;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--charcoal-08);text-align:center}
+.form-success.show{display:block}
+.success-title{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);margin-bottom:8px;letter-spacing:-0.015em}
+.success-sub{font-size:14px;color:var(--charcoal-60);line-height:1.75;font-weight:300}
 </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -389,6 +412,40 @@ body{padding-top:60px}
   </div>
 </section>
 
+<section class="prevenir-section">
+  <div class="prevenir-inner">
+    <div class="prevenir-eyebrow"><span class="eyebrow-dot"></span>Alerte bien</div>
+    <div class="prevenir-title">&#202;tre pr&#233;venu en premier.</div>
+    <p class="prevenir-sub">ICY s&#233;lectionne les biens avant de les publier. ICY vous avertit en avant-premi&#232;re, avant toute mise en ligne.</p>
+    <form class="prevenir-form" id="form-prevenir">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="f-prenom">Pr&#233;nom</label>
+          <input class="form-input" type="text" id="f-prenom" name="prenom" placeholder="Jean" autocomplete="given-name" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="f-email">Email</label>
+          <input class="form-input" type="email" id="f-email" name="email" placeholder="jean@exemple.fr" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <div class="form-label">Votre int&#233;r&#234;t</div>
+        <div class="form-interet">
+          <button type="button" class="interet-btn selected" data-val="achat" onclick="selectInteret(this)">Achat</button>
+          <button type="button" class="interet-btn" data-val="location" onclick="selectInteret(this)">Location</button>
+          <button type="button" class="interet-btn" data-val="les-deux" onclick="selectInteret(this)">Les deux</button>
+        </div>
+        <input type="hidden" id="f-interet" name="interet" value="achat">
+      </div>
+      <button type="submit" class="btn-prevenir" id="btn-submit">Me pr&#233;venir en premier &#8594;</button>
+    </form>
+    <div class="form-success" id="form-success">
+      <div class="success-title">Demande enregistr&#233;e.</div>
+      <p class="success-sub">Vous serez contact&#233; en avant-premi&#232;re d&#232;s qu&#8217;un bien ICY correspond &#224; votre recherche.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-top">
     <img src="/icy-immobilier-logo-footer.svg" alt="ICY Immobilier" style="height:28px;flex-shrink:0">
@@ -409,3 +466,28 @@ body{padding-top:60px}
     <a href="https://www.instagram.com/icy_immobilier/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:rgba(238,232,211,0.28);font-size:11px;text-decoration:none;letter-spacing:0.04em;transition:color 0.15s" aria-label="Instagram ICY Immobilier" onmouseover="this.style.color='rgba(238,232,211,0.68)'" onmouseout="this.style.color='rgba(238,232,211,0.28)'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@ICY_IMMOBILIER</a>
 
 <script src="faq.js"></script>
+<script>
+function selectInteret(btn) {
+  document.querySelectorAll('.interet-btn').forEach(function(b){b.classList.remove('selected')});
+  btn.classList.add('selected');
+  document.getElementById('f-interet').value = btn.dataset.val;
+}
+document.getElementById('form-prevenir').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var prenom = document.getElementById('f-prenom').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var interet = document.getElementById('f-interet').value;
+  if(!prenom || !email) return;
+  var btn = document.getElementById('btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'Envoi en cours…';
+  fetch('/api/leads/prevenir', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({prenom: prenom, email: email, interet: interet, source: 'acheter'})
+  }).catch(function(){}).finally(function(){
+    document.getElementById('form-prevenir').style.display = 'none';
+    document.getElementById('form-success').classList.add('show');
+  });
+});
+</script>
