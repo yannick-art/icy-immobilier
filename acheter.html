@@ -158,16 +158,6 @@ footer{background:var(--charcoal);padding:44px 52px}
 .footer-baseline{font-family:'Clash Display',sans-serif;font-size:13px;font-style:italic;font-weight:300;color:rgba(238,232,211,0.22)}
 .footer-carte{font-size:11px;color:rgba(238,232,211,0.16);letter-spacing:0.04em}
 
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){nav{padding:0 32px}.hero-acheter{padding:72px 32px;gap:48px}h1{font-size:40px}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:72px 32px}footer{padding:36px 32px}}
-@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-acheter{grid-template-columns:1fr;padding:52px 20px;gap:40px}h1{font-size:34px}.hero-sub{margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.steps{grid-template-columns:1fr}.offres-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}.prevenir-section{padding:56px 20px}.form-row{grid-template-columns:1fr}}
-@media(max-width:480px){h1{font-size:28px}.hero-stat-n{font-size:26px;min-width:60px}.s-title{font-size:30px}.offre-prix{font-size:26px}.cta-section h2{font-size:26px}}
-
-@media(max-width:768px){
-nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:200}
-body{padding-top:60px}
-.nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
-}
 /* ── ALERTE BIEN ── */
 .prevenir-section{background:var(--beige);padding:80px 52px;border-top:1px solid var(--beige-dark)}
 .prevenir-inner{max-width:600px;margin:0 auto;text-align:center}
@@ -191,6 +181,17 @@ body{padding-top:60px}
 .form-success.show{display:block}
 .success-title{font-family:'Clash Display',sans-serif;font-size:22px;font-weight:600;color:var(--pine);margin-bottom:8px;letter-spacing:-0.015em}
 .success-sub{font-size:14px;color:var(--charcoal-60);line-height:1.75;font-weight:300}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){nav{padding:0 32px}.hero-acheter{padding:72px 32px;gap:48px}h1{font-size:40px}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:72px 32px}footer{padding:36px 32px}}
+@media(max-width:768px){nav{padding:0 20px;height:60px}.nav-center,.nav-cta{display:none}.nav-burger{display:flex}.hero-acheter{grid-template-columns:1fr;padding:52px 20px;gap:40px}h1{font-size:34px}.hero-sub{margin:20px 0 36px}.ctas{flex-direction:column}.btn-fill,.btn-ghost{width:100%;text-align:center;padding:16px}.steps{grid-template-columns:1fr}.offres-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.steps-section,.section,.offres-section,.faq-section,.cta-section{padding:56px 20px}.cta-section h2{font-size:32px}footer{padding:32px 20px}.footer-top{flex-direction:column;align-items:flex-start;gap:20px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}.prevenir-section{padding:56px 20px}.form-row{grid-template-columns:1fr}}
+@media(max-width:480px){h1{font-size:28px}.hero-stat-n{font-size:26px;min-width:60px}.s-title{font-size:30px}.offre-prix{font-size:26px}.cta-section h2{font-size:26px}}
+
+@media(max-width:768px){
+nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:200}
+body{padding-top:60px}
+.nav-mobile{position:fixed;top:60px;left:0;right:0;z-index:199}
+}
 </style>
 <script src="/consent.js" defer></script>
 </head>
