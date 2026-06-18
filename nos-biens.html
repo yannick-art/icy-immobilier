@@ -441,6 +441,11 @@ footer{background:var(--charcoal);padding:44px 52px}
       </div>
 
       <div class="form-field">
+        <label class="form-label" for="f-telephone">T&#233;l&#233;phone</label>
+        <input class="form-input" type="tel" id="f-telephone" name="telephone" placeholder="06 12 34 56 78" autocomplete="tel" inputmode="tel" required>
+      </div>
+
+      <div class="form-field">
         <div class="form-label">Votre int&#233;r&#234;t</div>
         <div class="form-interet">
           <button type="button" class="interet-btn selected" data-val="achat" onclick="selectInteret(this)">Achat</button>
@@ -593,15 +598,16 @@ document.getElementById('form-prevenir').addEventListener('submit', function(e) 
   e.preventDefault();
   var prenom = document.getElementById('f-prenom').value.trim();
   var email = document.getElementById('f-email').value.trim();
+  var telephone = document.getElementById('f-telephone').value.trim();
   var interet = document.getElementById('f-interet').value;
-  if(!prenom || !email) return;
+  if(!prenom || !email || !telephone) return;
   var btn = document.getElementById('btn-submit');
   btn.disabled = true;
   btn.textContent = 'Envoi en cours…';
   fetch('/api/leads/prevenir', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({prenom: prenom, email: email, interet: interet, source: 'nos-biens'})
+    body: JSON.stringify({prenom: prenom, email: email, telephone: telephone, interet: interet, source: 'nos-biens'})
   }).catch(function(){}).finally(function(){
     document.getElementById('form-prevenir').style.display = 'none';
     document.getElementById('form-success').classList.add('show');
