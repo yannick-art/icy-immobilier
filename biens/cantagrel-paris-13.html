@@ -108,6 +108,7 @@ nav{height:64px;display:flex;align-items:center;justify-content:space-between;pa
 .galerie-secondary img{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;transition:transform 0.3s}
 .galerie-secondary img:hover{transform:scale(1.03)}
 .badge-louer-hero{position:absolute;top:20px;left:20px;background:var(--pine-mid);color:var(--white);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 14px;border-radius:var(--pill)}
+.badge-reseau-hero{position:absolute;top:20px;right:20px;background:rgba(43,81,65,0.9);color:var(--beige);font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 14px;border-radius:var(--pill);backdrop-filter:blur(4px)}
 .badge-compteur{position:absolute;bottom:20px;right:20px;background:rgba(43,81,65,0.88);color:var(--beige);font-size:11px;font-weight:600;padding:7px 14px;border-radius:var(--pill);backdrop-filter:blur(4px);cursor:pointer;transition:background 0.15s}
 .badge-compteur:hover{background:rgba(43,81,65,0.98)}
 /* Barre titre */
@@ -260,6 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="galerie-main" onclick="openLightbox(0)">
     <img src="/images/biens/l001/IMG_20260326_114245-1400.jpg" srcset="/images/biens/l001/IMG_20260326_114245-900.jpg 900w, /images/biens/l001/IMG_20260326_114245-1400.jpg 1400w" sizes="(max-width: 768px) 100vw, 66vw" alt="42 rue Cantagrel, Paris 13e — Coin repas" loading="eager" fetchpriority="high" decoding="async" width="1400" height="1867">
     <span class="badge-louer-hero">Loué</span>
+    <span class="badge-reseau-hero">Réseau ICY</span>
     <span class="badge-compteur" onclick="event.stopPropagation();openLightbox(0)">7 photos</span>
   </div>
   <div class="galerie-secondary">
@@ -387,8 +389,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Lieu Le Limousin -->
     <a href="https://maps.google.com/?q=Le+Limousin+42+rue+Cantagrel+Paris+13" target="_blank" rel="noopener noreferrer" class="lieu-card">
-      <div class="lieu-img" style="background:var(--beige-mid);display:flex;align-items:center;justify-content:center">
+      <div class="lieu-img" style="position:relative;background:var(--beige-mid);display:flex;align-items:center;justify-content:center">
         <span style="font-size:11px;color:var(--charcoal-30);letter-spacing:0.08em">LE LIMOUSIN — Brasserie française</span>
+        <img src="/images/lieux/le-limousin.jpg" alt="Le Limousin &#8212; 42 rue Cantagrel, Paris 13e" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.remove()">
       </div>
       <div class="lieu-body">
         <div class="lieu-name">Le Limousin</div>
